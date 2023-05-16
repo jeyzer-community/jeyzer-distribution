@@ -1,0 +1,18 @@
+FROM jeyzer
+
+WORKDIR /data/jeyzer/web/apache-tomcat-9.0.73/bin
+COPY ./setenv-portal.sh .
+
+# External profile repository
+VOLUME /data/jeyzer/profiles/external
+
+# Recording access
+VOLUME /data/jeyzer/work
+
+WORKDIR /data/jeyzer/analyzer/bin
+
+# FYI 
+EXPOSE 9080
+
+# Start Jeyzer Web Analyzer 
+CMD ["/data/jeyzer/analyzer/bin/jeyzer-analyzer-web-server.sh"]

@@ -1,0 +1,20 @@
+<langpack>
+
+  <str id="installer.reversetitle" txt="Jeyzer Recorder Installer"/>
+  
+  <!-- Panel header alternative titles -->
+  <str id="HTMLHelloPanel.headline" txt="Introduction"/>
+  <str id="LicencePanel.headline" txt="Jeyzer Licensing Agreements"/>
+  <str id="TargetPanel.headline" txt="Jeyzer Recorder Directory"/>
+  <str id="PacksPanel.headline" txt="Jeyzer Recorders"/>
+  
+  <str id="UserInputPanel.recorder.home.headline" txt="Jeyzer Recorder"/>
+  <str id="UserInputPanel.recorder.parameters.headline"  txt="Jeyzer Recorder"/>
+  <str id="UserInputPanel.recorder.jmx.parameters.headline"  txt="Jeyzer Recorder"/>
+  <str id="UserInputPanel.recorder.agent.headline"  txt="Jeyzer Recorder"/>
+       
+  <str id="InstallPanel.headline" txt="Jeyzer Installation Progress"/>
+  <str id="HTMLInfoPanel.quick_start.headline" txt="Jeyzer Quick Start Instructions"/>
+  <str id="FinishPanel.headline" txt="Jeyzer Installation Complete"/>
+
+</langpack>

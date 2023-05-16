@@ -1,0 +1,90 @@
+<userInput>
+  
+  <panel  id="recorder.agent">
+    <field type="title" txt="Jeyzer Recorder Agent" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="dir" align="left" variable="jeyzer.recorder.scaling.config.repository">
+	  <description txt="The configuration home directory. Each application will get its own agent, log and profile configuration directory. This permis to scale the agent usage to monitor multiple applications. For long term usage, it is recommended to put this repository outside of the Jeyzer Recorder installation." />
+      <spec txt="Configuration home" size="25" set="${jeyzer.recorder.scaling.config.repository.default}" mustExist="false" />
+    </field>
+	
+	<field type="space"/>
+  </panel>
+
+  <panel  id="recorder.home">
+    <field type="title" txt="Jeyzer Recorder - Recording home" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="dir" align="left" variable="jeyzer.recorder.work.dir">
+	  <description txt="The recording home directory. Each application will get its own sub recording directory." />
+      <spec txt="Recording home" size="25" set="${jeyzer.recorder.work.dir.default}" mustExist="false" />
+    </field>
+	
+	<field type="space"/>
+	
+    <field type="text" align="left" variable="jeyzer.recorder.target.profile">
+	  <description txt="The name of the first application to monitor. It's also the name of the recording sub-directory. To simplify, reuse the application analysis profile name (if any)." />
+      <spec txt="Application name" size="15" set="${jeyzer.recorder.target.profile.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The target application name is mandatory. Please set it." />
+    </field>
+  </panel>
+  
+  <panel  id="recorder.parameters">
+    <field type="title" txt="Jeyzer Recorder - Parameters" bold="true" size="2" />
+    <field type="divider" align="top"/>
+	
+    <field type="space"/>
+  
+    <field type="text" align="left" variable="ui.jeyzer.recorder.period">
+	  <description txt="The recording period in seconds. Use typically 30 seconds or 60 seconds for production environments" />
+      <spec txt="Recording period" size="8" set="${ui.jeyzer.recorder.period.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The recording period is mandatory. Please set it." />
+    </field>
+	
+    <field type="space"/>
+	<field type="space"/>
+
+    <field type="text" align="left" variable="ui.jeyzer.recorder.archiving.period">
+	  <description txt="The recording archiving period in hours. Archiving is the compression of the recordings. Use typically 6 or 12 hours for production environments." />
+      <spec txt="Recording archiving period" size="8" set="${ui.jeyzer.recorder.archiving.period.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The recording archiving period is mandatory. Please set it." />
+    </field>
+	
+    <field type="space"/>
+	<field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.recorder.archiving.retention">
+	  <description txt="The number of recording archives to keep. Archives get deleted once the retention is over. Keep typically for 3 or 7 days for production environments. Number of recording archives to keep = Desired retention time in hours / Recording archiving period" />
+      <spec txt="Recording archives kept" size="8" set="${jeyzer.recorder.archiving.retention.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The number of recording archives is mandatory. Please set it." />
+    </field>
+  </panel>
+  
+  <panel  id="recorder.jmx.parameters">
+    <field type="title" txt="Jeyzer Recorder Client - JMX Parameters" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+  
+    <field type="text" align="left" variable="jeyzer.recorder.jmx.host">
+	  <description txt="The target application JMX host. By default set to connect to the local Jeyzer Demo Features application." />
+      <spec txt="Target JMX host" size="8" set="${jeyzer.recorder.jmx.host.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The Target JMX host is mandatory. Please set it." />
+    </field>
+	
+    <field type="space"/>
+	<field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.recorder.jmx.port">
+	  <description txt="The target application JMX port. By default set to connect to the local Jeyzer Demo Features application." />
+      <spec txt="Target JMX port" size="8" set="${jeyzer.recorder.jmx.port.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.IsPortValidator" txt="The Target JMX port is mandatory. Please set it."/>
+    </field>
+  </panel>
+  
+</userInput>

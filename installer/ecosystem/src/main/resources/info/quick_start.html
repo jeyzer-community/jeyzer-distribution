@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	table {
+		font-family:arial;
+		margin-left:10px
+	}
+	td {
+		border-width: 1px; 
+		border-style: solid; 
+		border-color: #9b9ea3; 
+		background-color: white; 
+		padding-bottom: 20px;
+		padding-left: 5px;
+	}
+	span {
+		font-family:courier;
+		font-size: 12px
+	}
+	h2 {
+		font-family:arial;
+		color: white
+	}
+	li {
+		padding-bottom: 8px;
+	}
+</style>
+
+<body bgcolor="#65a876">
+
+<h1 style="text-align:center;font-family:arial;color: white;padding-top: 10px;">Installation successful !</h1>
+<div style="text-align:center;font-family:Tw Cen MT;color: white;font-size: 16px;">Welcome to Jeyzer</div><br/>
+<br/>
+
+<div style="font-family:arial;margin-left:5px">
+<h2>Quick start</h2>
+Take the owner's tour :
+</div>
+
+<div style="font-family:arial">
+<ul>
+<li>
+Choose a demo : Labors (incident detection) or Features.
+</li>
+<li>
+Run the demo and look at its Jeyzer recording
+</li>
+${jeyzer.recorder.client.block.start}
+<li>
+Run the Jeyzer Client<br/>
+</li>
+${jeyzer.recorder.client.block.end}
+${jeyzer.analyzer.block.start}
+<li>
+Generate the JZR report
+</li>
+${jeyzer.analyzer.block.end}
+${jeyzer.monitor.block.start}
+<li>
+Monitor the demo application
+${jeyzer.monitor.block.end}
+</li>
+<li>
+Look at the demo profiles and customize it
+</li>
+<li>
+Look at the demo monitoring rules and tune it
+</li>
+<li>
+Look at the Base profiles and monitoring rules
+</li>
+${jeyzer.recorder.agent.block.start}
+<li>
+Add the agent to your application
+</li>
+${jeyzer.recorder.agent.block.end}
+${jeyzer.analysis_or_monitor.block.start}
+<li>
+Create your own applicative profile
+${jeyzer.analysis_or_monitor.block.end}
+</li>
+</ul>
+<br/>
+You can retrieve current info in quick_start.html at the root of the Jeyzer installation.
+</div>
+
+<div style="font-family:arial;margin-left:5px">
+
+<br/>
+<h2>Jeyzer Ecosystem - Paths & Resources</h2>
+
+<table>
+<tbody>
+
+${jeyzer.analyzer.web.block.start}
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Analyzer Web URL :</b>
+</div>
+<span>${jeyzer.analyzer.web.url}</span>
+<br/>
+<small>
+Bookmark it in your browser.
+</small>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Analyzer Web Server :</b>
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}analyzer${SYSTEM[file.separator]}bin${SYSTEM[file.separator]}jeyzer-analyzer-web-server${script.extension}</span>
+</td>
+</tr>
+${jeyzer.analyzer.web.block.end}
+
+${jeyzer.analyzer.console.block.start}
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Analyzer Console :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}analyzer${SYSTEM[file.separator]}bin${SYSTEM[file.separator]}jeyzer-analysis${script.extension}</span>
+</td>
+</tr>
+${jeyzer.analyzer.console.block.end}
+
+${jeyzer.monitor.block.start}
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Monitor :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}analyzer${SYSTEM[file.separator]}bin${SYSTEM[file.separator]}jeyzer-monitor${script.extension}</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Monitor JIRA core configuration :</b>
+</div>
+<small>See also the master profile configuration for the JIRA project configuration</small>
+<br/>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}analyzer${SYSTEM[file.separator]}config${SYSTEM[file.separator]}monitor${SYSTEM[file.separator]}publishers${SYSTEM[file.separator]}jira</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Monitor email configuration :</b>
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}analyzer${SYSTEM[file.separator]}config${SYSTEM[file.separator]}mail${SYSTEM[file.separator]}mail.properties</span>
+</td>
+</tr>
+${jeyzer.monitor.block.end}
+
+${jeyzer.recorder.client.block.start}
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Recorder Client :</b>
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}recorder${SYSTEM[file.separator]}bin${SYSTEM[file.separator]}jeyzer-recorder-jmx${script.extension}</span>
+<br/>
+<small>The JZR recording will be available in this directory :</small>
+<br/>
+<span>${jeyzer.recorder.work.dir}${SYSTEM[file.separator]}${jeyzer.recorder.target.profile}</span>
+</td>
+</tr>
+${jeyzer.recorder.client.block.end}
+
+${jeyzer.recorder.agent.block.start}
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Recorder Agent :</b>
+</div>
+<small>Add this parameter to your application classpath :</small>
+<br/>
+<span>-javaagent:&quot;$INSTALL_PATH${SYSTEM[file.separator]}recorder${SYSTEM[file.separator]}lib${SYSTEM[file.separator]}jeyzer-agent.jar&quot;=$INSTALL_PATH${SYSTEM[file.separator]}recorder${SYSTEM[file.separator]}config${SYSTEM[file.separator]}agent${SYSTEM[file.separator]}jeyzer-agent.xml;jeyzer-record-agent-profile=${jeyzer.recorder.target.profile}</span>
+<br/>
+<small>The JZR recording will be available in this directory :</small>
+<br/>
+<span>${jeyzer.recorder.work.dir}${SYSTEM[file.separator]}${jeyzer.recorder.target.profile}</span>
+</td>
+</tr>
+
+${jeyzer.recorder.agent.block.end}
+
+${jeyzer.recorder.agent.block.start}
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Java Flight Recorder :</b>
+</div>
+<small>Add this standard JFR parameter to your application classpath :</small>
+<br/>
+<span>--XX:StartFlightRecording=maxage=6h,maxsize=100M,dumponexit=true,settings=$INSTALL_PATH${SYSTEM[file.separator]}jfr${SYSTEM[file.separator]}jeyzer.jfc,filename=&lt;JFR recording file path&gt;</span>
+<br/>
+<small>The jeyzer.jfc file is the recommended JFR configuration, aligned and optimized for Jeyzer.</small>
+<br/>
+<small>Important : Java 11 or 17 is required.</small>
+</td>
+</tr>
+
+${jeyzer.recorder.agent.block.end}
+
+</tbody>
+</table>
+
+<br/>
+
+<h2 style="font-family:arial">Demo Labors</h2>
+
+<table>
+<tbody>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo sample JZR recording :</b>
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}sample${SYSTEM[file.separator]}demo-labors${SYSTEM[file.separator]}demo-labors-3-cases-sample-recording.zip</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo sample JZR report :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}sample${SYSTEM[file.separator]}demo-labors${SYSTEM[file.separator]}Demo-labors-3-cases-sample-report.xlsx</span>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo labors application :</b>
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}bin${SYSTEM[file.separator]}jeyzer-demo-labors${script.extension}</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo labors recordings :</b> 
+</div>
+<span>${jeyzer.recorder.work.dir}${SYSTEM[file.separator]}jeyzer-demo-labors</span>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<br/>
+
+<h2 style="font-family:arial">Demo Features</h2>
+
+<table>
+<tbody>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo sample JZR recording :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}sample${SYSTEM[file.separator]}demo-features${SYSTEM[file.separator]}demo-features-sample-recording.zip</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo sample JZR report :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}sample${SYSTEM[file.separator]}demo-features${SYSTEM[file.separator]}Demo-features-mx-sample-report.xlsx</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo features application :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}bin${SYSTEM[file.separator]}jeyzer-demo-features${script.extension}</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo features recordings :</b>
+</div>
+<span>${jeyzer.recorder.work.dir}${SYSTEM[file.separator]}jeyzer-demo-features-mx</span>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+${jeyzer.analysis_or_monitor.block.start}
+<br/>
+
+<h2 style="font-family:arial">Profiles</h2>
+
+<table>
+<tbody>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo profiles :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}profiles${SYSTEM[file.separator]}demo</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Base profiles :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}profiles${SYSTEM[file.separator]}base</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>External profiles :</b> 
+</div>
+<span>${jeyzer.analyzer.ext.profiles.dir}</span>
+</td>
+</tr>
+${jeyzer.analysis_or_monitor.block.end}
+
+${jeyzer.profile.block.start}
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Your first applicative (master) profile :</b> 
+</div>
+<span>${jeyzer.analyzer.ext.profiles.dir}${SYSTEM[file.separator]}master${SYSTEM[file.separator]}${jeyzer.profile.id}</span>
+</td>
+</tr>
+${jeyzer.profile.block.end}
+
+<br/>
+
+</tbody>
+</table>
+
+<br/>
+<h2>System info</h2>
+
+<table>
+<tbody>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Jeyzer ecosystem</b>
+</div>
+<small>
+<span>Analyzer version : ${jeyzer.version}</span>
+</small>
+<br/>
+${jeyzer.monitor.block.start}
+<small>
+<span>Monitor version : ${jeyzer.version}</span>
+</small>
+<br/>
+${jeyzer.monitor.block.end}
+${jeyzer.recorder.agent.block.start}
+<small>
+<span>Agent recorder version : ${jeyzer-community-recorder.version}</span>
+</small>
+<br/>
+${jeyzer.recorder.agent.block.end}
+${jeyzer.recorder.client.block.start}
+<small>
+<span>Client recorder version : ${jeyzer-community-recorder.version}</span>
+</small>
+<br/>
+${jeyzer.recorder.client.block.end}
+<small>
+<span>Demo version : ${jeyzer-community-demo.version}</span>
+</small>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Java</b>
+</div>
+<small>
+<span>Home : ${SYSTEM[java.home]}</span>
+</small>
+<br/>
+<small>
+<span>Vendor : ${SYSTEM[java.vendor]}</span>
+</small>
+<br/>
+<small>
+<span>Version : ${SYSTEM[java.version]}</span>
+</small>
+<br/>
+<small>
+Jeyzer will use this Java runtime, originally found on your system path.
+</small>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Operating system</b>
+</div>
+<small>
+<span>Name : ${SYSTEM[os.name]}</span>
+</small>
+<br/>
+<small>
+<span>Version : ${SYSTEM[os.version]}</span>
+</small>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+</body>
+</html>

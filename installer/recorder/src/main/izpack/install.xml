@@ -1,0 +1,232 @@
+<izpack:installation version="5.0"
+                     xmlns:izpack="http://izpack.org/schema/installation"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://izpack.org/schema/installation http://izpack.org/schema/5.0/izpack-installation-5.0.xsd">
+ 
+  <info>
+    <appname>Jeyzer Recorder</appname>
+    <appversion>@{jeyzer.version}</appversion>
+    <appsubpath>jeyzer</appsubpath>
+	<url>https://jeyzer.org</url>
+	<authors>
+		<author name="Jeyzer" email="contact@jeyzer.org"/>
+	</authors>
+    <javaversion>1.7</javaversion>
+    <uninstaller write="false"/>
+    <writeinstallationinformation>false</writeinstallationinformation>
+  </info>
+  
+  <locale>
+    <langpack iso3="eng"/>
+  </locale>
+ 
+   <guiprefs width="900" height="500" resizable="no">
+	<!--modifier key="useSplashScreen" value="1000" /--> 
+	<!-- See the IzPacks-UI-renderings.docx for details and tests -->
+	<laf name="looks">
+      <os family="windows" />
+      <os family="unix" />
+      <!-- looks variants -->
+	  <param name="variant" value="plastic3D" />
+    </laf>
+    <modifier key="useHeadingPanel" value="yes" />
+    <modifier key="headingImageOnLeft" value="yes"/>
+    <modifier key="headingLineCount" value="1"/>
+    <modifier key="headingFontSize" value="1.3"/>
+    <modifier key="headingBackgroundColor" value="0x00ffffff"/>
+  </guiprefs>
+  
+  <variables>
+    <variable name="Installer.title" value="Jeyzer Recorder Installer" />
+    <variable name="TargetPanel.dir.windows" value="C:\demo-pg\jeyzer-recorder"/>
+    <variable name="TargetPanel.dir.unix" value="/usr/data/jeyzer-recorder"/>
+	<variable name="jeyzer.installer.deployment" value="true"/>
+	
+	<variable name="jeyzer.installer.java.home" value="$JAVA_HOME"/>
+	
+	<variable name="jeyzer.recorder.work.dir.default" value="$INSTALL_PATH${SYSTEM[file.separator]}work${SYSTEM[file.separator]}recordings"/>
+	<variable name="ui.jeyzer.recorder.period.default" value="30"/>
+	
+	<variable name="jeyzer.recorder.target.profile.default"      value="the_app"/>
+	<variable name="ui.jeyzer.recorder.archiving.period.default" value="6"/>
+	<variable name="jeyzer.recorder.archiving.retention.default" value="20"/>
+
+	<variable name="jeyzer.recorder.jmx.host.default" value="localhost"/>
+	<variable name="jeyzer.recorder.jmx.port.default" value="2500"/>
+
+    <variable name="jeyzer.recorder.scaling.config.repository.default" value="$INSTALL_PATH${SYSTEM[file.separator]}recorder${SYSTEM[file.separator]}config${SYSTEM[file.separator]}scaling"/>
+  </variables>
+  
+  <dynamicvariables>
+    <variable name="jeyzer.recorder.agent.home-to-be-set" value="$INSTALL_PATH${SYSTEM[file.separator]}recorder"/>
+    <variable name="jeyzer.recorder.agent.home" value="$INSTALL_PATH${SYSTEM[file.separator]}recorder"/>
+
+	<!-- Period variables, making it ISO-8601 -->
+	<variable name="jeyzer.recorder.period" value="${ui.jeyzer.recorder.period}s" />
+	<variable name="jeyzer.recorder.archiving.period" value="${ui.jeyzer.recorder.archiving.period}h" />
+	
+	<!-- Info panel variables -->
+	<variable name="jeyzer.recorder.agent.block.start" value="" condition="RecorderAgentIsSelected"/>
+	<variable name="jeyzer.recorder.agent.block.end"   value="" condition="RecorderAgentIsSelected"/>
+	<variable name="jeyzer.recorder.agent.block.start" value="&lt;!--" condition="!RecorderAgentIsSelected"/>
+	<variable name="jeyzer.recorder.agent.block.end"   value="--&gt;" condition="!RecorderAgentIsSelected"/>
+
+	<variable name="jeyzer.recorder.client.block.start" value="" condition="RecorderClientIsSelected"/>
+	<variable name="jeyzer.recorder.client.block.end"   value="" condition="RecorderClientIsSelected"/>
+	<variable name="jeyzer.recorder.client.block.start" value="&lt;!--" condition="!RecorderClientIsSelected"/>
+	<variable name="jeyzer.recorder.client.block.end"   value="--&gt;" condition="!RecorderClientIsSelected"/>
+	
+	<variable name="jeyzer.demo.block.start" value="" condition="DemoIsSelected"/>
+	<variable name="jeyzer.demo.block.end"   value="" condition="DemoIsSelected"/>
+	<variable name="jeyzer.demo.block.start" value="&lt;!--" condition="!DemoIsSelected"/>
+	<variable name="jeyzer.demo.block.end"   value="--&gt;" condition="!DemoIsSelected"/>
+	
+	<variable name="script.extension" value=".bat" condition="izpack.windowsinstall"/>
+	<variable name="script.extension" value=".sh"  condition="unixinstall"/>
+	
+  </dynamicvariables>
+ 
+  <resources>
+    <!--res id="Splash.image" src="resources/images/background.jpg"/-->
+	<res id="CustomLangPack.xml_eng" src="@{resources.dir}/lang/customLangPack.xml_eng" />
+	<res id="Installer.image" src="@{resources.dir}/images/background.jpg"/>
+    <res id="customicons.xml" src="@{resources.dir}/images/custom-icons.xml" />
+	<res id="JFrameIcon" src="@{resources.dir}/images/JFrameIcon.png"/>
+	<res id="HTMLHelloPanel.info" src="@{resources.dir}/info/intro.html"/>
+	<res id="LicencePanel.licence" src="@{licenses.dir}/LICENSE-MPL-2.0.txt"/>
+	<res id="userInputSpec.xml" src="@{izpack.dir.app}/user_input_spec.xml" parse="yes" type="xml"/>
+	<res id="userInputLang.xml_eng" src="@{resources.dir}/lang/userInputLang.xml_eng" />
+	<res id="packsLang.xml_eng" src="@{resources.dir}/lang/packsLang.xml_eng" />
+	<res id="HTMLInfoPanel.quick_start" src="@{resources.dir}/info/quick_start.html"/>	
+  </resources>
+ 
+  <panels>
+  	<panel classname="HTMLHelloPanel"/>
+	<panel classname="LicencePanel"/>
+    <panel classname="TargetPanel">
+	  <configuration>
+	    <param name="ShowCreateDirectoryMessage" value="false"/>
+	  </configuration>
+	</panel>
+    <panel classname="PacksPanel"/>
+	<panel classname="UserInputPanel" id="recorder.agent"               condition="RecorderAgentIsSelected"/>
+	<panel classname="UserInputPanel" id="recorder.home"                condition="RecorderAgentIsSelected|RecorderClientIsSelected"/>
+	<panel classname="UserInputPanel" id="recorder.parameters"          condition="RecorderAgentIsSelected|RecorderClientIsSelected"/>
+	<panel classname="UserInputPanel" id="recorder.jmx.parameters"      condition="RecorderClientIsSelected"/>
+	<!-- panel classname="DataCheckPanel" /-->
+    <panel classname="InstallPanel"/>
+    <panel classname="HTMLInfoPanel" id="quick_start" />
+    <panel classname="FinishPanel"/>
+  </panels>
+  
+  <conditions>
+    <condition type="packselection" id="RecorderAgentIsSelected">
+      <name>Jeyzer Recorder Agent</name>
+    </condition>
+    <condition type="packselection" id="RecorderClientIsSelected">
+      <name>Jeyzer Recorder Client</name>
+    </condition>
+    <condition type="packselection" id="DemoIsSelected">
+      <name>Jeyzer Demo</name>
+    </condition>
+	<condition type="or" id="unixinstall">
+		<condition type="ref" refid="izpack.linuxinstall" />
+		<condition type="ref" refid="izpack.solarisinstall" />
+	</condition>
+  </conditions>
+ 
+  <packs>
+
+    <pack name="Jeyzer Recorder Agent" required="no" preselected="true">
+      <description>The Jeyzer Recorder Java agent, to add to your application classpath.</description>
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-package.zip" targetdir="${INSTALL_PATH}/recorder" unpack="true" override="true">
+		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}">
+		   <exclude name="bin/*.bat"/>
+		   <exclude name="bin/*.sh"/>
+		 </archivefileset>
+	  </file>
+	  <!-- Scaling - Never override existing configuration -->
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-scaling-template-config.zip" targetdir="${INSTALL_PATH}/recorder/config/scaling" unpack="true" override="false">
+		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
+	  </file>
+	  <singlefile src="@{templates.dir}/recorder/agent/jeyzer-agent.installer.xml" target="${INSTALL_PATH}/recorder/config/agent/jeyzer-agent.xml" override="false" />
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/recorder/config/agent/jeyzer-agent.xml"/>
+	  <singlefile src="@{templates.dir}/recorder/scaling-template/agent/application-template/jeyzer-record.installer.properties" target="${jeyzer.recorder.scaling.config.repository}/agent/${jeyzer.recorder.target.profile}/jeyzer-record.properties" override="false" />
+	  <parsable type="shell" targetfile="${jeyzer.recorder.scaling.config.repository}/agent/${jeyzer.recorder.target.profile}/jeyzer-record.properties"/>
+	  <singlefile src="@{templates.dir}/recorder/scaling-template/agent/application-template/jeyzer-record.installer.properties" target="${jeyzer.recorder.scaling.config.repository}/agent/application-template/jeyzer-record.properties" override="false" />
+	  <parsable type="shell" targetfile="${jeyzer.recorder.scaling.config.repository}/agent/application-template/jeyzer-record.properties"/>
+	  <singlefile src="@{templates.dir}/recorder/log/jeyzer-log.properties" target="${jeyzer.recorder.scaling.config.repository}/log/${jeyzer.recorder.target.profile}/jeyzer-log.properties" override="false" />
+	  <singlefile src="@{templates.dir}/recorder/scaling-template/profiles/profile-template/profile-template_advanced_mx.xml" target="${jeyzer.recorder.scaling.config.repository}/profiles/standard/standard_advanced_mx.xml" override="false" />
+	  <singlefile src="@{templates.dir}/recorder/scaling-template/profiles/profile-template/profile-template_generation.xml" target="${jeyzer.recorder.scaling.config.repository}/profiles/standard/standard_generation.xml" override="false" />
+	  <!-- Work directory creation -->
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-work-recordings.zip" targetdir="${jeyzer.recorder.work.dir}" unpack="true" override="false">
+	    <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
+	  </file>
+	  <file src="jeyzer-jfr-@{jeyzer-community-jfr.version}-config.zip" targetdir="${INSTALL_PATH}/jfr" unpack="true" override="true">
+	  	<archivefileset dir="jeyzer-jfr-@{jeyzer-community-jfr.version}"/>
+	  </file>
+    </pack>
+    
+    <pack name="Jeyzer Recorder Client" required="no" preselected="false">
+      <description>The Jeyzer Recorder JMX client, to connect to your application.</description>
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-package.zip" targetdir="${INSTALL_PATH}/recorder" unpack="true" override="true">
+		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
+	  </file>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/recorder/bin/set-jeyzer-params.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/recorder/bin/set-jeyzer-params.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/recorder/bin/set-jeyzer-params.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/recorder/bin/check-java.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/recorder/bin/check-java.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/recorder/bin/check-java.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <!-- Work directory creation -->
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-work-recordings.zip" targetdir="${jeyzer.recorder.work.dir}" unpack="true" override="false">
+	  	<archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
+	  </file>
+	  <file src="jeyzer-jfr-@{jeyzer-community-jfr.version}-config.zip" targetdir="${INSTALL_PATH}/jfr" unpack="true" override="true">
+	  	<archivefileset dir="jeyzer-jfr-@{jeyzer-community-jfr.version}"/>
+	  </file>
+    </pack>
+	
+	<pack name="Jeyzer Demo" required="no" preselected="false">
+      <description>The Jeyzer Demo applications on which you can apply and discover the Jeyzer applications right away. Shipped with demo recordings and reports for the lazy people.</description>
+	  <file src="jeyzer-demo-@{jeyzer-community-demo.version}-package.zip" targetdir="${INSTALL_PATH}/demo" unpack="true" override="true">
+		 <archivefileset dir="jeyzer-demo-@{jeyzer-community-demo.version}"/>
+	  </file>
+	  <!-- Startup scripts -->
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/check-java.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/check-java.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/check-java.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.bat" condition="izpack.windowsinstall+RecorderAgentIsSelected"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.sh" condition="unixinstall+RecorderAgentIsSelected"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.sh" stage="never" failure ="warn" keep="true" condition="unixinstall+RecorderAgentIsSelected"/>
+	  <!-- Agent configurations -->
+	  <singlefile src="@{templates.dir}/demo/demo-features/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-features/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-features-mx/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-features-mx/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-philosophers/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-philosophers/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-toll/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-toll/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-labors/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-labors/jeyzer-record.properties" override="true" />
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-features/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-features-mx/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-philosophers/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-toll/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-labors/jeyzer-record.properties"/>
+    </pack>
+    
+    <pack name="Jeyzer finalization" required="yes" hidden="true">
+   		<description>Installation finalization which includes file cleanup while waiting for IZPACK-1615. Not shown.</description>
+		<!-- Windows : cleanup of shell scripts -->
+		<singlefile src="@{util.dir}/cleanup.bat" target="${INSTALL_PATH}/cleanup.bat" override="true" condition="izpack.windowsinstall"/>
+	    <parsable type="plain" targetfile="${INSTALL_PATH}/cleanup.bat" condition="izpack.windowsinstall"/>
+		<executable targetfile="${INSTALL_PATH}/cleanup.bat" type="bin" stage="postinstall" failure ="warn" keep="false" condition="izpack.windowsinstall"/>
+		<!-- Unix : cleanup of bat scripts -->
+		<singlefile src="@{util.dir}/cleanup.sh" target="${INSTALL_PATH}/cleanup.sh" override="true" condition="unixinstall"/>
+	    <parsable type="shell" targetfile="${INSTALL_PATH}/cleanup.sh" condition="unixinstall"/>
+		<executable targetfile="${INSTALL_PATH}/cleanup.sh" type="bin" stage="postinstall" failure ="warn" keep="false" condition="unixinstall"/>
+		<!-- Quick start doc file -->
+		<singlefile src="@{resources.dir}/info/quick_start.html" target="${INSTALL_PATH}/quick_start.html" override="true"/>
+		<parsable type="plain" targetfile="${INSTALL_PATH}/quick_start.html"/>
+    </pack>
+	
+  </packs>
+ 
+</izpack:installation>

@@ -1,0 +1,45 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>external-profiles</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<fileSets>
+		<!-- At least include the README.txt (stored in Git Jeyzer repository) file to prevent Maven zip assembly from failing -->
+		<fileSet>
+			<directory>../../jeyzer-external/profiles/repository</directory>
+			<filtered>true</filtered>
+			<includes>
+				<include>master/template/**/*.xml</include>
+				<include>README.txt</include>
+			</includes>
+			<outputDirectory></outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>../../jeyzer-external/profiles/template/master</directory>
+			<filtered>true</filtered>
+			<includes>
+				<include>**/*.xml</include>
+			</includes>
+			<outputDirectory>master/template</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>../../jeyzer-external/profiles/template</directory>
+			<filtered>true</filtered>
+			<includes>
+				<include>multi_monitor.xml</include>
+			</includes>
+			<outputDirectory>master</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>../../jeyzer-external/profiles/template/shared</directory>
+			<filtered>true</filtered>
+			<includes>
+				<include>**/*.xml</include>
+			</includes>
+			<outputDirectory>shared/template</outputDirectory>
+		</fileSet>
+	</fileSets>
+</assembly>

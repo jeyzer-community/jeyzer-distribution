@@ -1,0 +1,395 @@
+<userInput>
+
+  <panel  id="recorder.agent">
+    <field type="title" txt="Jeyzer Recorder Agent" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="dir" align="left" variable="jeyzer.recorder.scaling.config.repository">
+	  <description txt="The configuration home directory. Each application will get its own agent, log and profile configuration directory. This permis to scale the agent usage to monitor multiple applications. For long term usage, it is recommended to put this repository outside of the Jeyzer Recorder installation." />
+      <spec txt="Configuration home" size="25" set="${jeyzer.recorder.scaling.config.repository.default}" mustExist="false" />
+    </field>
+	
+	<field type="space"/>
+  </panel>
+
+  <panel  id="recorder.home">
+    <field type="title" txt="Jeyzer Recorder - Recording home" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="dir" align="left" variable="jeyzer.recorder.work.dir">
+	  <description txt="The recording home directory. Each application will get its own sub recording directory." />
+      <spec txt="Recording home" size="25" set="${jeyzer.recorder.work.dir.default}" mustExist="false" />
+    </field>
+	
+	<field type="space"/>
+	
+    <field type="text" align="left" variable="jeyzer.recorder.target.profile">
+	  <description txt="The name of the first application to monitor. It's also the name of the recording sub-directory. To simplify, reuse the application analysis profile name (if any)." />
+      <spec txt="Application name" size="15" set="${jeyzer.recorder.target.profile.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The target application name is mandatory. Please set it." />
+    </field>
+  </panel>
+  
+  <panel  id="recorder.parameters">
+    <field type="title" txt="Jeyzer Recorder - Parameters" bold="true" size="2" />
+    <field type="divider" align="top"/>
+	
+    <field type="space"/>
+  
+    <field type="text" align="left" variable="ui.jeyzer.recorder.period">
+	  <description txt="The recording period in seconds. Use typically 30 seconds or 60 seconds for production environments" />
+      <spec txt="Recording period" size="8" set="${ui.jeyzer.recorder.period.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The recording period is mandatory. Please set it." />
+    </field>
+	
+    <field type="space"/>
+	<field type="space"/>
+
+    <field type="text" align="left" variable="ui.jeyzer.recorder.archiving.period">
+	  <description txt="The recording archiving period in hours. Archiving is the compression of the recordings. Use typically 6 or 12 hours for production environments." />
+      <spec txt="Recording archiving period" size="8" set="${ui.jeyzer.recorder.archiving.period.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The recording archiving period is mandatory. Please set it." />
+    </field>
+	
+    <field type="space"/>
+	<field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.recorder.archiving.retention">
+	  <description txt="The number of recording archives to keep. Archives get deleted once the retention is over. Keep typically for 3 or 7 days for production environments. Number of recording archives to keep = Desired retention time in hours / Recording archiving period" />
+      <spec txt="Recording archives kept" size="8" set="${jeyzer.recorder.archiving.retention.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The number of recording archives is mandatory. Please set it." />
+    </field>
+  </panel>
+  
+  <panel  id="recorder.jmx.parameters">
+    <field type="title" txt="Jeyzer Recorder Client - JMX Parameters" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+  
+    <field type="text" align="left" variable="jeyzer.recorder.jmx.host">
+	  <description txt="The target application JMX host. By default set to connect to the local Jeyzer Demo Features application." />
+      <spec txt="Target JMX host" size="8" set="${jeyzer.recorder.jmx.host.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The Target JMX host is mandatory. Please set it." />
+    </field>
+	
+    <field type="space"/>
+	<field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.recorder.jmx.port">
+	  <description txt="The target application JMX port. By default set to connect to the local Jeyzer Demo Features application." />
+      <spec txt="Target JMX port" size="8" set="${jeyzer.recorder.jmx.port.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.IsPortValidator" txt="The Target JMX port is mandatory. Please set it."/>
+    </field>
+  </panel>
+
+  <panel  id="tomcat.params">
+    <field type="title" txt="Jeyzer Analyzer - Tomcat configuration" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="tomcat.http.port">
+	    <description txt="The Tomcat HTTP port. For the SSL/HTTPS configuration, please refer to the Tomcat documentation." />
+        <spec txt="Tomcat HTTP port" size="8" set="${tomcat.http.port.default}"/>
+        <validator class="com.izforge.izpack.panels.userinput.validator.IsPortValidator" txt="The Tomcat HTTP port is mandatory. Please set it."/>
+    </field>
+  </panel>
+
+   <panel  id="monitor.parameters">
+    <field type="title" txt="Jeyzer Monitor - Parameters" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="ui.monitor.scanning.period">
+	    <description txt="The Jeyzer Monitor scanning period in minutes. On each scan, Jeyzer Monitor will execute a fast recording analysis on which it will apply monitoring rules and generate events to be published." />
+        <spec txt="Scanning period" size="8" set="${ui.monitor.scanning.period.default}"/>
+        <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The Jeyzer Monitor scanning period is mandatory. Please set it."/>
+    </field>
+  </panel>
+  
+  <panel  id="monitor.publish">
+    <field type="title" txt="Jeyzer Monitor - Publishers" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="check" align="left" variable="jeyzer.monitor.publish.jira">
+	    <description txt="Activate the JIRA publishing of events and JZR reports." />
+        <spec txt="JIRA publishing" size="8" true="true" false="false" set="${jeyzer.monitor.publish.jira.default}"/>
+    </field>
+
+	<field type="space"/>
+	
+    <field type="divider" align="top"/>	
+	
+    <field type="space"/>
+
+    <field type="space"/>
+
+    <field type="check" align="left" variable="jeyzer.monitor.publish.web">
+	    <description txt="Activate the web publishing of events." />
+        <spec txt="Web publishing" size="8" true="true" false="false" set="${jeyzer.monitor.publish.web.default}"/>
+    </field>
+
+	<field type="space"/>
+	
+    <field type="divider" align="top"/>	
+	
+    <field type="space"/>
+
+    <field type="check" align="left" variable="jeyzer.monitor.publish.email">
+	    <description txt="Activate the email publishing of events, and attach to it a JZR report in case of critical event." />
+        <spec txt="Email publishing" size="8" true="true" false="false" set="${jeyzer.monitor.publish.email.default}"/>
+    </field>
+
+    <field type="check" align="left" variable="jeyzer.monitor.publish.email.report.generation">
+        <spec txt="JZR report generation" size="8" true="true" false="false" set="${jeyzer.monitor.publish.email.report.generation.default}"/>
+	</field>
+	
+    <field type="space"/>	
+	
+	<field type="divider" align="top"/>	
+
+    <field type="space"/>
+	
+    <field type="check" align="left" variable="jeyzer.monitor.publish.sound">
+	    <description txt="Activate the sound generation upon critical or warning events." />
+        <spec txt="Sound publishing" size="8" true="true" false="false" set="${jeyzer.monitor.publish.sound.default}"/>
+    </field>
+	
+  </panel>
+  
+  <panel  id="monitor.publish.jira">
+    <field type="title" txt="Jeyzer Monitor - JIRA publishing" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+		
+	<field type="staticText" align="left" txt="The JIRA Cloud server parameters on which the important events and JZR reports will be sent to. If you do not know the values, skip it. JIRA project will have anyway to be set at each master profile level : please refer to the Jeyzer documentation."/>
+	
+    <field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.monitor.publish.jira.server.url">
+	    <!--description txt="The JIRA server URL." /-->
+        <spec txt="JIRA server URL" size="40" set="${jeyzer.monitor.publish.jira.server.url.default}"/>
+    </field>
+	
+	<field type="space"/>
+	
+    <field type="text" align="left" variable="jeyzer.monitor.publish.jira.server.auth.key">
+	    <!-- description txt="The JIRA server authentication key." /-->
+        <spec txt="JIRA server auth key" size="65" set="${jeyzer.monitor.publish.jira.server.auth.key.default}"/>
+    </field>
+
+    <field type="space"/>
+	
+  </panel>
+  
+  <panel  id="monitor.publish.email.1">
+    <field type="title" txt="Jeyzer Monitor - Email publishing 1/2" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+		
+	<field type="staticText" align="left" txt="The SMTP server parameters on which the notification emails will be sent to."/>
+	
+    <field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.monitor.publish.email.smtp.host">
+	    <!--description txt="The SMTP server host." /-->
+        <spec txt="SMTP host" size="20" set="${jeyzer.monitor.publish.email.smtp.host.default}"/>
+        <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The SMTP host is mandatory. Please set it."/>
+    </field>
+	
+	<field type="space"/>
+	
+    <field type="text" align="left" variable="jeyzer.monitor.publish.email.smtp.port">
+	    <!-- description txt="The SMTP server port." /-->
+        <spec txt="SMTP port" size="8" set="${jeyzer.monitor.publish.email.smtp.port.default}"/>
+        <validator class="com.izforge.izpack.panels.userinput.validator.IsPortValidator" txt="The SMTP port is mandatory. Please set it."/>
+    </field>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.monitor.publish.email.smtp.user">
+	    <!-- description txt="The SMTP connection user." /-->
+        <spec txt="SMTP connection user" size="20" set="${jeyzer.monitor.publish.email.smtp.user.default}"/>
+        <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The SMTP connection user is mandatory. Please set it."/>
+    </field>
+
+    <field type="space"/>
+
+    <field type="password" align="left" variable="jeyzer.monitor.publish.email.smtp.password">
+	    <!-- description txt="The SMTP connection password." /-->
+        <!-- spec txt="SMTP connection password" size="20" set="${jeyzer.monitor.publish.email.smtp.password.default}"/-->
+		<spec>
+           <pwd txt="SMTP connection password" size="20" set="${jeyzer.monitor.publish.email.smtp.password.default}"/>
+           <pwd txt="Retype Password:"         size="20" set="${jeyzer.monitor.publish.email.smtp.password.default}"/>
+        </spec>
+		<validator class="com.izforge.izpack.panels.userinput.validator.PasswordEqualityValidator" txt="Both passwords must match."/>
+    </field>
+	
+  </panel>
+  
+  <panel  id="monitor.publish.email.2">
+    <field type="title" txt="Jeyzer Monitor - Email publishing 2/2" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.monitor.publish.email.recipients">
+	    <description txt="The notification email recipients. Semicolon separated list of emails." />
+        <spec txt="Email recipients" size="30" set="${jeyzer.monitor.publish.email.recipients.default}"/>
+        <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The notification email recipients are mandatory. Please set it."/>
+    </field>
+	
+    <field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.monitor.publish.email.sender">
+	    <description txt="The notification email sender." />
+        <spec txt="Email sender" size="20" set="${jeyzer.monitor.publish.email.sender.default}"/>
+        <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The notification email sender is mandatory. Please set it."/>
+    </field>
+	
+  </panel>
+  
+  <panel  id="monitor.publish.web">
+    <field type="title" txt="Jeyzer Monitor - Web publishing" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="dir" align="left" variable="jeyzer.monitor.publish.web.deploy.dir">
+	  <description txt="The web publishing directory to output monitoring events." />
+      <spec txt="Web publishing directory" size="25" set="${jeyzer.monitor.publish.web.deploy.dir.default}" mustExist="false" create="false" />
+    </field>
+	
+  </panel>
+
+  
+  <panel  id="analyzer.directories">
+    <field type="title" txt="Jeyzer Analyzer - Directories" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="dir" align="left" variable="jeyzer.analyzer.work.dir">
+	  <description txt="The directory used to process the recordings and generate the analysis outputs." />
+      <spec txt="Working directory" size="25" set="${jeyzer.analyzer.work.dir.default}" mustExist="false" />
+    </field>
+	
+    <field type="space"/>
+	<field type="space"/>
+
+    <field type="dir" align="left" variable="jeyzer.analyzer.ext.profiles.dir">
+	  <description txt="The external profiles directory which will contain the local master and shared profiles." />
+      <spec txt="Profiles directory" size="25" set="${jeyzer.analyzer.ext.profiles.dir.default}" mustExist="false" />
+    </field>
+	
+    <field type="space"/>
+	<field type="space"/>
+
+    <field type="dir" align="left" variable="jeyzer.analyzer.deobfuscation.dir">
+	  <description txt="The directory which will contain the obfuscation mappings required to deobfuscate stacks." />
+      <spec txt="Profiles directory" size="25" set="${jeyzer.analyzer.deobfuscation.dir.default}" mustExist="false" />
+    </field>
+	
+  </panel>
+
+  <panel order="0" id="profile.creation">
+    <field type="title" txt="Jeyzer Profile creation" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+	<field type="staticText" align="left" txt="The Jeyzer Monitor and Analyzer require a master profile to run against. The below proposes to create your first applicative master profile in the external profile repository."/>
+
+	<field type="staticText" align="left" txt="This new profile will need to be tuned and enriched to make it accurate and reflect your application behaviour. Note that the Profile-Tuning profile is here to help you."/>
+	
+	<field type="staticText" align="left" txt="If you defer the profile creation to later stage, you can then copy/inspire from the template and sample profiles to create your own. In the meantime, you can use the Discovery profile to perform your first analysis of your application recording."/>
+
+	<field type="staticText" align="left" txt="If you own the application source code, one good alternative to the profile creation is to generate and update it automatically as part of the build process through the Gradle or Maven Jeyzer plugins. More details available in the Jeyzer documentation."/>
+	
+    <field type="space"/>
+	
+    <field type="check" align="left" variable="jeyzer.profile.creation">
+      <spec txt="Create your first master profile ?" size="15" true="true" false="false" set="${jeyzer.profile.creation.default}" />
+    </field>
+	
+  </panel>
+  
+  <panel order="0" id="profile.details">
+    <field type="title" txt="Jeyzer Profile creation" bold="true" size="2" />
+    <field type="divider" align="top"/>
+	
+    <field type="text" align="left" variable="jeyzer.profile.id">
+	  <description txt="The profile Id, referenced also as profile target. It determines the profile directory name and file prefix." />
+      <spec txt="Profile Id" size="20" set="${jeyzer.profile.id.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The profile Id is mandatory. Please set it." />
+    </field>
+	
+    <field type="text" align="left" variable="jeyzer.profile.name">
+	  <description txt="The profile name is used as display in the Jeyzer Web Analyzer." />
+      <spec txt="Profile name" size="20" set="${jeyzer.profile.name.default}" />
+	  <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" txt="The profile name is mandatory. Please set it." />
+    </field>
+	
+  </panel>
+
+  <panel order="0" id="profile.dependencies">
+    <field type="title" txt="Jeyzer Profile creation - Dependencies" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+	<field type="staticText" align="left" txt="Select your applicative dependencies."/>
+	
+	<field type="staticText" align="left" txt="Shared profiles come in standard with their related monitoring rules. Profile dependencies get set in the  ${jeyzer.profile.id}_analysis.xml file : you can still add there at later stage any external dependency (standard or company one)."/>
+	
+    <field type="space"/>
+
+    <field type="check" align="left" variable="jeyzer.profile.dependency.java" readonly="true">
+      <spec txt="Java" size="15" true="java," false="" set="true" />
+    </field>
+	
+    <field type="check" align="left" variable="jeyzer.profile.dependency.hibernate.and.c3p0">
+      <spec txt="Hibernate" size="15" true="hibernate,c3p0," false="" set="true" />
+    </field>
+	
+   <field type="check" align="left" variable="jeyzer.profile.dependency.spring">
+      <spec txt="Spring" size="15" true="spring," false="" set="true" />
+    </field>
+	
+    <field type="check" align="left" variable="jeyzer.profile.dependency.log4j">
+      <spec txt="Log4j" size="15" true="log4j," false="" set="true" />
+    </field>
+	
+    <field type="check" align="left" variable="jeyzer.profile.dependency.guava">
+      <spec txt="Guava" size="15" true="guava," false="" set="false" />
+    </field>
+	
+    <field type="check" align="left" variable="jeyzer.profile.dependency.slf4j">
+      <spec txt="Slf4j" size="15" true="slf4j," false="" set="false" />
+    </field>
+
+    <field type="check" align="left" variable="jeyzer.profile.dependency.tomcat">
+      <spec txt="Tomcat" size="15" true="tomcat," false="" set="false" />
+    </field>
+	
+    <field type="check" align="left" variable="jeyzer.profile.dependency.jboss">
+      <spec txt="Jboss" size="15" true="jboss," false="" set="false" />
+    </field>
+
+    <field type="check" align="left" variable="jeyzer.profile.dependency.glassfish">
+      <spec txt="Glassfish" size="15" true="glassfish," false="" set="false" />
+    </field>
+
+    <field type="check" align="left" variable="jeyzer.profile.dependency.oracle">
+      <spec txt="Oracle" size="15" true="oracle," false="" set="false" />
+    </field>	
+	
+  </panel>
+  
+</userInput>

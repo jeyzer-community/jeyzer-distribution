@@ -1,0 +1,34 @@
+<langpack>
+
+  <str id="installer.reversetitle" txt="Jeyzer Ecosystem Installer"/>
+  
+  <!-- Panel header alternative titles -->
+  <str id="HTMLHelloPanel.headline" txt="Introduction"/>
+  <str id="LicencePanel.headline" txt="Jeyzer Licensing Agreements"/>
+  <str id="TargetPanel.headline" txt="Jeyzer Home Directory"/>
+  <str id="PacksPanel.headline" txt="Jeyzer Products"/>
+  
+  <str id="UserInputPanel.recorder.home.headline" txt="Jeyzer Recorder"/>
+  <str id="UserInputPanel.recorder.parameters.headline"  txt="Jeyzer Recorder"/>
+  <str id="UserInputPanel.recorder.jmx.parameters.headline"  txt="Jeyzer Recorder"/>
+  <str id="UserInputPanel.recorder.agent.headline"  txt="Jeyzer Recorder"/>
+  
+  <str id="UserInputPanel.monitor.parameters.headline"  txt="Jeyzer Monitor"/>
+  <str id="UserInputPanel.monitor.publish.headline"  txt="Jeyzer Monitor"/>
+  <str id="UserInputPanel.monitor.publish.web.headline"  txt="Jeyzer Monitor"/>
+  <str id="UserInputPanel.monitor.publish.jira.headline"  txt="Jeyzer Monitor"/>
+  <str id="UserInputPanel.monitor.publish.email.1.headline"  txt="Jeyzer Monitor"/>
+  <str id="UserInputPanel.monitor.publish.email.2.headline"  txt="Jeyzer Monitor"/>
+  
+  <str id="UserInputPanel.analyzer.directories.headline"  txt="Jeyzer Analyzer"/>
+  <str id="UserInputPanel.tomcat.params.headline"  txt="Jeyzer Analyzer"/>
+  
+  <str id="UserInputPanel.profile.creation.headline"  txt="Jeyzer Applicative Profile"/>
+  <str id="UserInputPanel.profile.details.headline"  txt="Jeyzer Applicative Profile"/>
+  <str id="UserInputPanel.profile.dependencies.headline"  txt="Jeyzer Applicative Profile"/>
+  
+  <str id="InstallPanel.headline" txt="Jeyzer Installation Progress"/>
+  <str id="HTMLInfoPanel.quick_start.headline" txt="Jeyzer Quick Start Instructions"/>
+  <str id="FinishPanel.headline" txt="Jeyzer Installation Complete"/>
+    
+</langpack>

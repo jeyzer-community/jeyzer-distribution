@@ -1,0 +1,26 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>demo-resources</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+    <files>
+		<file>
+			<source>../demo-samples/src/main/samples/demo-features/demo-features-sample-recording.zip</source>
+			<outputDirectory>resources/demo/recordings</outputDirectory>
+			<destName>demo-features-recording-jzr.zip</destName>
+		</file>
+		<file>
+			<source>../demo-samples/src/main/samples/demo-labors/demo-labors-3-cases-sample-recording.zip</source>
+			<outputDirectory>resources/demo/recordings</outputDirectory>
+			<destName>demo-labors-recording-jzr.zip</destName>
+		</file>
+		<file>
+			<source>../../jeyzer-jfr/src/main/config/jeyzer.jfc</source>
+			<outputDirectory>resources/jfr</outputDirectory>
+			<destName>jeyzer.jfc</destName>
+		</file>
+	</files>
+</assembly>

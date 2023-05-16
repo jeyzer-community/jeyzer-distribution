@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+	<modelVersion>4.0.0</modelVersion>
+    <groupId>org.jeyzer.docker</groupId>
+    <artifactId>jeyzer-docker</artifactId>
+    <name>Jeyzer Docker</name>
+    <version>3.0</version>
+    <packaging>pom</packaging>
+	<url>https://jeyzer.org</url>
+	<description>The Jeyzer Docker project</description>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+    </dependencies>
+
+    <build>
+        <plugins>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>dockerMode</id>
+
+            <dependencies>
+            </dependencies>
+
+            <build>
+                <plugins>
+                	<!-- Prepare the Docker context directory -->
+					<plugin>
+						<artifactId>maven-resources-plugin</artifactId>
+						<version>2.7</version>
+						<executions>
+						  <!-- Copy the installer package in the Docker context directory -->
+						  <execution>
+							<id>copy-installer</id>
+							<phase>prepare-package</phase>
+							<goals>
+							  <goal>copy-resources</goal>
+							</goals>
+							<configuration>
+							  <outputDirectory>${basedir}/target/context</outputDirectory>
+							  <resources>
+								<resource>
+								  <directory>${basedir}/src/main/docker</directory>
+								  <filtering>true</filtering>
+								  <includes>
+									<include>Dockerfile</include>
+								  </includes>
+								</resource>
+								<resource>
+								  <directory>../installer/ecosystem/target</directory>
+								  <filtering>false</filtering>
+								  <includes>
+									<include>*.jar</include>
+									<include>*.md5</include>
+								  </includes>
+								</resource>
+								<resource>
+								  <directory>${basedir}/src/main/resources/installer</directory>
+								  <filtering>false</filtering>
+								  <includes>
+									<include>*.xml</include>
+								  </includes>
+								</resource>
+							  </resources>
+							</configuration>
+						  </execution>
+						  <!-- Disabled for now as the Jeyzer Web Analyzer portal is deployed manually on AWS -->
+						  <!-- Copy the portal resources in the Docker portal context directory -->
+						  <!-- 
+						  <execution>
+							<id>copy-portal</id>
+							<phase>prepare-package</phase>
+							<goals>
+							  <goal>copy-resources</goal>
+							</goals>
+							<configuration>
+							  <outputDirectory>${basedir}/target/context-portal</outputDirectory>
+							  <resources>
+								<resource>
+								  <directory>${basedir}/src/main/docker</directory>
+								  <filtering>true</filtering>
+								  <includes>
+									<include>Dockerfile-portal</include>
+								  </includes>
+								</resource>
+								<resource>
+								  <directory>../web/release/tomcat/src/main/scripts/bin</directory>
+								  <filtering>false</filtering>
+								  <includes>
+									<include>setenv-portal.sh</include>
+								  </includes>
+								</resource>
+							  </resources>
+							</configuration>
+						  </execution>
+						   -->
+						</executions>
+					</plugin>
+                	<!-- Build the jeyzer Docker image and test it -->
+					<plugin>
+						<groupId>io.fabric8</groupId>
+						<artifactId>docker-maven-plugin</artifactId>
+						<version>0.26.0</version>
+						<executions>
+							<execution>
+								<id>start</id>
+								<phase>pre-integration-test</phase>
+								<goals>
+									<goal>build</goal>
+									<goal>start</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>stop</id>
+								<phase>post-integration-test</phase>
+								<goals>
+									<goal>stop</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<images>
+								<image>
+									<name>jeyzer</name>
+									<build>
+										<dockerFile>${project.basedir}/target/context/Dockerfile</dockerFile >
+									</build>
+									<run>
+										<ports>
+										    <!-- Do not conflict with dev 9080 port, use instead 9081 -->
+											<port>9081:9080</port>
+										</ports>
+										<wait>
+											<!-- Check for this URL to return a 200 return code -->
+											<url>http://localhost:9081/jeyzer</url>
+											<time>120000</time>
+										</wait>     
+									</run>
+								</image>
+								<!-- Disabled for now as the Jeyzer Web Analyzer portal is deployed manually on AWS -->
+								<!-- 
+								<image>
+									<name>jeyzer-portal</name>
+									<build>
+										<dockerFile>${project.basedir}/target/context-portal/Dockerfile-portal</dockerFile >
+									</build>
+									<run>
+										<ports>
+											<port>9082:9080</port>
+										</ports>
+										<wait>
+											<url>http://localhost:9082/jeyzer</url>
+											<time>120000</time>
+										</wait>
+									</run>
+								</image>
+								 -->
+							</images>
+						</configuration>
+					</plugin>
+					<!-- Clean the context and docker directories. No need to pollute backup files with 400Mb -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+						    <execution>
+						        <phase>install</phase>
+						        <goals>
+						            <goal>run</goal>
+						        </goals>
+						        <configuration>
+						            <target>
+						                <delete>
+						                    <fileset dir="${project.basedir}/target/context"/>
+						                    <fileset dir="${project.basedir}/target/docker/jeyzer/tmp"/>
+						                    <!-- Disabled for now as the Jeyzer Web Analyzer portal is deployed manually on AWS -->
+						                    <!-- 
+						                    <fileset dir="${project.basedir}/target/context-portal"/>
+						                    <fileset dir="${project.basedir}/target/docker/jeyzer-portal/tmp"/>
+						                    -->
+						                </delete>
+						            </target>
+						        </configuration>
+						    </execution>
+						</executions>
+					</plugin>
+                </plugins>
+            </build>
+        </profile>
+        
+        <profile>
+        	<!-- Deploy on the Jeyzer Docker registry -->
+            <id>dockerReleaseMode</id>
+
+            <dependencies>
+            </dependencies>
+
+            <build>
+                <plugins>
+                	<!-- Prepare the Docker context directory -->
+					<plugin>
+						<artifactId>maven-resources-plugin</artifactId>
+						<version>2.7</version>
+						<executions>
+						  <!-- Copy the installer package in the Docker context directory -->
+						  <execution>
+							<id>copy-installer</id>
+							<phase>prepare-package</phase>
+							<goals>
+							  <goal>copy-resources</goal>
+							</goals>
+							<configuration>
+							  <outputDirectory>${basedir}/target/context</outputDirectory>
+							  <resources>
+								<resource>
+								  <directory>${basedir}/src/main/docker</directory>
+								  <filtering>true</filtering>
+								  <includes>
+									<include>Dockerfile</include>
+								  </includes>
+								</resource>
+								<resource>
+								  <directory>../installer/ecosystem/target</directory>
+								  <filtering>false</filtering>
+								  <includes>
+									<include>*.jar</include>
+									<include>*.md5</include>
+								  </includes>
+								</resource>
+								<resource>
+								  <directory>${basedir}/src/main/resources/installer</directory>
+								  <filtering>false</filtering>
+								  <includes>
+									<include>*.xml</include>
+								  </includes>
+								</resource>
+							  </resources>
+							</configuration>
+						  </execution>
+						</executions>
+					</plugin>
+                	<!-- Build the Jeyzer Docker image, test it and push it on the Docker Hub -->
+                	<!--  Check the result at https://hub.docker.com/r/jeyzer/jeyzer-web-analyzer/tags -->
+					<plugin>
+						<groupId>io.fabric8</groupId>
+						<artifactId>docker-maven-plugin</artifactId>
+						<version>0.26.0</version>
+						<executions>
+							<execution>
+								<id>start</id>
+								<phase>pre-integration-test</phase>
+								<goals>
+									<goal>build</goal>
+									<goal>start</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>stop</id>
+								<phase>post-integration-test</phase>
+								<goals>
+									<goal>stop</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>push</id>
+								<phase>install</phase>
+								<goals>
+									<goal>push</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<images>
+								<image>
+									<name>jeyzer/jeyzer-web-analyzer:${project.version}</name>
+									<build>
+										<dockerFile>${project.basedir}/target/context/Dockerfile</dockerFile >
+									</build>
+									<run>
+										<ports>
+										    <!-- Do not conflict with dev 9080 port, use instead 9081 -->
+											<port>9081:9080</port>
+										</ports>
+										<wait>
+											<!-- Check for this URL to return a 200 return code -->
+											<url>http://localhost:9081/jeyzer</url>
+											<time>120000</time>
+										</wait>     
+									</run>
+								</image>
+							</images>
+						</configuration>
+					</plugin>
+					<!-- Clean the context and docker directories. No need to pollute backup files with 400Mb -->
+					<!-- 
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+						    <execution>
+						        <phase>install</phase>
+						        <goals>
+						            <goal>run</goal>
+						        </goals>
+						        <configuration>
+						            <target>
+						                <delete>
+						                    <fileset dir="${project.basedir}/target/context"/>
+						                    <fileset dir="${project.basedir}/target/docker/jeyzer/jeyzer-web-analyzer/tmp"/>
+						                </delete>
+						            </target>
+						        </configuration>
+						    </execution>
+						</executions>
+					</plugin>
+					 -->
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <organization>
+  		<name>Jeyzer</name>
+  		<url>https://jeyzer.org</url>
+  	</organization>
+  	<inceptionYear>2020</inceptionYear>
+</project>

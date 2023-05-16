@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ 
+  <parent>
+	<groupId>org.jeyzer</groupId>
+	<artifactId>jeyzer-all</artifactId>
+	<version>3.0</version>
+	<relativePath>../../../jeyzer-all/pom.xml</relativePath>
+  </parent>
+ 
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jeyzer</groupId>
+  <artifactId>jeyzer-recorder-installer</artifactId>
+  <packaging>izpack-jar</packaging>
+  <version>3.0</version>
+  <name>Jeyzer Recorder Installer</name>
+  <url>https://jeyzer.org</url>
+  <description>The Jeyzer Recorder Installer project, based on the IzPack framework</description>
+ 
+  <dependencies>
+	<dependency>
+		<groupId>org.codehaus.izpack</groupId>
+		<artifactId>izpack-maven-plugin</artifactId>
+		<version>5.1.3</version>
+	</dependency>
+  </dependencies>
+ 
+  <properties>
+    <!-- Installer variables -->
+    <staging.dir>../../project-dist/target/distribution</staging.dir>
+    <info.appName>Jeyzer</info.appName>
+    <info.appsubpath>jeyzer</info.appsubpath>
+    <jeyzer.version>${project.version}</jeyzer.version>	
+    <izpack.dir.app>${basedir}/src/main/izpack</izpack.dir.app>
+    <staging.dir.app>${staging.dir}</staging.dir.app>
+	<templates.dir>../installer/templates</templates.dir>
+	<licenses.dir>../installer/licenses/recorder</licenses.dir>
+	<resources.dir>${basedir}/src/main/resources</resources.dir>
+	<util.dir>${basedir}/../util</util.dir>
+	<!-- Community versions -->
+	<jeyzer-community-recorder.version>3.0</jeyzer-community-recorder.version>
+	<jeyzer-community-demo.version>3.0</jeyzer-community-demo.version>
+	<jeyzer-community-jfr.version>3.0</jeyzer-community-jfr.version>
+  </properties>
+ 
+  	<build>
+		<plugins>
+		
+		  <!-- Izpack installer generation -->
+		  <plugin>
+			<groupId>org.codehaus.izpack</groupId>
+			<artifactId>izpack-maven-plugin</artifactId>
+			<version>5.1.3</version>
+			<extensions>true</extensions>
+			<configuration>
+			  <baseDir>${staging.dir.app}</baseDir>
+			  <installFile>${izpack.dir.app}/install.xml</installFile>
+			  <outputDirectory>${project.build.directory}</outputDirectory>
+			  <finalName>${project.build.finalName}</finalName>
+			  <enableOverrideArtifact>true</enableOverrideArtifact>
+			  <mkdirs>true</mkdirs>
+			  <autoIncludeUrl>false</autoIncludeUrl>
+			  <autoIncludeDevelopers>false</autoIncludeDevelopers>
+			</configuration>
+		  </plugin>
+		  
+		  <!-- MD5 checksum applied on the installer -->
+		  <!-- See http://checksum-maven-plugin.nicoulaj.net/files-mojo.html -->
+		  <plugin>
+			<groupId>net.nicoulaj.maven.plugins</groupId>
+			<artifactId>checksum-maven-plugin</artifactId>
+			<version>1.8</version>
+			<executions>
+				<execution>
+				     <phase>package</phase>
+					<goals>
+						<goal>files</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration>
+				<algorithms>
+				  <algorithm>MD5</algorithm>
+				</algorithms>
+				<fileSets>
+				  <fileSet>
+				    <directory>${project.build.directory}</directory>
+				    <includes>
+				      <include>*.jar</include>
+				    </includes>
+				  </fileSet>
+				</fileSets>
+				<csvSummary>false</csvSummary>
+        	</configuration>
+		  </plugin>
+		  
+  		</plugins>
+	</build>  
+  
+</project>

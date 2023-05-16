@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+<com.izforge.izpack.panels.htmlhello.HTMLHelloPanel id="HTMLHelloPanel_0"/>
+<com.izforge.izpack.panels.target.TargetPanel id="TargetPanel_1">
+<installpath>/data/jeyzer</installpath>
+</com.izforge.izpack.panels.target.TargetPanel>
+<com.izforge.izpack.panels.packs.PacksPanel id="PacksPanel_2">
+<pack index="0" name="Jeyzer Recorder Agent" selected="true"/>
+<pack index="1" name="Jeyzer Recorder Client" selected="false"/>
+<pack index="2" name="Jeyzer Analyzer Web" selected="true"/>
+<pack index="3" name="Jeyzer Analyzer Console" selected="false"/>
+<pack index="4" name="Jeyzer Monitor" selected="true"/>
+<pack index="5" name="Jeyzer Demo" selected="true"/>
+<pack index="6" name="Jeyzer Demo profiles, deobfuscation mappings and samples" selected="true"/>
+<pack index="7" name="Jeyzer Demo preset monitor scripts" selected="true"/>
+<pack index="8" name="Jeyzer Demo preset analyzer scripts" selected="false"/>
+<pack index="9" name="Jeyzer Utilities and Jeyzer Profile Updater" selected="true"/>
+<pack index="10" name="Jeyzer Profile Creation" selected="true"/>
+<pack index="11" name="Jeyzer finalization" selected="true"/>
+</com.izforge.izpack.panels.packs.PacksPanel>
+<com.izforge.izpack.panels.licence.LicencePanel id="license.mpl-2.0"/>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="recorder.agent">
+<entry key="jeyzer.recorder.scaling.config.repository" value="/data/jeyzer/recorder/config/scaling"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="recorder.home">
+<entry key="jeyzer.recorder.work.dir" value="/data/jeyzer/work/recordings"/>
+<entry key="jeyzer.recorder.target.profile" value="generic"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="recorder.parameters">
+<entry key="jeyzer.recorder.archiving.retention" value="12"/>
+<entry key="ui.jeyzer.recorder.archiving.period" value="6"/>
+<entry key="ui.jeyzer.recorder.period" value="30"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="monitor.parameters">
+<entry key="ui.monitor.scanning.period" value="5"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="monitor.publish">
+<entry key="jeyzer.monitor.publish.sound" value="false"/>
+<entry key="jeyzer.monitor.publish.email.report.generation" value="true"/>
+<entry key="jeyzer.monitor.publish.jira" value="false"/>
+<entry key="jeyzer.monitor.publish.web" value="true"/>
+<entry key="jeyzer.monitor.publish.email" value="false"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="monitor.publish.web">
+<entry key="jeyzer.monitor.publish.web.deploy.dir" value="/data/jeyzer/web/apache-tomcat-9.0.73/jeyzer-webapps/jeyzer-monitor"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="analyzer.directories">
+<entry key="jeyzer.analyzer.work.dir" value="/data/jeyzer/work"/>
+<entry key="jeyzer.analyzer.deobfuscation.dir" value="/data/jeyzer/deobfuscation"/>
+<entry key="jeyzer.analyzer.ext.profiles.dir" value="/data/jeyzer/profiles/external"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="tomcat.params">
+<entry key="tomcat.http.port" value="9080"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="profile.creation">
+<entry key="jeyzer.profile.creation" value="false"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.install.InstallPanel id="InstallPanel_19"/>
+<com.izforge.izpack.panels.htmlinfo.HTMLInfoPanel id="quick_start"/>
+<com.izforge.izpack.panels.finish.FinishPanel id="FinishPanel_21"/>
+</AutomatedInstallation>

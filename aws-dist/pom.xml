@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.jeyzer</groupId>
+        <artifactId>jeyzer-all</artifactId>
+        <version>3.0</version>
+		<relativePath>../../jeyzer-all/pom.xml</relativePath>
+    </parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jeyzer</groupId>
+	<artifactId>jeyzer-aws-dist</artifactId>
+	<packaging>pom</packaging>
+	<version>3.0</version>
+	<name>Jeyzer AWS Distribution</name>
+	<url>https://jeyzer.org</url>
+	<description>The Jeyzer AWS distribution project</description>
+	
+	<properties>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.7</version>
+				<executions>
+				  <!-- Installer for AWS -->
+  				  <execution>
+					<id>copy-aws-installer</id>
+					<phase>package</phase>
+					<goals>
+					  <goal>copy-resources</goal>
+					</goals>
+					<configuration>
+					  <outputDirectory>${basedir}/target/installer</outputDirectory>
+					  <resources>
+						<resource>
+						  <directory>../installer/ecosystem/target</directory>
+						  <filtering>false</filtering>
+						  <includes>
+							<include>jeyzer-installer*.jar</include>
+						  </includes>
+						</resource>
+						<resource>
+						  <directory>../docker/src/main/resources/installer</directory>
+						  <filtering>false</filtering>
+						  <includes>
+							<include>auto-install.xml</include>
+						  </includes>
+						</resource>
+						<resource>
+						  <directory>../../jeyzer-analyzer/web/release/tomcat/src/main</directory>
+						  <filtering>false</filtering>
+						  <includes>
+							<include>**/*-aws.*</include>
+						  </includes>
+						</resource>
+					  </resources>
+					</configuration>
+  				  </execution>
+				  <!-- War file -->
+  				  <execution>
+					<id>copy-war</id>
+					<phase>package</phase>
+					<goals>
+					  <goal>copy-resources</goal>
+					</goals>
+					<configuration>
+					  <outputDirectory>${basedir}/target/war</outputDirectory>
+					  <resources>
+						<resource>
+						  <directory>../../jeyzer-analyzer/web/target-prod</directory>
+						  <filtering>false</filtering>
+						  <includes>
+							<include>**/*.war</include>
+						  </includes>
+						</resource>
+					  </resources>
+					</configuration>
+				  </execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.3</version>
+				<executions>
+					<!-- Javadoc -->
+					<execution>
+						<id>make-javadoc-zip</id>
+						<configuration>
+							<finalName>jeyzer-javadoc-${project.version}</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>src/assembly/javadoc.xml</descriptor>
+							</descriptors>
+							<attach>false</attach>
+							<outputDirectory>${project.build.directory}/web-resources</outputDirectory>
+						</configuration>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				    <!-- Demo recording doc -->
+					<execution>
+						<id>make-demo-recording-zip</id>
+						<configuration>
+							<finalName>jeyzer-demo-recordings-${project.version}</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>src/assembly/demo-recordings.xml</descriptor>
+							</descriptors>
+							<attach>false</attach>
+							<outputDirectory>${project.build.directory}/web-resources</outputDirectory>
+						</configuration>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+		</pluginManagement>
+	</build>	
+    <organization>
+  		<name>Jeyzer</name>
+  		<url>https://jeyzer.org</url>
+  	</organization>
+  	<inceptionYear>2020</inceptionYear>
+</project>

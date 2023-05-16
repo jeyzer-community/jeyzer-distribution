@@ -1,0 +1,579 @@
+<izpack:installation version="5.0"
+                     xmlns:izpack="http://izpack.org/schema/installation"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://izpack.org/schema/installation http://izpack.org/schema/5.0/izpack-installation-5.0.xsd">
+ 
+  <info>
+    <appname>Jeyzer</appname>
+    <appversion>@{jeyzer.version}</appversion>
+    <appsubpath>jeyzer</appsubpath>
+	<url>https://jeyzer.org</url>
+	<authors>
+		<author name="Jeyzer" email="contact@jeyzer.org"/>
+	</authors>
+    <javaversion>1.8</javaversion>
+    <!-- izpack binary file used only for upgrades : complex and risky -->
+    <writeinstallationinformation>false</writeinstallationinformation>
+  </info>
+  
+  <locale>
+    <langpack iso3="eng"/>
+  </locale>
+ 
+  <guiprefs width="900" height="500" resizable="no">
+	<!--modifier key="useSplashScreen" value="1000" /--> 
+	<!-- See the IzPacks-UI-renderings.docx for details and tests -->
+	<laf name="looks">
+      <os family="windows" />
+      <os family="unix" />
+      <!-- looks variants -->
+	  <param name="variant" value="plastic3D" />
+    </laf>
+    <modifier key="useHeadingPanel" value="yes" />
+    <modifier key="headingImageOnLeft" value="yes"/>
+    <modifier key="headingLineCount" value="1"/>
+    <modifier key="headingFontSize" value="1.3"/>
+    <modifier key="headingBackgroundColor" value="0x00ffffff"/>
+  </guiprefs>
+  
+  <variables>
+    <variable name="Installer.title" value="Jeyzer Installer" />
+    <variable name="TargetPanel.dir.windows" value="C:\demo-pg\jeyzer"/>
+    <variable name="TargetPanel.dir.unix" value="/data/jeyzer-pg/jeyzer-X"/>
+	<variable name="jeyzer.installer.deployment" value="true"/>
+	
+	<variable name="jeyzer.installer.java.home" value="$JAVA_HOME"/>
+	
+	<variable name="jeyzer.recorder.work.dir.default" value="$INSTALL_PATH${SYSTEM[file.separator]}work${SYSTEM[file.separator]}recordings"/>
+	<variable name="ui.jeyzer.recorder.period.default" value="30"/>
+	
+	<variable name="jeyzer.recorder.target.profile.default"      value="the_app"/>
+	<variable name="ui.jeyzer.recorder.archiving.period.default" value="6"/>
+	<variable name="jeyzer.recorder.archiving.retention.default" value="20"/>
+
+	<variable name="jeyzer.recorder.jmx.host.default" value="localhost"/>
+	<variable name="jeyzer.recorder.jmx.port.default" value="2500"/>
+	
+	<variable name="jeyzer.analyzer.work.dir.default" value="$INSTALL_PATH${SYSTEM[file.separator]}work"/>
+	<variable name="jeyzer.analyzer.ext.profiles.dir.default" value="$INSTALL_PATH${SYSTEM[file.separator]}profiles${SYSTEM[file.separator]}external"/>
+	<variable name="jeyzer.analyzer.deobfuscation.dir.default" value="$INSTALL_PATH${SYSTEM[file.separator]}deobfuscation"/>
+	
+	<variable name="tomcat.http.port.default" value="9080"/>
+
+	<variable name="ui.monitor.scanning.period.default"      value="5"/>
+	
+	<variable name="jeyzer.monitor.publish.jira.default"                     value="false"/>
+	<variable name="jeyzer.monitor.publish.web.default"                      value="true"/>
+	<variable name="jeyzer.monitor.publish.email.default"                    value="false"/>
+	<variable name="jeyzer.monitor.publish.email.report.generation.default"  value="true"/>
+	<variable name="jeyzer.monitor.publish.sound.default"                    value="false"/>
+	
+	<variable name="jeyzer.monitor.publish.web.deploy.dir.default" value="$INSTALL_PATH${SYSTEM[file.separator]}web${SYSTEM[file.separator]}apache-tomcat-9.0.73${SYSTEM[file.separator]}jeyzer-webapps${SYSTEM[file.separator]}jeyzer-monitor"/>
+	
+	<variable name="jeyzer.monitor.publish.jira.server.url.default"          value="https://company-server.atlassian.net"/>
+	<variable name="jeyzer.monitor.publish.jira.server.auth.key.default"     value="changeit"/>	
+	
+	<variable name="jeyzer.monitor.publish.email.smtp.host.default"     value="localhost"/>
+	<variable name="jeyzer.monitor.publish.email.smtp.port.default"     value="465"/>
+	<variable name="jeyzer.monitor.publish.email.smtp.user.default"     value="email-account@domain.com"/>
+	<variable name="jeyzer.monitor.publish.email.smtp.password.default" value="changeit"/>
+
+	<variable name="jeyzer.monitor.publish.email.recipients.default" value="email-recipient@domain.com"/>
+	<variable name="jeyzer.monitor.publish.email.sender.default"     value="email-sender@domain.com"/>	
+	
+	<variable name="jeyzer.profile.creation.default" value="false"/>
+	<variable name="jeyzer.profile.id.default"       value="the_app"/>
+	<variable name="jeyzer.profile.name.default"     value="The application name"/>
+	
+	<variable name="jeyzer.recorder.scaling.config.repository.default" value="$INSTALL_PATH${SYSTEM[file.separator]}recorder${SYSTEM[file.separator]}config${SYSTEM[file.separator]}scaling"/>
+  </variables>
+  
+  <dynamicvariables>
+    <variable name="jeyzer.recorder.agent.home-to-be-set" value="$INSTALL_PATH${SYSTEM[file.separator]}recorder"/>
+    <variable name="jeyzer.recorder.agent.home" value="$INSTALL_PATH${SYSTEM[file.separator]}recorder"/>
+    
+	<variable name="tomcat.home.dir" value="$INSTALL_PATH/web/apache-tomcat-9.0.73"/>
+	
+	<!-- Used as replacement tokens -->
+	<variable name="tomcat.home.dir.windows" value="$INSTALL_PATH\web\apache-tomcat-9.0.73"/>
+	<variable name="tomcat.home.dir.unix" value="$INSTALL_PATH/web/apache-tomcat-9.0.73"/>
+	<variable name="jeyzer.analyzer.web.url" value="http://localhost:${tomcat.http.port}/jeyzer"/>
+
+	<!-- Period variables, making it ISO-8601 -->
+	<variable name="jeyzer.recorder.period" value="${ui.jeyzer.recorder.period}s" />
+	<variable name="jeyzer.recorder.archiving.period" value="${ui.jeyzer.recorder.archiving.period}h" />
+	<variable name="monitor.scanning.period" value="${ui.monitor.scanning.period}m" />
+	
+	<!-- Info panel variables -->
+	<variable name="jeyzer.analyzer.web.block.start" value="" condition="AnalyzerWebIsSelected"/>
+	<variable name="jeyzer.analyzer.web.block.end"   value="" condition="AnalyzerWebIsSelected"/>
+	<variable name="jeyzer.analyzer.web.block.start" value="&lt;!--" condition="!AnalyzerWebIsSelected"/>
+	<variable name="jeyzer.analyzer.web.block.end"   value="--&gt;" condition="!AnalyzerWebIsSelected"/>
+	
+	<variable name="jeyzer.analyzer.console.block.start" value="" condition="AnalyzerConsoleIsSelected"/>
+	<variable name="jeyzer.analyzer.console.block.end"   value="" condition="AnalyzerConsoleIsSelected"/>
+	<variable name="jeyzer.analyzer.console.block.start" value="&lt;!--" condition="!AnalyzerConsoleIsSelected"/>
+	<variable name="jeyzer.analyzer.console.block.end"   value="--&gt;" condition="!AnalyzerConsoleIsSelected"/>	
+
+	<variable name="jeyzer.monitor.block.start" value="" condition="MonitorIsSelected"/>
+	<variable name="jeyzer.monitor.block.end"   value="" condition="MonitorIsSelected"/>
+	<variable name="jeyzer.monitor.block.start" value="&lt;!--" condition="!MonitorIsSelected"/>
+	<variable name="jeyzer.monitor.block.end"   value="--&gt;" condition="!MonitorIsSelected"/>
+
+	<variable name="jeyzer.recorder.agent.block.start" value="" condition="RecorderAgentIsSelected"/>
+	<variable name="jeyzer.recorder.agent.block.end"   value="" condition="RecorderAgentIsSelected"/>
+	<variable name="jeyzer.recorder.agent.block.start" value="&lt;!--" condition="!RecorderAgentIsSelected"/>
+	<variable name="jeyzer.recorder.agent.block.end"   value="--&gt;" condition="!RecorderAgentIsSelected"/>
+
+	<variable name="jeyzer.recorder.client.block.start" value="" condition="RecorderClientIsSelected"/>
+	<variable name="jeyzer.recorder.client.block.end"   value="" condition="RecorderClientIsSelected"/>
+	<variable name="jeyzer.recorder.client.block.start" value="&lt;!--" condition="!RecorderClientIsSelected"/>
+	<variable name="jeyzer.recorder.client.block.end"   value="--&gt;" condition="!RecorderClientIsSelected"/>
+	
+	<variable name="jeyzer.analysis_or_monitor.block.start" value="" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected"/>
+	<variable name="jeyzer.analysis_or_monitor.block.end"   value="" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected"/>
+	<variable name="jeyzer.analysis_or_monitor.block.start" value="&lt;!--" condition="@!AnalyzerWebIsSelected &amp;&amp; !AnalyzerConsoleIsSelected &amp;&amp; !MonitorIsSelected"/>
+	<variable name="jeyzer.analysis_or_monitor.block.end"   value="--&gt;" condition="@!AnalyzerWebIsSelected &amp;&amp; !AnalyzerConsoleIsSelected &amp;&amp; !MonitorIsSelected"/>
+
+	<variable name="jeyzer.analyzer.block.start" value="" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected"/>
+	<variable name="jeyzer.analyzer.block.end"   value="" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected"/>
+	<variable name="jeyzer.analyzer.block.start" value="&lt;!--" condition="@!AnalyzerWebIsSelected &amp;&amp; !AnalyzerConsoleIsSelected"/>
+	<variable name="jeyzer.analyzer.block.end"   value="--&gt;"  condition="@!AnalyzerWebIsSelected &amp;&amp; !AnalyzerConsoleIsSelected"/>
+	
+	<variable name="jeyzer.profile.block.start" value="" condition="ProfileCreationIsEnabled"/>
+	<variable name="jeyzer.profile.block.end"   value="" condition="ProfileCreationIsEnabled"/>
+	<variable name="jeyzer.profile.block.start" value="&lt;!--" condition="!ProfileCreationIsEnabled"/>
+	<variable name="jeyzer.profile.block.end"   value="--&gt;"  condition="!ProfileCreationIsEnabled"/>
+	
+	<variable name="script.extension" value=".bat" condition="izpack.windowsinstall"/>
+	<variable name="script.extension" value=".sh"  condition="unixinstall"/>
+	
+  </dynamicvariables>
+ 
+  <resources>
+    <!--res id="Splash.image" src="resources/images/background.jpg"/-->
+	<res id="CustomLangPack.xml_eng" src="@{resources.dir}/lang/customLangPack.xml_eng" />
+	<res id="Installer.image" src="@{resources.dir}/images/background.jpg"/>
+    <res id="customicons.xml" src="@{resources.dir}/images/custom-icons.xml" />
+	<res id="JFrameIcon" src="@{resources.dir}/images/JFrameIcon.png"/>
+	<res id="HTMLHelloPanel.info" src="@{resources.dir}/info/intro.html"/>
+	<res id="LicencePanel.license.mpl-2.0"    src="@{licenses.dir}/LICENSE-MPL-2.0.txt"/>
+	<res id="userInputSpec.xml" src="@{izpack.dir.app}/user_input_spec.xml" parse="yes" type="xml"/>
+	<res id="userInputLang.xml_eng" src="@{resources.dir}/lang/userInputLang.xml_eng" />
+	<res id="packsLang.xml_eng" src="@{resources.dir}/lang/packsLang.xml_eng" />
+	<res id="HTMLInfoPanel.quick_start" src="@{resources.dir}/info/quick_start.html"/>
+  </resources>
+ 
+  <panels>
+	<panel classname="HTMLHelloPanel"/>
+	<panel classname="TargetPanel">
+	  <configuration>
+	    <param name="ShowCreateDirectoryMessage" value="false"/>
+	  </configuration>
+	</panel>
+    <panel classname="PacksPanel"/>
+   	<panel classname="LicencePanel" id="license.mpl-2.0"/>
+	<panel classname="UserInputPanel" id="recorder.agent"           condition="RecorderAgentIsSelected"/>
+	<panel classname="UserInputPanel" id="recorder.home"            condition="RecorderAgentIsSelected|RecorderClientIsSelected"/>
+	<panel classname="UserInputPanel" id="recorder.parameters"      condition="RecorderAgentIsSelected|RecorderClientIsSelected"/>
+	<panel classname="UserInputPanel" id="recorder.jmx.parameters"  condition="RecorderClientIsSelected"/>
+	<panel classname="UserInputPanel" id="monitor.parameters"       condition="MonitorIsSelected"/>
+	<panel classname="UserInputPanel" id="monitor.publish"          condition="MonitorIsSelected"/>
+	<panel classname="UserInputPanel" id="monitor.publish.jira"     condition="MonitorPublishJiraIsEnabled"/>
+	<panel classname="UserInputPanel" id="monitor.publish.web"      condition="MonitorPublishWebIsEnabled"/>
+	<panel classname="UserInputPanel" id="monitor.publish.email.1"  condition="MonitorPublishMailIsEnabled"/>
+	<panel classname="UserInputPanel" id="monitor.publish.email.2"  condition="MonitorPublishMailIsEnabled"/>
+	<panel classname="UserInputPanel" id="analyzer.directories"     condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected"/>
+	<panel classname="UserInputPanel" id="tomcat.params"            condition="AnalyzerWebIsSelected|MonitorPublishWebIsEnabled"/>
+	<panel classname="UserInputPanel" id="profile.creation"         condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected"/>
+	<panel classname="UserInputPanel" id="profile.details"			condition="ProfileCreationIsEnabled"/>
+	<panel classname="UserInputPanel" id="profile.dependencies"     condition="ProfileCreationIsEnabled"/>
+	<!-- panel classname="DataCheckPanel" /-->
+    <panel classname="InstallPanel"/>
+    <panel classname="HTMLInfoPanel" id="quick_start" />
+    <panel classname="FinishPanel"/>
+  </panels>
+  
+  <conditions>
+    <condition type="packselection" id="AnalyzerWebIsSelected">
+      <name>Jeyzer Analyzer Web</name>
+    </condition>
+    <condition type="packselection" id="AnalyzerConsoleIsSelected">
+      <name>Jeyzer Analyzer Console</name>
+    </condition>
+    <condition type="packselection" id="MonitorIsSelected">
+      <name>Jeyzer Monitor</name>
+    </condition>
+    <condition type="packselection" id="RecorderAgentIsSelected">
+      <name>Jeyzer Recorder Agent</name>
+    </condition>
+    <condition type="packselection" id="RecorderClientIsSelected">
+      <name>Jeyzer Recorder Client</name>
+    </condition>
+    <condition type="variable" id="MonitorPublishJiraIsEnabled">
+        <name>jeyzer.monitor.publish.jira</name>
+        <value>true</value>
+    </condition>
+    <condition type="variable" id="MonitorPublishWebIsEnabled">
+        <name>jeyzer.monitor.publish.web</name>
+        <value>true</value>
+    </condition>
+    <condition type="variable" id="MonitorPublishMailIsEnabled">
+        <name>jeyzer.monitor.publish.email</name>
+        <value>true</value>
+    </condition>
+    <condition type="variable" id="DoNotDisplay">
+        <name>jeyzer.monitor.publish.email</name>
+        <value>impossible</value>
+    </condition>
+    <condition type="variable" id="ProfileCreationIsEnabled">
+        <name>jeyzer.profile.creation</name>
+        <value>true</value>
+    </condition>
+	<condition type="or" id="unixinstall">
+		<condition type="ref" refid="izpack.linuxinstall" />
+		<condition type="ref" refid="izpack.solarisinstall" />
+	</condition>
+  </conditions>
+ 
+  <packs>
+  
+    <pack name="Jeyzer Recorder Agent" required="no" preselected="true">
+      <description>The Jeyzer Recorder Java agent, to add to your application classpath.</description>
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-package.zip" targetdir="${INSTALL_PATH}/recorder" unpack="true" override="true">
+		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}">
+		   <exclude name="bin/*.bat"/>
+		   <exclude name="bin/*.sh"/>
+		 </archivefileset>
+	  </file>
+	  <!-- Scaling - Never override existing configuration -->
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-scaling-template-config.zip" targetdir="${INSTALL_PATH}/recorder/config/scaling" unpack="true" override="false">
+		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
+	  </file>
+	  <singlefile src="@{templates.dir}/recorder/agent/jeyzer-agent.installer.xml" target="${INSTALL_PATH}/recorder/config/agent/jeyzer-agent.xml" override="false" />
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/recorder/config/agent/jeyzer-agent.xml"/>
+	  <singlefile src="@{templates.dir}/recorder/scaling-template/agent/application-template/jeyzer-record.installer.properties" target="${jeyzer.recorder.scaling.config.repository}/agent/${jeyzer.recorder.target.profile}/jeyzer-record.properties" override="false" />
+	  <parsable type="shell" targetfile="${jeyzer.recorder.scaling.config.repository}/agent/${jeyzer.recorder.target.profile}/jeyzer-record.properties"/>
+	  <singlefile src="@{templates.dir}/recorder/scaling-template/agent/application-template/jeyzer-record.installer.properties" target="${jeyzer.recorder.scaling.config.repository}/agent/application-template/jeyzer-record.properties" override="false" />
+	  <parsable type="shell" targetfile="${jeyzer.recorder.scaling.config.repository}/agent/application-template/jeyzer-record.properties"/>
+	  <singlefile src="@{templates.dir}/recorder/log/jeyzer-log.properties" target="${jeyzer.recorder.scaling.config.repository}/log/${jeyzer.recorder.target.profile}/jeyzer-log.properties" override="false" />
+	  <singlefile src="@{templates.dir}/recorder/scaling-template/profiles/profile-template/profile-template_advanced_mx.xml" target="${jeyzer.recorder.scaling.config.repository}/profiles/standard/standard_advanced_mx.xml" override="false" />
+	  <singlefile src="@{templates.dir}/recorder/scaling-template/profiles/profile-template/profile-template_generation.xml" target="${jeyzer.recorder.scaling.config.repository}/profiles/standard/standard_generation.xml" override="false" />
+	  <!-- Work directory creation -->
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-work-recordings.zip" targetdir="${jeyzer.recorder.work.dir}" unpack="true" override="false">
+	    <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
+	  </file>
+	  <file src="jeyzer-jfr-@{jeyzer-community-jfr.version}-config.zip" targetdir="${INSTALL_PATH}/jfr" unpack="true" override="true">
+	  	<archivefileset dir="jeyzer-jfr-@{jeyzer-community-jfr.version}"/>
+	  </file>
+    </pack>
+	
+    <pack name="Jeyzer Recorder Client" required="no" preselected="false">
+      <description>The Jeyzer Recorder JMX client, to connect to your application.</description>
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-package.zip" targetdir="${INSTALL_PATH}/recorder" unpack="true" override="true">
+		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
+	  </file>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/recorder/bin/set-jeyzer-params.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/recorder/bin/set-jeyzer-params.sh" condition="unixinstall"/>
+      <executable targetfile="${INSTALL_PATH}/recorder/bin/set-jeyzer-params.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/recorder/bin/check-java.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/recorder/bin/check-java.sh" condition="unixinstall"/>
+      <executable targetfile="${INSTALL_PATH}/recorder/bin/check-java.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+      <executable targetfile="${INSTALL_PATH}/recorder/bin/jeyzer-recorder-jstack.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+      <executable targetfile="${INSTALL_PATH}/recorder/bin/jeyzer-recorder-jmx.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <!-- Work directory creation -->
+	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-work-recordings.zip" targetdir="${jeyzer.recorder.work.dir}" unpack="true" override="false">
+	  	<archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
+	  </file>
+	  <file src="jeyzer-jfr-@{jeyzer-community-jfr.version}-config.zip" targetdir="${INSTALL_PATH}/jfr" unpack="true" override="true">
+	  	<archivefileset dir="jeyzer-jfr-@{jeyzer-community-jfr.version}"/>
+	  </file>
+    </pack>
+  
+    <pack name="Jeyzer Analyzer Web" required="no">
+      <description>The Jeyzer Analyzer Web application hosted under Tomcat.</description>
+	  <!-- Analyzer -->
+	  <file src="jeyzer-analyzer-@{jeyzer.version}-config.zip" targetdir="${INSTALL_PATH}/analyzer" unpack="true" override="true">
+		 <archivefileset dir=".">
+		   <!-- keep only the web-analyzer-logback.xml -->
+		   <exclude name="config/log/analyzer-logback.xml"/>
+		   <exclude name="config/log/monitor-console-logback.xml"/>
+		   <exclude name="config/log/monitor-logback.xml"/>
+		   <exclude name="config/log/multi-monitor-logback.xml"/>
+		   <exclude name="config/log/nagios-logback.xml"/>
+		   <exclude name="config/log/replay-logback.xml"/>
+		 </archivefileset>
+	  </file>
+	  <singlefile src="jeyzer-web-@{jeyzer.version}.war" target="${tomcat.home.dir}/jeyzer-webapps/jeyzer.war" override="true" overrideRenameTo="*.bak"/>
+	  <!-- Analyzer shortcuts to start Tomcat and browser -->
+	  <singlefile src="@{templates.dir}/analyzer/bin/jeyzer-analyzer-web-client.installer.bat" target="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-client.bat" override="true" condition="izpack.windowsinstall"/>
+	  <singlefile src="@{templates.dir}/analyzer/bin/jeyzer-analyzer-web-server.installer.bat" target="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-server.bat" override="true" condition="izpack.windowsinstall"/>
+	  <singlefile src="@{templates.dir}/analyzer/bin/jeyzer-analyzer-web-server.installer.sh" target="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-server.sh" override="true" condition="unixinstall"/>
+	  <singlefile src="@{templates.dir}/analyzer/bin/jeyzer-analyzer-web.installer.service" target="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web.service" override="true" condition="unixinstall"/>
+	  <singlefile src="@{templates.dir}/analyzer/bin/jeyzer-analyzer-web-client-readme.installer.txt" target="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-client-readme.txt" override="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-server.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-client.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-server.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-server.sh" condition="unixinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web.service" condition="unixinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-analyzer-web-client-readme.txt" condition="unixinstall"/>
+	  <!-- Profiles and shared repositories -->
+	  <file src="jeyzer-profiles-base-@{jeyzer.version}.zip" targetdir="${INSTALL_PATH}/profiles" unpack="true" override="true"/>
+	  <file src="jeyzer-profiles-external-@{jeyzer.version}.zip" targetdir="${jeyzer.analyzer.ext.profiles.dir}" unpack="true" override="true"/>
+	  <file src="jeyzer-shared-repositories-@{jeyzer.version}.zip" targetdir="${INSTALL_PATH}/profiles" unpack="true" override="true"/>
+	  <!-- Graphstream licenses -->
+	  <file src="gs-core-alt-licenses.zip" targetdir="${INSTALL_PATH}/analyzer/licenses" unpack="true" override="true"/>
+	  <!-- Tomcat -->
+	  <file src="apache-tomcat-9.0.73.zip" targetdir="${INSTALL_PATH}/web" unpack="true" override="true"/>
+	  <singlefile src="@{templates.dir}/tomcat/conf/server.installer.xml" target="${tomcat.home.dir}/conf/server.xml" override="true"/>
+	  <singlefile src="@{templates.dir}/tomcat/bin/setenv.installer.bat" target="${tomcat.home.dir}/bin/setenv.bat" override="true" condition="izpack.windowsinstall"/>
+	  <singlefile src="@{templates.dir}/tomcat/bin/setenv.installer.sh" target="${tomcat.home.dir}/bin/setenv.sh" override="true" condition="unixinstall"/>
+	  <executable targetfile="${tomcat.home.dir}/bin/setenv.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <!-- Required for Unix service -->
+	  <executable targetfile="${tomcat.home.dir}/bin/catalina.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${tomcat.home.dir}/bin/startup.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${tomcat.home.dir}/bin/shutdown.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${tomcat.home.dir}/conf/server.xml"/>
+	  <parsable type="plain" targetfile="${tomcat.home.dir}/bin/setenv.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${tomcat.home.dir}/bin/setenv.sh" condition="unixinstall"/>
+    </pack>
+	
+	<pack name="Jeyzer Analyzer Console" required="no" preselected="false">
+      <description>The Jeyzer Analyzer application for automated processing or whenever web usage is not possible.</description>
+	  <file src="jeyzer-analyzer-@{jeyzer.version}-package.zip" targetdir="${INSTALL_PATH}/analyzer" unpack="true" override="true">
+		 <archivefileset dir="jeyzer-analyzer-@{jeyzer.version}">
+		   <exclude name="bin/jeyzer-monitor*"/>
+		   <exclude name="bin/jeyzer-multi-monitor*"/>
+		   <exclude name="bin/set-jeyzer-monitor*"/>
+		   <!-- keep only the analyzer-logback.xml -->
+		   <exclude name="config/log/monitor-console-logback.xml"/>
+		   <exclude name="config/log/monitor-logback.xml"/>
+		   <exclude name="config/log/multi-monitor-logback.xml"/>
+		   <exclude name="config/log/nagios-logback.xml"/>
+		   <exclude name="config/log/web-analyzer-logback.xml"/>
+		 </archivefileset>
+	  </file>
+	  <!-- Profiles and shared repositories with back up of the previous if any -->
+	  <file src="jeyzer-profiles-base-@{jeyzer.version}.zip" targetdir="${INSTALL_PATH}/profiles" unpack="true" override="true"/>
+	  <file src="jeyzer-profiles-external-@{jeyzer.version}.zip" targetdir="${jeyzer.analyzer.ext.profiles.dir}" unpack="true" override="true"/>
+	  <file src="jeyzer-shared-repositories-@{jeyzer.version}.zip" targetdir="${INSTALL_PATH}/profiles" unpack="true" override="true"/>
+	  <!-- Graphstream licenses -->
+	  <file src="gs-core-alt-licenses.zip" targetdir="${INSTALL_PATH}/analyzer/licenses" unpack="true" override="true"/>
+	  <!-- Startup scripts -->
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/check-java.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/check-java.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/check-java.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-paths.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-paths.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-paths.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+    </pack>
+	
+	<pack name="Jeyzer Monitor" required="no" preselected="false">
+      <description>The Jeyzer Monitor application to detect events and dispatch it by email (report generation option), web and/or sounding.</description>
+	  <file src="jeyzer-analyzer-@{jeyzer.version}-package.zip" targetdir="${INSTALL_PATH}/analyzer" unpack="true" override="true">
+		 <archivefileset dir="jeyzer-analyzer-@{jeyzer.version}">
+		   <exclude name="bin/jeyzer-analysis*"/>
+		   <exclude name="bin/jeyzer-replay*"/>
+		   <!-- keep the monitor related configurations -->
+		   <exclude name="config/log/analyzer-logback.xml"/>
+		   <exclude name="config/log/web-analyzer-logback.xml"/>
+		   <exclude name="config/log/replay-logback.xml"/>
+		 </archivefileset>
+	  </file>
+	  <!-- JIRA core settings -->
+	  <singlefile src="@{templates.dir}/analyzer/jira_setup.installer.xml" target="${INSTALL_PATH}/analyzer/config/monitor/publishers/jira/jira_setup.xml" override="true" />
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/config/monitor/publishers/jira/jira_setup.xml"/>
+	  <!-- Mail properties -->
+	  <singlefile src="@{templates.dir}/analyzer/mail.installer.properties" target="${INSTALL_PATH}/analyzer/config/mail/mail.properties" override="true" />
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/config/mail/mail.properties"/>
+	  <!-- Profiles and shared repositories with back up of the previous if any -->
+	  <file src="jeyzer-profiles-base-@{jeyzer.version}.zip" targetdir="${INSTALL_PATH}/profiles" unpack="true" override="true"/>
+	  <file src="jeyzer-profiles-external-@{jeyzer.version}.zip" targetdir="${jeyzer.analyzer.ext.profiles.dir}" unpack="true" override="true"/>
+	  <file src="jeyzer-shared-repositories-@{jeyzer.version}.zip" targetdir="${INSTALL_PATH}/profiles" unpack="true" override="true"/>
+	  <!-- Graphstream licenses -->
+	  <file src="gs-core-alt-licenses.zip" targetdir="${INSTALL_PATH}/analyzer/licenses" unpack="true" override="true"/>
+	  <!-- Startup scripts -->
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/check-java.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/check-java.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/check-java.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-paths.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-paths.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-paths.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-monitor-paths.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-monitor-paths.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/set-jeyzer-monitor-paths.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-monitor-console.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-monitor-oneshot.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-multi-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <!-- Tomcat -->
+	  <file src="apache-tomcat-9.0.73.zip" targetdir="${INSTALL_PATH}/web" unpack="true" override="true"/>
+	  <singlefile src="@{templates.dir}/tomcat/conf/server.installer.xml" target="${tomcat.home.dir}/conf/server.xml" override="true"/>
+	  <singlefile src="@{templates.dir}/tomcat/bin/setenv.installer.bat" target="${tomcat.home.dir}/bin/setenv.bat" override="true" condition="izpack.windowsinstall"/>
+	  <singlefile src="@{templates.dir}/tomcat/bin/setenv.installer.sh" target="${tomcat.home.dir}/bin/setenv.sh" override="true" condition="unixinstall"/>
+	  <executable targetfile="${tomcat.home.dir}/bin/setenv.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${tomcat.home.dir}/bin/catalina.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${tomcat.home.dir}/conf/server.xml"/>
+	  <parsable type="plain" targetfile="${tomcat.home.dir}/bin/setenv.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${tomcat.home.dir}/bin/setenv.sh" condition="unixinstall"/>
+    </pack>
+	
+	<pack name="Jeyzer Demo" required="yes">
+      <description>The Jeyzer Demo applications on which you can apply and discover the Jeyzer applications right away. Shipped with demo recordings and reports for the lazy people.</description>
+	  <file src="jeyzer-demo-@{jeyzer-community-demo.version}-package.zip" targetdir="${INSTALL_PATH}/demo" unpack="true" override="true">
+		 <archivefileset dir="jeyzer-demo-@{jeyzer-community-demo.version}"/>
+	  </file>
+	  <!-- Startup scripts -->
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/jeyzer-demo-features.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/jeyzer-demo-philosophers.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/jeyzer-demo-toll.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/jeyzer-demo-labors.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/check-java.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/check-java.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/check-java.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.bat" condition="izpack.windowsinstall+RecorderAgentIsSelected"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.sh" condition="unixinstall+RecorderAgentIsSelected"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.sh" stage="never" failure ="warn" keep="true" condition="unixinstall+RecorderAgentIsSelected"/>
+	  <!-- Agent configurations -->
+	  <singlefile src="@{templates.dir}/demo/demo-features/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-features/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-features-mx/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-features-mx/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-philosophers/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-philosophers/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-toll/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-toll/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-labors/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-labors/jeyzer-record.properties" override="true" />
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-features/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-features-mx/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-philosophers/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-toll/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-labors/jeyzer-record.properties"/>
+    </pack>
+	
+	<pack name="Jeyzer Demo profiles, deobfuscation mappings and samples" required="yes" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected" hidden="true">
+      <description>The Jeyzer Demo profiles, deobfuscation files and samples. Izpack installation workaround as file conditions do not work (IZPACK-1615). Not shown.</description>
+	  <file src="jeyzer-demo-@{jeyzer-community-demo.version}-obfuscation-mappings.zip" targetdir="${jeyzer.analyzer.deobfuscation.dir}" unpack="true" override="true">
+		 <archivefileset dir="deobfuscation"/>
+	  </file>
+	  <file src="jeyzer-demo-samples-@{jeyzer.version}-obfuscation-mappings.zip" targetdir="${jeyzer.analyzer.deobfuscation.dir}" unpack="true" override="true">
+		 <archivefileset dir="deobfuscation"/>
+	  </file>
+	  <file src="jeyzer-profiles-demo-@{jeyzer.version}.zip" targetdir="${INSTALL_PATH}/profiles" unpack="true" override="true"/>
+	  <file src="jeyzer-demo-samples-@{jeyzer.version}.zip" targetdir="${INSTALL_PATH}/demo" unpack="true" override="true"/>
+    </pack>
+	
+	<pack name="Jeyzer Demo preset monitor scripts" required="yes" condition="MonitorIsSelected" hidden="true">
+      <description>The Jeyzer Demo preset monitor scripts. Izpack installation workaround as file conditions do not work (IZPACK-1615). Not shown.</description>
+	  <file src="jeyzer-demo-@{jeyzer-community-demo.version}-analyzer-bin-preset.zip" targetdir="${INSTALL_PATH}/analyzer/bin" unpack="true" override="true">
+		<archivefileset dir="analyzer/bin">
+			<include name="**/*-monitor.bat"/>
+			<include name="**/*-monitor.sh"/>
+		</archivefileset>
+	  </file>
+	  <parsable type="plain" condition="izpack.windowsinstall">
+		<fileset dir="${INSTALL_PATH}/analyzer/bin/preset">
+			<include name="**/*-monitor.bat"/>
+		</fileset>
+	  </parsable>
+	  <parsable type="shell" condition="unixinstall">
+		<fileset dir="${INSTALL_PATH}/analyzer/bin/preset">
+			<include name="**/*-monitor.sh"/>
+		</fileset>
+	  </parsable>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-features-mx/demo-features-mx-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-features/demo-features-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-philosophers/demo-philosophers-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-toll/demo-toll-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-labors/demo-labors-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+    </pack>
+	
+	<pack name="Jeyzer Demo preset analyzer scripts" required="yes" condition="AnalyzerConsoleIsSelected" hidden="true">
+      <description>The Jeyzer Demo preset analyzer scripts. Izpack installation workaround as file conditions do not work (IZPACK-1615). Not shown.</description>
+	  <file src="jeyzer-demo-@{jeyzer-community-demo.version}-analyzer-bin-preset.zip" targetdir="${INSTALL_PATH}/analyzer/bin" unpack="true" override="true">
+		<archivefileset dir="analyzer/bin">
+			<include name="**/*-analysis.bat"/>
+			<include name="**/*-analysis.sh"/>
+			<include name="**/*-replay.bat"/>
+			<include name="**/*-replay.sh"/>
+		</archivefileset>
+	  </file>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-analysis.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/jeyzer-replay.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" condition="izpack.windowsinstall">
+		<fileset dir="${INSTALL_PATH}/analyzer/bin/preset">
+			<include name="**/*-analysis.bat"/>
+			<include name="**/*-replay.bat"/>
+		</fileset>
+	  </parsable>
+	  <!-- Demo preset scripts -->
+	  <parsable type="shell" condition="unixinstall">
+		<fileset dir="${INSTALL_PATH}/analyzer/bin/preset">
+			<include name="**/*-analysis.sh"/>
+			<include name="**/*-replay.sh"/>
+		</fileset>
+	  </parsable>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-features-mx/demo-features-mx-analysis.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-features/demo-features-analysis.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-philosophers/demo-philosophers-analysis.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-toll/demo-toll-analysis.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-labors/demo-labors-analysis.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-features-mx/demo-features-mx-replay.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-features/demo-features-replay.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-philosophers/demo-philosophers-replay.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-toll/demo-toll-replay.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-labors/demo-labors-replay.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+    </pack>
+    
+	<pack name="Jeyzer Utilities and Jeyzer Profile Updater" required="yes" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected" hidden="true">
+      <description>The Jeyzer Utilities and Jeyzer Profile Updater. Izpack installation workaround as file conditions do not work (IZPACK-1615). Not shown.</description>
+	  <file src="jeyzer-profile-updater-@{jeyzer-community-profile-updaters.version}.zip" targetdir="${INSTALL_PATH}/analyzer/util/profile-updater" unpack="false" override="true"/>
+	  <file src="jeyzer-maven-plugin-@{jeyzer-community-profile-updaters.version}.zip" targetdir="${INSTALL_PATH}/analyzer/util/profile-updater" unpack="false" override="true"/>
+	  <file src="jeyzer-annotations-@{jeyzer-community-annotations.version}.zip" targetdir="${INSTALL_PATH}/analyzer/util/profile-updater/annotations" unpack="false" override="true"/>
+	  <file src="jeyzer-annotation-processors-@{jeyzer-community-annotation-processors.version}.zip" targetdir="${INSTALL_PATH}/analyzer/util/profile-updater/annotations" unpack="false" override="true"/>
+    </pack>
+	
+	<pack name="Jeyzer Profile Creation" required="yes" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected" hidden="true">
+      <description>The Jeyzer profile templates. Not shown.</description>
+	  <!-- Profile templates -->
+	  <singlefile src="@{templates.dir}/profile/template_analysis.installer.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/${jeyzer.profile.id}_analysis.xml" override="true" condition="ProfileCreationIsEnabled"/>
+	  <singlefile src="@{templates.dir}/profile/template_monitor.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor.xml" override="true" condition="ProfileCreationIsEnabled"/>
+	  <singlefile src="@{templates.dir}/profile/template_monitor_console.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor_console.xml" override="true" condition="ProfileCreationIsEnabled"/>
+	  <singlefile src="@{templates.dir}/profile/monitor/publishers/jira/jira.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/monitor/publishers/jira/jira.xml" override="true" condition="ProfileCreationIsEnabled"/>
+	  <singlefile src="@{templates.dir}/profile/analysis/patterns.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/analysis/patterns.xml" override="true" condition="ProfileCreationIsEnabled"/>
+	  <singlefile src="@{templates.dir}/profile/analysis/report/report.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/analysis/report/report.xml" override="true" condition="ProfileCreationIsEnabled"/>
+	  <parsable type="shell" targetfile="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/${jeyzer.profile.id}_analysis.xml" condition="ProfileCreationIsEnabled"/>
+	  <!-- Preset scripts Windows -->
+	  <singlefile src="@{templates.dir}/analyzer/bin/preset/template/template-analysis.bat" target="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_analysis.bat" override="true" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+izpack.windowsinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_analysis.bat" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+izpack.windowsinstall"/>
+	  <singlefile src="@{templates.dir}/analyzer/bin/preset/template/template-replay.bat" target="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_replay.bat" override="true" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+izpack.windowsinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_replay.bat" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+izpack.windowsinstall"/>
+	  <singlefile src="@{templates.dir}/analyzer/bin/preset/template/template-monitor.bat" target="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor.bat" override="true" condition="ProfileCreationIsEnabled+MonitorIsSelected+izpack.windowsinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor.bat" condition="ProfileCreationIsEnabled+MonitorIsSelected+izpack.windowsinstall"/>
+	  <!-- Preset scripts Unix -->
+	  <singlefile src="@{templates.dir}/analyzer/bin/preset/template/template-analysis.sh" target="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_analysis.sh" override="true" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_analysis.sh" stage="never" failure ="warn" keep="true" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+unixinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_analysis.sh" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+unixinstall"/>
+	  <singlefile src="@{templates.dir}/analyzer/bin/preset/template/template-replay.sh" target="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_replay.sh" override="true" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_replay.sh" stage="never" failure ="warn" keep="true" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+unixinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_replay.sh" condition="ProfileCreationIsEnabled+AnalyzerConsoleIsSelected+unixinstall"/>
+	  <singlefile src="@{templates.dir}/analyzer/bin/preset/template/template-monitor.sh" target="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor.sh" override="true" condition="ProfileCreationIsEnabled+MonitorIsSelected+unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor.sh" stage="never" failure ="warn" keep="true" condition="ProfileCreationIsEnabled+MonitorIsSelected+unixinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor.sh" condition="ProfileCreationIsEnabled+MonitorIsSelected+unixinstall"/>
+    </pack>
+    
+    <pack name="Jeyzer finalization" required="yes" hidden="true">
+   		<description>Installation finalization which includes file cleanup while waiting for IZPACK-1615. Not shown.</description>
+		<!-- Windows : cleanup of shell scripts -->
+		<singlefile src="@{util.dir}/cleanup.bat" target="${INSTALL_PATH}/cleanup.bat" override="true" condition="izpack.windowsinstall"/>
+	    <parsable type="plain" targetfile="${INSTALL_PATH}/cleanup.bat" condition="izpack.windowsinstall"/>
+		<executable targetfile="${INSTALL_PATH}/cleanup.bat" type="bin" stage="postinstall" failure ="warn" keep="false" condition="izpack.windowsinstall"/>
+		<!-- Unix : cleanup of bat scripts -->
+		<singlefile src="@{util.dir}/cleanup.sh" target="${INSTALL_PATH}/cleanup.sh" override="true" condition="unixinstall"/>
+	    <parsable type="shell" targetfile="${INSTALL_PATH}/cleanup.sh" condition="unixinstall"/>
+		<executable targetfile="${INSTALL_PATH}/cleanup.sh" type="bin" stage="postinstall" failure ="warn" keep="false" condition="unixinstall"/>
+		<singlefile src="@{templates.dir}/analyzer/bin/preset/template/template-monitor.sh" target="${INSTALL_PATH}/analyzer/bin/preset/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor.sh" override="true" condition="ProfileCreationIsEnabled+MonitorIsSelected+unixinstall"/>
+		<!-- Quick start doc file -->
+		<singlefile src="@{resources.dir}/info/quick_start.html" target="${INSTALL_PATH}/quick_start.html" override="true"/>
+		<parsable type="plain" targetfile="${INSTALL_PATH}/quick_start.html"/>
+    </pack>
+	
+  </packs>
+ 
+</izpack:installation>
