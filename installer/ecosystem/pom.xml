@@ -12,7 +12,7 @@
   <groupId>org.jeyzer</groupId>
   <artifactId>jeyzer-installer</artifactId>
   <packaging>izpack-jar</packaging>
-  <version>3.0</version>
+  <version>3.1-SNAPSHOT</version>
   <name>Jeyzer Installer</name>
   <url>https://jeyzer.org</url>
   <description>The Jeyzer Ecosystem Installer project, based on the IzPack framework</description>
@@ -39,7 +39,7 @@
 	<util.dir>${basedir}/../util</util.dir>
 	<!-- Community versions -->
 	<jeyzer-community-recorder.version>3.0</jeyzer-community-recorder.version>
-	<jeyzer-community-demo.version>3.0</jeyzer-community-demo.version>
+	<jeyzer-community-demo.version>3.1-SNAPSHOT</jeyzer-community-demo.version>
 	<jeyzer-community-jfr.version>3.0</jeyzer-community-jfr.version>
 	<jeyzer-community-profile-updaters.version>3.0</jeyzer-community-profile-updaters.version>
 	<jeyzer-community-annotations.version>3.0</jeyzer-community-annotations.version>

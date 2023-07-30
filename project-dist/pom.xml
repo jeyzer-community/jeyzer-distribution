@@ -12,7 +12,7 @@
 	<groupId>org.jeyzer</groupId>
 	<artifactId>jeyzer-dist</artifactId>
 	<packaging>pom</packaging>
-	<version>3.0</version>
+	<version>3.1-SNAPSHOT</version>
 	<name>Jeyzer Distribution</name>
 	<url>https://jeyzer.org</url>
     <description>The Jeyzer Distribution repository, responsible for aggregating the project outputs and expose it to the packaging projects (AWS, Docker, Jeyzer Installers)</description>
