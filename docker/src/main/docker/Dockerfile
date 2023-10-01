@@ -1,4 +1,6 @@
-FROM amazoncorretto:17
+# FROM 21-jdk-oracle
+FROM amazoncorretto:21
+# FROM amazoncorretto:17
 # FROM amazoncorretto:11
 # FROM amazoncorretto:8
 # FROM adoptopenjdk:11-jre-openj9

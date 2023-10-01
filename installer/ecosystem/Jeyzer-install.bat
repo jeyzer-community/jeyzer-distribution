@@ -3,12 +3,13 @@
 rem JRE or JDK can be used. 
 rem Let's use the Correto JRE 11 in standard
 
-rem Supported Java versions : 8, 11 and 17
+rem Supported Java versions : 8, 11, 17 and 21
 
 rem --- Coretto --- 
 rem set PATH=C:\Dev\programs\Java\Amazon-correto\jdk1.8.0_242\bin;%PATH%
 rem set PATH=C:\Dev\programs\Java\Amazon-correto\jdk11.0.6_10\jre\bin;%PATH%
-set PATH=C:\Dev\programs\Java\Amazon-correto\jdk17.0.4_8\bin;%PATH%
+rem set PATH=C:\Dev\programs\Java\Amazon-correto\jdk17.0.4_8\bin;%PATH%
+set PATH=C:\Dev\programs\Java\Amazon-correto\jdk21.0.0_35\bin;%PATH%
 
 rem --- Oracle testing --- 
 rem set PATH=C:\Dev\programs\Java\Oracle\jdk1.8.0_241\bin;%PATH%
