@@ -1,4 +1,4 @@
-<!DOCTYPE${jeyzer. html>
+<!DOCTYPE html>
 <html>
 
 <style>
@@ -21,6 +21,9 @@
 	h2 {
 		font-family:arial;
 		color: white
+	}
+	li {
+		padding-bottom: 8px;
 	}
 </style>
 
@@ -91,10 +94,54 @@ ${jeyzer.recorder.client.block.end}
 </tbody>
 </table>
 
-
-
 <br/>
 ${jeyzer.demo.block.start}
+<h2 style="font-family:arial">Demo Virtual Threads</h2>
+<br/>
+<small>Important : JAVA_HOME must point to a Java 21 JDK/JRE. JDK is recommended as it contains the jcmd tool which permits to dump the virtual threads.</small>
+<br/>
+<br/>
+
+<table>
+<tbody>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo Virtual Threads application :</b>
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}bin${SYSTEM[file.separator]}jeyzer-demo-virtual-threads${script.extension}</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo Virtual Threads JCMD periodic command :</b>
+</div>
+<span>Windows : ${INSTALL_PATH}\demo\bin\jcmd.bat</span>
+<br/>
+<span>Unix    : watch -n 30 &#39;jcmd <process pid> Thread.dump_to_file -format=txt > ${jeyzer.recorder.work.dir}/jeyzer-demo-virtual-threads/jcmd-dump-\${date}.txt&#39;</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo Virtual Threads JCMD recordings :</b>
+</div>
+<span>${jeyzer.recorder.work.dir}${SYSTEM[file.separator]}jeyzer-demo-virtual-threads</span>
+</td>
+</tr>
+
+
+</tbody>
+</table>
+
+<br/>
 <h2>Demo Labors</h2>
 
 <table>

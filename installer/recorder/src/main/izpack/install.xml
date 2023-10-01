@@ -167,8 +167,8 @@
 	  </file>
     </pack>
     
-    <pack name="Jeyzer Recorder Client" required="no" preselected="false">
-      <description>The Jeyzer Recorder JMX client, to connect to your application.</description>
+    <pack name="Jeyzer Recorder Client" required="no" preselected="true">
+      <description>The Jeyzer Recorder JMX client, to connect to your application.. Includes the periodic jcmd tool on Windows.</description>
 	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-package.zip" targetdir="${INSTALL_PATH}/recorder" unpack="true" override="true">
 		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
 	  </file>
@@ -205,11 +205,13 @@
 	  <singlefile src="@{templates.dir}/demo/demo-philosophers/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-philosophers/jeyzer-record.properties" override="true" />
 	  <singlefile src="@{templates.dir}/demo/demo-toll/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-toll/jeyzer-record.properties" override="true" />
 	  <singlefile src="@{templates.dir}/demo/demo-labors/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-labors/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-virtual-threads/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-virtual-threads/jeyzer-record.properties" override="true" />
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-features/jeyzer-record.properties"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-features-mx/jeyzer-record.properties"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-philosophers/jeyzer-record.properties"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-toll/jeyzer-record.properties"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-labors/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-virtual-threads/jeyzer-record.properties"/>
     </pack>
     
     <pack name="Jeyzer finalization" required="yes" hidden="true">

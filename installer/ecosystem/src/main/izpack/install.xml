@@ -268,8 +268,8 @@
 	  </file>
     </pack>
 	
-    <pack name="Jeyzer Recorder Client" required="no" preselected="false">
-      <description>The Jeyzer Recorder JMX client, to connect to your application.</description>
+    <pack name="Jeyzer Recorder Client" required="no" preselected="true">
+      <description>The Jeyzer Recorder JMX client, to connect to your application. Includes the periodic jcmd tool on Windows.</description>
 	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-package.zip" targetdir="${INSTALL_PATH}/recorder" unpack="true" override="true">
 		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
 	  </file>
@@ -428,9 +428,13 @@
 	  <executable targetfile="${INSTALL_PATH}/demo/bin/jeyzer-demo-philosophers.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
 	  <executable targetfile="${INSTALL_PATH}/demo/bin/jeyzer-demo-toll.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
 	  <executable targetfile="${INSTALL_PATH}/demo/bin/jeyzer-demo-labors.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/jeyzer-demo-virtual-threads.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
 	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/check-java.bat" condition="izpack.windowsinstall"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/check-java.sh" condition="unixinstall"/>
 	  <executable targetfile="${INSTALL_PATH}/demo/bin/check-java.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/check-java21.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/check-java21.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/check-java21.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
 	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.bat" condition="izpack.windowsinstall+RecorderAgentIsSelected"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.sh" condition="unixinstall+RecorderAgentIsSelected"/>
 	  <executable targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.sh" stage="never" failure ="warn" keep="true" condition="unixinstall+RecorderAgentIsSelected"/>
@@ -440,11 +444,13 @@
 	  <singlefile src="@{templates.dir}/demo/demo-philosophers/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-philosophers/jeyzer-record.properties" override="true" />
 	  <singlefile src="@{templates.dir}/demo/demo-toll/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-toll/jeyzer-record.properties" override="true" />
 	  <singlefile src="@{templates.dir}/demo/demo-labors/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-labors/jeyzer-record.properties" override="true" />
+	  <singlefile src="@{templates.dir}/demo/demo-virtual-threads/jeyzer-record.installer.properties" target="${INSTALL_PATH}/demo/config/record/agent/demo-virtual-threads/jeyzer-record.properties" override="true" />
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-features/jeyzer-record.properties"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-features-mx/jeyzer-record.properties"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-philosophers/jeyzer-record.properties"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-toll/jeyzer-record.properties"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-labors/jeyzer-record.properties"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/config/record/agent/demo-virtual-threads/jeyzer-record.properties"/>
     </pack>
 	
 	<pack name="Jeyzer Demo profiles, deobfuscation mappings and samples" required="yes" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected" hidden="true">
@@ -482,6 +488,7 @@
 	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-philosophers/demo-philosophers-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
 	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-toll/demo-toll-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
 	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-labors/demo-labors-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/analyzer/bin/preset/demo-virtual-threads/demo-virtual-threads-monitor.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
     </pack>
 	
 	<pack name="Jeyzer Demo preset analyzer scripts" required="yes" condition="AnalyzerConsoleIsSelected" hidden="true">

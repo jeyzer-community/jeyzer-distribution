@@ -41,7 +41,7 @@ Take the owner's tour :
 <div style="font-family:arial">
 <ul>
 <li>
-Choose a demo : Labors (incident detection) or Features.
+Choose a demo : Virtual threads, Labors (incident detection) or Features.
 </li>
 <li>
 Run the demo and look at its Jeyzer recording
@@ -213,11 +213,78 @@ ${jeyzer.recorder.agent.block.start}
 <br/>
 <small>The jeyzer.jfc file is the recommended JFR configuration, aligned and optimized for Jeyzer.</small>
 <br/>
-<small>Important : Java 11 or 17 is required.</small>
 </td>
 </tr>
 
 ${jeyzer.recorder.agent.block.end}
+
+</tbody>
+</table>
+
+<br/>
+
+<h2 style="font-family:arial">Demo Virtual Threads</h2>
+<br/>
+<small>Important : JAVA_HOME must point to a Java 21 JDK/JRE. JDK is recommended as it contains the jcmd tool which permits to dump the virtual threads.</small>
+<br/>
+<br/>
+
+<table>
+<tbody>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo Virtual Threads JCMD sample recording :</b>
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}sample${SYSTEM[file.separator]}demo-virtual-threads${SYSTEM[file.separator]}demo-virtual-threads-sample-jcmd-recording.zip</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo Virtual Threads JZR report :</b> 
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}sample${SYSTEM[file.separator]}demo-virtual-threads${SYSTEM[file.separator]}Demo-virtual-threads-sample-report.xlsx</span>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo Virtual Threads application :</b>
+</div>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}bin${SYSTEM[file.separator]}jeyzer-demo-virtual-threads${script.extension}</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo Virtual Threads JCMD periodic command :</b>
+</div>
+<span>Windows : ${INSTALL_PATH}\recorder\bin\jcmd-periodic.bat</span>
+<br/>
+<span>Unix    : watch -n 30 &#39;jcmd <process pid> Thread.dump_to_file -format=txt > ${jeyzer.recorder.work.dir}/jeyzer-demo-virtual-threads/jcmd-dump-&#36;{date}.txt&#39;</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Demo Virtual Threads JCMD recordings :</b>
+</div>
+<span>${jeyzer.recorder.work.dir}${SYSTEM[file.separator]}jeyzer-demo-virtual-threads</span>
+</td>
+</tr>
+
 
 </tbody>
 </table>
@@ -262,6 +329,8 @@ ${jeyzer.recorder.agent.block.end}
 
 <tr>
 <td>
+
+
 <br/>
 <div style="color:#515452">
 <b>Demo labors recordings :</b> 
