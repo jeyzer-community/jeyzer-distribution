@@ -24,4 +24,4 @@ rem set PATH=C:\Dev\programs\Java\Zulu\zulu17.36.13-ca-jdk17.0.4-win_x64\bin;%PA
 
 java -version
 
-java -jar target/jeyzer-installer-3.1-SNAPSHOT.jar 
+java -jar target/jeyzer-installer-3.1.jar 
