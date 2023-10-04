@@ -662,6 +662,7 @@ org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition -> org.jeyzer.demo
     org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_MODULE_VERSION_ABSENCE -> PROCESS_MODULE_VERSION_ABSENCE
     org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JVM_FLAG -> JVM_FLAG
     org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SHARED_PROFILE -> SHARED_PROFILE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXECUTOR_PRESENCE -> EXECUTOR_PRESENCE
     int threadCount -> a
     int startLifeTics -> b
     int percentage -> c
@@ -669,21 +670,21 @@ org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition -> org.jeyzer.demo
     org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] $VALUES -> $VALUES
     17:17:org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] values() -> values
     17:17:org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition valueOf(java.lang.String) -> valueOf
-    124:125:void <init>(java.lang.String,int,int,int) -> <init>
-    128:129:void <init>(java.lang.String,int,int,int,boolean) -> <init>
-    131:136:void <init>(java.lang.String,int,int,int,int,boolean) -> <init>
-    144:144:boolean isPercentageBased() -> isPercentageBased
-    148:148:int getThreadCount() -> getThreadCount
-    152:152:int getStartLifeTics() -> getStartLifeTics
-    156:156:int getPercentage() -> getPercentage
-    160:160:java.lang.String getEventName() -> getEventName
-    164:164:java.lang.String getStickerName() -> getStickerName
-    168:168:java.lang.String getThreadName() -> getThreadName
-    172:172:java.lang.String getClassName() -> getClassName
-    176:176:boolean isSystemEventBased() -> isSystemEventBased
-    180:191:java.lang.String getClassNameFromEnumValue() -> a
-    196:196:java.lang.String toString() -> toString
-    17:121:void <clinit>() -> <clinit>
+    126:127:void <init>(java.lang.String,int,int,int) -> <init>
+    130:131:void <init>(java.lang.String,int,int,int,boolean) -> <init>
+    133:138:void <init>(java.lang.String,int,int,int,int,boolean) -> <init>
+    146:146:boolean isPercentageBased() -> isPercentageBased
+    150:150:int getThreadCount() -> getThreadCount
+    154:154:int getStartLifeTics() -> getStartLifeTics
+    158:158:int getPercentage() -> getPercentage
+    162:162:java.lang.String getEventName() -> getEventName
+    166:166:java.lang.String getStickerName() -> getStickerName
+    170:170:java.lang.String getThreadName() -> getThreadName
+    174:174:java.lang.String getClassName() -> getClassName
+    178:178:boolean isSystemEventBased() -> isSystemEventBased
+    182:193:java.lang.String getClassNameFromEnumValue() -> a
+    198:198:java.lang.String toString() -> toString
+    17:123:void <clinit>() -> <clinit>
 org.jeyzer.demo.labors.job.executable.ExecutableJobScheduler -> org.jeyzer.demo.labors.job.executable.c:
     org.slf4j.Logger logger -> a
     java.util.Queue scheduledJobs -> b
@@ -889,6 +890,10 @@ org.jeyzer.demo.labors.job.executable.impl.ExcessiveOldGcExecutionJob -> org.jey
     38:43:void executeJob() -> a
     47:51:void consumeMemory() -> m
     55:58:void fillList() -> n
+org.jeyzer.demo.labors.job.executable.impl.ExecutorPresenceJob -> org.jeyzer.demo.labors.job.executable.impl.ExecutorPresenceJob:
+    22:23:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    28:29:void executeJob() -> a
+    33:37:void executeImportantThing() -> m
 org.jeyzer.demo.labors.job.executable.impl.FrozenStacksJob -> org.jeyzer.demo.labors.job.executable.impl.FrozenStacksJob:
     24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
     31:35:void executeJob() -> a

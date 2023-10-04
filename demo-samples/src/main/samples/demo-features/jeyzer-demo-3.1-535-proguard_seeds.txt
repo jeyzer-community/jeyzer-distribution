@@ -90,6 +90,7 @@ org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.l
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_MODULE_VERSION_ABSENCE
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JVM_FLAG
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SHARED_PROFILE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXECUTOR_PRESENCE
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] $VALUES
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] values()
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition valueOf(java.lang.String)
@@ -130,6 +131,7 @@ org.jeyzer.demo.labors.job.executable.impl.DeadlockJob
 org.jeyzer.demo.labors.job.executable.impl.DeadlockJob$SubDeadlock
 org.jeyzer.demo.labors.job.executable.impl.ExcessiveGcTimeJob
 org.jeyzer.demo.labors.job.executable.impl.ExcessiveOldGcExecutionJob
+org.jeyzer.demo.labors.job.executable.impl.ExecutorPresenceJob
 org.jeyzer.demo.labors.job.executable.impl.FrozenStacksJob
 org.jeyzer.demo.labors.job.executable.impl.FrozenStacksWithFunctionJob
 org.jeyzer.demo.labors.job.executable.impl.FunctionAndOperationParallelContentionJob
