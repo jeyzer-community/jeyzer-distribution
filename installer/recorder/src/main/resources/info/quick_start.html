@@ -91,6 +91,26 @@ ${jeyzer.recorder.client.block.start}
 </tr>
 ${jeyzer.recorder.client.block.end}
 
+<tr>
+<td>
+<br/>
+<div style="color:#515452">
+<b>Jcmd periodic</b>
+<br/>
+</div>
+<br/>
+<small>Jcmd is JDK tool, used here to dump threads, especially the virtual ones in JDK 21+</small>
+<br/>
+<small>On Windows : </small>
+<br/>
+<span>${INSTALL_PATH}\recorder\bin\jcmd-periodic.bat</span>
+<br/>
+<small>On Unix (requires procps) : </small>
+<br/>
+<span>watch -n 30 &#39;jcmd <process pid> Thread.dump_to_file -format=txt > jeyzer.recorder.work.dir/your_app/jcmd-dump-&#36;{date}.txt&#39;</span>
+</td>
+</tr>
+
 </tbody>
 </table>
 
@@ -121,9 +141,9 @@ ${jeyzer.demo.block.start}
 <div style="color:#515452">
 <b>Demo Virtual Threads JCMD periodic command :</b>
 </div>
-<span>Windows : ${INSTALL_PATH}\demo\bin\jcmd.bat</span>
+<span>Windows : ${INSTALL_PATH}\demo\bin\jcmd-periodic.bat</span>
 <br/>
-<span>Unix    : watch -n 30 &#39;jcmd <process pid> Thread.dump_to_file -format=txt > ${jeyzer.recorder.work.dir}/jeyzer-demo-virtual-threads/jcmd-dump-\${date}.txt&#39;</span>
+<span>Unix : watch -n 30 &#39;jcmd <process pid> Thread.dump_to_file -format=txt > ${jeyzer.recorder.work.dir}/jeyzer-demo-virtual-threads/jcmd-dump-\${date}.txt&#39;</span>
 </td>
 </tr>
 
