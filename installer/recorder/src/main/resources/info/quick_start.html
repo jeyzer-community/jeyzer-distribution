@@ -91,6 +91,7 @@ ${jeyzer.recorder.client.block.start}
 </tr>
 ${jeyzer.recorder.client.block.end}
 
+${jeyzer.recorder.agent.jcmd.block.start}
 <tr>
 <td>
 <br/>
@@ -110,6 +111,7 @@ ${jeyzer.recorder.client.block.end}
 <span>watch -n 30 &#39;jcmd <process pid> Thread.dump_to_file -format=txt > jeyzer.recorder.work.dir/your_app/jcmd-dump-&#36;{date}.txt&#39;</span>
 </td>
 </tr>
+${jeyzer.recorder.agent.jcmd.block.end}
 
 </tbody>
 </table>
@@ -135,6 +137,7 @@ ${jeyzer.demo.block.start}
 </td>
 </tr>
 
+${jeyzer.recorder.agent.jcmd.block.start}
 <tr>
 <td>
 <br/>
@@ -146,6 +149,7 @@ ${jeyzer.demo.block.start}
 <span>Unix : watch -n 30 &#39;jcmd <process pid> Thread.dump_to_file -format=txt > ${jeyzer.recorder.work.dir}/jeyzer-demo-virtual-threads/jcmd-dump-\${date}.txt&#39;</span>
 </td>
 </tr>
+${jeyzer.recorder.agent.jcmd.block.end}
 
 <tr>
 <td>
@@ -156,7 +160,6 @@ ${jeyzer.demo.block.start}
 <span>${jeyzer.recorder.work.dir}${SYSTEM[file.separator]}jeyzer-demo-virtual-threads</span>
 </td>
 </tr>
-
 
 </tbody>
 </table>

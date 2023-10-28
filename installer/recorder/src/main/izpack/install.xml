@@ -76,6 +76,11 @@
 	<variable name="jeyzer.recorder.client.block.start" value="&lt;!--" condition="!RecorderClientIsSelected"/>
 	<variable name="jeyzer.recorder.client.block.end"   value="--&gt;" condition="!RecorderClientIsSelected"/>
 	
+	<variable name="jeyzer.recorder.agent.jcmd.block.start" value="" condition="!RecorderMethodJcmdIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.jcmd.block.end"   value="" condition="!RecorderMethodJcmdIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.jcmd.block.start" value="&lt;!--" condition="RecorderMethodJcmdIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.jcmd.block.end"   value="--&gt;" condition="RecorderMethodJcmdIsEnabled"/>
+	
 	<variable name="jeyzer.demo.block.start" value="" condition="DemoIsSelected"/>
 	<variable name="jeyzer.demo.block.end"   value="" condition="DemoIsSelected"/>
 	<variable name="jeyzer.demo.block.start" value="&lt;!--" condition="!DemoIsSelected"/>
@@ -133,6 +138,10 @@
 		<condition type="ref" refid="izpack.linuxinstall" />
 		<condition type="ref" refid="izpack.solarisinstall" />
 	</condition>
+    <condition type="variable" id="RecorderMethodJcmdIsEnabled">
+        <name>jeyzer.recorder.method</name>
+        <value>jcmd</value>
+    </condition>
   </conditions>
  
   <packs>
@@ -196,6 +205,9 @@
 	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/check-java.bat" condition="izpack.windowsinstall"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/check-java.sh" condition="unixinstall"/>
 	  <executable targetfile="${INSTALL_PATH}/demo/bin/check-java.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
+	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/check-java21.bat" condition="izpack.windowsinstall"/>
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/check-java21.sh" condition="unixinstall"/>
+	  <executable targetfile="${INSTALL_PATH}/demo/bin/check-java21.sh" stage="never" failure ="warn" keep="true" condition="unixinstall"/>
 	  <parsable type="plain" targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.bat" condition="izpack.windowsinstall+RecorderAgentIsSelected"/>
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.sh" condition="unixinstall+RecorderAgentIsSelected"/>
 	  <executable targetfile="${INSTALL_PATH}/demo/bin/set-jeyzer-recorder-agent.sh" stage="never" failure ="warn" keep="true" condition="unixinstall+RecorderAgentIsSelected"/>

@@ -20,6 +20,7 @@
 </com.izforge.izpack.panels.packs.PacksPanel>
 <com.izforge.izpack.panels.licence.LicencePanel id="license.mpl-2.0"/>
 <com.izforge.izpack.panels.userinput.UserInputPanel id="recorder.agent">
+<entry key="jeyzer.recorder.method" value="advancedmxagent"/>
 <entry key="jeyzer.recorder.scaling.config.repository" value="/data/jeyzer/recorder/config/scaling"/>
 </com.izforge.izpack.panels.userinput.UserInputPanel>
 <com.izforge.izpack.panels.userinput.UserInputPanel id="recorder.home">

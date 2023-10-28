@@ -130,6 +130,11 @@
 	<variable name="jeyzer.recorder.client.block.start" value="&lt;!--" condition="!RecorderClientIsSelected"/>
 	<variable name="jeyzer.recorder.client.block.end"   value="--&gt;" condition="!RecorderClientIsSelected"/>
 	
+	<variable name="jeyzer.recorder.agent.jcmd.block.start" value="" condition="!RecorderMethodJcmdIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.jcmd.block.end"   value="" condition="!RecorderMethodJcmdIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.jcmd.block.start" value="&lt;!--" condition="RecorderMethodJcmdIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.jcmd.block.end"   value="--&gt;" condition="RecorderMethodJcmdIsEnabled"/>
+	
 	<variable name="jeyzer.analysis_or_monitor.block.start" value="" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected"/>
 	<variable name="jeyzer.analysis_or_monitor.block.end"   value="" condition="AnalyzerWebIsSelected|AnalyzerConsoleIsSelected|MonitorIsSelected"/>
 	<variable name="jeyzer.analysis_or_monitor.block.start" value="&lt;!--" condition="@!AnalyzerWebIsSelected &amp;&amp; !AnalyzerConsoleIsSelected &amp;&amp; !MonitorIsSelected"/>
@@ -229,6 +234,10 @@
     <condition type="variable" id="ProfileCreationIsEnabled">
         <name>jeyzer.profile.creation</name>
         <value>true</value>
+    </condition>
+    <condition type="variable" id="RecorderMethodJcmdIsEnabled">
+        <name>jeyzer.recorder.method</name>
+        <value>jcmd</value>
     </condition>
 	<condition type="or" id="unixinstall">
 		<condition type="ref" refid="izpack.linuxinstall" />

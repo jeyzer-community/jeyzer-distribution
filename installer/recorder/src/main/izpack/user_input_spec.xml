@@ -12,6 +12,15 @@
     </field>
 	
 	<field type="space"/>
+	<field type="space"/>
+	
+    <field type="radio" variable="jeyzer.recorder.method">
+  	  <description txt="The recording method. Virtual threads require Java 21+."/>
+      <spec>
+        <choice txt="Standard (recommended)" value="advancedmxagent" set="true" />
+        <choice txt="Virtual threads (Jcmd like)" value="jcmd"/>
+      </spec>
+    </field>
   </panel>
 
   <panel  id="recorder.home">
