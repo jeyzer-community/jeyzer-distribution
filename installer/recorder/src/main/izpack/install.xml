@@ -76,10 +76,10 @@
 	<variable name="jeyzer.recorder.client.block.start" value="&lt;!--" condition="!RecorderClientIsSelected"/>
 	<variable name="jeyzer.recorder.client.block.end"   value="--&gt;" condition="!RecorderClientIsSelected"/>
 	
-	<variable name="jeyzer.recorder.agent.jcmd.block.start" value="" condition="!RecorderMethodJcmdIsEnabled"/>
-	<variable name="jeyzer.recorder.agent.jcmd.block.end"   value="" condition="!RecorderMethodJcmdIsEnabled"/>
-	<variable name="jeyzer.recorder.agent.jcmd.block.start" value="&lt;!--" condition="RecorderMethodJcmdIsEnabled"/>
-	<variable name="jeyzer.recorder.agent.jcmd.block.end"   value="--&gt;" condition="RecorderMethodJcmdIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.vt.block.start" value="" condition="!RecorderMethodVTIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.vt.block.end"   value="" condition="!RecorderMethodVTIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.vt.block.start" value="&lt;!--" condition="RecorderMethodVTIsEnabled"/>
+	<variable name="jeyzer.recorder.agent.vt.block.end"   value="--&gt;" condition="RecorderMethodVTIsEnabled"/>
 	
 	<variable name="jeyzer.demo.block.start" value="" condition="DemoIsSelected"/>
 	<variable name="jeyzer.demo.block.end"   value="" condition="DemoIsSelected"/>
@@ -138,9 +138,9 @@
 		<condition type="ref" refid="izpack.linuxinstall" />
 		<condition type="ref" refid="izpack.solarisinstall" />
 	</condition>
-    <condition type="variable" id="RecorderMethodJcmdIsEnabled">
+    <condition type="variable" id="RecorderMethodVTIsEnabled">
         <name>jeyzer.recorder.method</name>
-        <value>jcmd</value>
+        <value>advancedmxvtagent</value>
     </condition>
   </conditions>
  
@@ -177,7 +177,7 @@
     </pack>
     
     <pack name="Jeyzer Recorder Client" required="no" preselected="true">
-      <description>The Jeyzer Recorder JMX client, to connect to your application.. Includes the periodic jcmd tool on Windows.</description>
+      <description>The Jeyzer Recorder JMX client, to connect to your application.. Includes the periodic jcmd dump wrapper on Windows.</description>
 	  <file src="jeyzer-recorder-@{jeyzer-community-recorder.version}-package.zip" targetdir="${INSTALL_PATH}/recorder" unpack="true" override="true">
 		 <archivefileset dir="jeyzer-recorder-@{jeyzer-community-recorder.version}"/>
 	  </file>

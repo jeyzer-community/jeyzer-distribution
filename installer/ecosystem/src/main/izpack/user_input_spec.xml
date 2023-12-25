@@ -18,7 +18,7 @@
   	  <description txt="The recording method. Virtual threads require Java 21+."/>
       <spec>
         <choice txt="Standard (recommended)" value="advancedmxagent" set="true" />
-        <choice txt="Virtual threads (Jcmd like)" value="jcmd"/>
+        <choice txt="Virtual threads" value="advancedmxvtagent"/>
       </spec>
     </field>
   </panel>

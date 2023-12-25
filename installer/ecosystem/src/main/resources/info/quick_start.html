@@ -236,9 +236,9 @@ ${jeyzer.recorder.agent.block.end}
 <td>
 <br/>
 <div style="color:#515452">
-<b>Demo Virtual Threads JCMD sample recording :</b>
+<b>Demo Virtual Threads sample recording :</b>
 </div>
-<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}sample${SYSTEM[file.separator]}demo-virtual-threads${SYSTEM[file.separator]}demo-virtual-threads-sample-jcmd-recording.zip</span>
+<span>${INSTALL_PATH}${SYSTEM[file.separator]}demo${SYSTEM[file.separator]}sample${SYSTEM[file.separator]}demo-virtual-threads${SYSTEM[file.separator]}demo-virtual-threads-sample-recording.zip</span>
 </td>
 </tr>
 
@@ -263,7 +263,7 @@ ${jeyzer.recorder.agent.block.end}
 </td>
 </tr>
 
-${jeyzer.recorder.agent.jcmd.block.start}
+${jeyzer.recorder.agent.vt.block.start}
 <tr>
 <td>
 <br/>
@@ -275,13 +275,13 @@ ${jeyzer.recorder.agent.jcmd.block.start}
 <span>Unix    : watch -n 30 &#39;jcmd <process pid> Thread.dump_to_file -format=txt > ${jeyzer.recorder.work.dir}/jeyzer-demo-virtual-threads/jcmd-dump-&#36;{date}.txt&#39;</span>
 </td>
 </tr>
-${jeyzer.recorder.agent.jcmd.block.end}
+${jeyzer.recorder.agent.vt.block.end}
 
 <tr>
 <td>
 <br/>
 <div style="color:#515452">
-<b>Demo Virtual Threads JCMD recordings :</b>
+<b>Demo Virtual Threads recordings :</b>
 </div>
 <span>${jeyzer.recorder.work.dir}${SYSTEM[file.separator]}jeyzer-demo-virtual-threads</span>
 </td>
