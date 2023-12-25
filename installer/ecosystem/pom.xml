@@ -39,7 +39,7 @@
 	<util.dir>${basedir}/../util</util.dir>
 	<!-- Community versions -->
 	<jeyzer-community-recorder.version>3.2-SNAPSHOT</jeyzer-community-recorder.version>
-	<jeyzer-community-demo.version>3.1</jeyzer-community-demo.version>
+	<jeyzer-community-demo.version>3.2-SNAPSHOT</jeyzer-community-demo.version>
 	<jeyzer-community-jfr.version>3.1</jeyzer-community-jfr.version>
 	<jeyzer-community-profile-updaters.version>3.0</jeyzer-community-profile-updaters.version>
 	<jeyzer-community-annotations.version>3.0</jeyzer-community-annotations.version>
