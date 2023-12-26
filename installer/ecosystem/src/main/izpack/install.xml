@@ -63,6 +63,7 @@
 	<variable name="ui.monitor.scanning.period.default"      value="5"/>
 	
 	<variable name="jeyzer.monitor.publish.jira.default"                     value="false"/>
+	<variable name="jeyzer.monitor.publish.zabbix.default"                   value="false"/>
 	<variable name="jeyzer.monitor.publish.web.default"                      value="true"/>
 	<variable name="jeyzer.monitor.publish.email.default"                    value="false"/>
 	<variable name="jeyzer.monitor.publish.email.report.generation.default"  value="true"/>
@@ -72,6 +73,11 @@
 	
 	<variable name="jeyzer.monitor.publish.jira.server.url.default"          value="https://company-server.atlassian.net"/>
 	<variable name="jeyzer.monitor.publish.jira.server.auth.key.default"     value="changeit"/>	
+	
+	<variable name="jeyzer.monitor.publish.zabbix.sender.path.default"  value="$INSTALL_PATH${SYSTEM[file.separator]}zabbix${SYSTEM[file.separator]}zabbix_sender/"/>
+	<variable name="jeyzer.monitor.publish.zabbix.host.default"         value="zabbix-server-host"/>
+	<variable name="jeyzer.monitor.publish.zabbix.port.default"         value="zabbix-server-port"/>
+	<variable name="jeyzer.monitor.publish.zabbix.source.ip.default"    value="zabbix-server-ip"/>
 	
 	<variable name="jeyzer.monitor.publish.email.smtp.host.default"     value="localhost"/>
 	<variable name="jeyzer.monitor.publish.email.smtp.port.default"     value="465"/>
@@ -185,6 +191,7 @@
 	<panel classname="UserInputPanel" id="monitor.parameters"       condition="MonitorIsSelected"/>
 	<panel classname="UserInputPanel" id="monitor.publish"          condition="MonitorIsSelected"/>
 	<panel classname="UserInputPanel" id="monitor.publish.jira"     condition="MonitorPublishJiraIsEnabled"/>
+	<panel classname="UserInputPanel" id="monitor.publish.zabbix"   condition="MonitorPublishZabbixIsEnabled"/>
 	<panel classname="UserInputPanel" id="monitor.publish.web"      condition="MonitorPublishWebIsEnabled"/>
 	<panel classname="UserInputPanel" id="monitor.publish.email.1"  condition="MonitorPublishMailIsEnabled"/>
 	<panel classname="UserInputPanel" id="monitor.publish.email.2"  condition="MonitorPublishMailIsEnabled"/>
@@ -217,6 +224,10 @@
     </condition>
     <condition type="variable" id="MonitorPublishJiraIsEnabled">
         <name>jeyzer.monitor.publish.jira</name>
+        <value>true</value>
+    </condition>
+    <condition type="variable" id="MonitorPublishZabbixIsEnabled">
+        <name>jeyzer.monitor.publish.zabbix</name>
         <value>true</value>
     </condition>
     <condition type="variable" id="MonitorPublishWebIsEnabled">
@@ -392,6 +403,9 @@
 	  <!-- JIRA core settings -->
 	  <singlefile src="@{templates.dir}/analyzer/jira_setup.installer.xml" target="${INSTALL_PATH}/analyzer/config/monitor/publishers/jira/jira_setup.xml" override="true" />
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/config/monitor/publishers/jira/jira_setup.xml"/>
+	  <!-- Zabbix core settings -->
+	  <singlefile src="@{templates.dir}/analyzer/zabbix_setup.installer.xml" target="${INSTALL_PATH}/analyzer/config/monitor/publishers/zabbix/zabbix_setup.xml" override="true" />
+	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/config/monitor/publishers/zabbix/zabbix_setup.xml"/>
 	  <!-- Mail properties -->
 	  <singlefile src="@{templates.dir}/analyzer/mail.installer.properties" target="${INSTALL_PATH}/analyzer/config/mail/mail.properties" override="true" />
 	  <parsable type="shell" targetfile="${INSTALL_PATH}/analyzer/config/mail/mail.properties"/>
@@ -552,6 +566,7 @@
 	  <singlefile src="@{templates.dir}/profile/template_monitor.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor.xml" override="true" condition="ProfileCreationIsEnabled"/>
 	  <singlefile src="@{templates.dir}/profile/template_monitor_console.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/${jeyzer.profile.id}_monitor_console.xml" override="true" condition="ProfileCreationIsEnabled"/>
 	  <singlefile src="@{templates.dir}/profile/monitor/publishers/jira/jira.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/monitor/publishers/jira/jira.xml" override="true" condition="ProfileCreationIsEnabled"/>
+	  <singlefile src="@{templates.dir}/profile/monitor/publishers/zabbix/zabbix.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/monitor/publishers/zabbix/zabbix.xml" override="true" condition="ProfileCreationIsEnabled"/>
 	  <singlefile src="@{templates.dir}/profile/analysis/patterns.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/analysis/patterns.xml" override="true" condition="ProfileCreationIsEnabled"/>
 	  <singlefile src="@{templates.dir}/profile/analysis/report/report.xml" target="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/analysis/report/report.xml" override="true" condition="ProfileCreationIsEnabled"/>
 	  <parsable type="shell" targetfile="${jeyzer.analyzer.ext.profiles.dir}/master/${jeyzer.profile.id}/${jeyzer.profile.id}_analysis.xml" condition="ProfileCreationIsEnabled"/>

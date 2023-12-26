@@ -138,6 +138,17 @@
     <field type="divider" align="top"/>	
 	
     <field type="space"/>
+    
+    <field type="check" align="left" variable="jeyzer.monitor.publish.zabbix">
+	    <description txt="Activate the Zabbix publishing of events." />
+        <spec txt="Zabbix publishing" size="8" true="true" false="false" set="${jeyzer.monitor.publish.zabbix.default}"/>
+    </field>
+
+	<field type="space"/>
+	
+    <field type="divider" align="top"/>	
+	
+    <field type="space"/>
 
     <field type="space"/>
 
@@ -197,6 +208,46 @@
     </field>
 
     <field type="space"/>
+	
+  </panel>
+  
+  <panel  id="monitor.publish.zabbix">
+    <field type="title" txt="Jeyzer Monitor - Zabbix publishing" bold="true" size="2" />
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+		
+	<field type="staticText" align="left" txt="The Zabbix parameters on which the important events will be sent to. If you do not know the values, skip it. Zabbix project will have anyway to be set at each master profile level : please refer to the Jeyzer documentation."/>
+	
+    <field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.monitor.publish.zabbix.sender.path">
+	    <!-- description txt="The Zabbix sender local path." /-->
+        <spec txt="Zabbix sender path" size="60" set="${jeyzer.monitor.publish.zabbix.sender.path.default}"/>
+    </field>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="jeyzer.monitor.publish.zabbix.host">
+	    <!--description txt="The Zabbix server host." /-->
+        <spec txt="Zabbix server host" size="40" set="${jeyzer.monitor.publish.zabbix.host.default}"/>
+    </field>
+	
+	<field type="space"/>
+	
+    <field type="text" align="left" variable="jeyzer.monitor.publish.zabbix.port">
+	    <!-- description txt="The Zabbix server port." /-->
+        <spec txt="Zabbix server port" size="8" set="${jeyzer.monitor.publish.zabbix.port.default}"/>
+    </field>
+
+    <field type="space"/>
+	
+    <field type="text" align="left" variable="jeyzer.monitor.publish.zabbix.source.ip">
+	    <!-- description txt="The Zabbix server IP." /-->
+        <spec txt="Zabbix server IP address" size="20" set="${jeyzer.monitor.publish.zabbix.source.ip.default}"/>
+    </field>
+
+    <field type="space"/>    
 	
   </panel>
   

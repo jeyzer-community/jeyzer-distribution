@@ -39,6 +39,7 @@
 <entry key="jeyzer.monitor.publish.sound" value="false"/>
 <entry key="jeyzer.monitor.publish.email.report.generation" value="true"/>
 <entry key="jeyzer.monitor.publish.jira" value="false"/>
+<entry key="jeyzer.monitor.publish.zabbix" value="false"/>
 <entry key="jeyzer.monitor.publish.web" value="true"/>
 <entry key="jeyzer.monitor.publish.email" value="false"/>
 </com.izforge.izpack.panels.userinput.UserInputPanel>
@@ -56,7 +57,7 @@
 <com.izforge.izpack.panels.userinput.UserInputPanel id="profile.creation">
 <entry key="jeyzer.profile.creation" value="false"/>
 </com.izforge.izpack.panels.userinput.UserInputPanel>
-<com.izforge.izpack.panels.install.InstallPanel id="InstallPanel_19"/>
+<com.izforge.izpack.panels.install.InstallPanel id="InstallPanel_20"/>
 <com.izforge.izpack.panels.htmlinfo.HTMLInfoPanel id="quick_start"/>
-<com.izforge.izpack.panels.finish.FinishPanel id="FinishPanel_21"/>
+<com.izforge.izpack.panels.finish.FinishPanel id="FinishPanel_22"/>
 </AutomatedInstallation>
