@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <AutomatedInstallation langpack="eng">
 <com.izforge.izpack.panels.htmlhello.HTMLHelloPanel id="HTMLHelloPanel_0"/>
-<com.izforge.izpack.panels.target.TargetPanel id="TargetPanel_1">
+<com.izforge.izpack.panels.licence.LicencePanel id="license.mpl-2.0"/>
+<com.izforge.izpack.panels.target.TargetPanel id="TargetPanel_2">
 <installpath>/data/jeyzer</installpath>
 </com.izforge.izpack.panels.target.TargetPanel>
-<com.izforge.izpack.panels.packs.PacksPanel id="PacksPanel_2">
+<com.izforge.izpack.panels.packs.PacksPanel id="PacksPanel_3">
 <pack index="0" name="Jeyzer Recorder Agent" selected="true"/>
 <pack index="1" name="Jeyzer Recorder Client" selected="false"/>
 <pack index="2" name="Jeyzer Analyzer Web" selected="true"/>
@@ -18,7 +19,6 @@
 <pack index="10" name="Jeyzer Profile Creation" selected="true"/>
 <pack index="11" name="Jeyzer finalization" selected="true"/>
 </com.izforge.izpack.panels.packs.PacksPanel>
-<com.izforge.izpack.panels.licence.LicencePanel id="license.mpl-2.0"/>
 <com.izforge.izpack.panels.userinput.UserInputPanel id="recorder.agent">
 <entry key="jeyzer.recorder.method" value="advancedmxagent"/>
 <entry key="jeyzer.recorder.scaling.config.repository" value="/data/jeyzer/recorder/config/scaling"/>
