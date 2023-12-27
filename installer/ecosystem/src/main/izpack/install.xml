@@ -74,10 +74,10 @@
 	<variable name="jeyzer.monitor.publish.jira.server.url.default"          value="https://company-server.atlassian.net"/>
 	<variable name="jeyzer.monitor.publish.jira.server.auth.key.default"     value="changeit"/>	
 	
-	<variable name="jeyzer.monitor.publish.zabbix.sender.path.default"  value="$INSTALL_PATH${SYSTEM[file.separator]}zabbix${SYSTEM[file.separator]}zabbix_sender/"/>
-	<variable name="jeyzer.monitor.publish.zabbix.host.default"         value="zabbix-server-host"/>
-	<variable name="jeyzer.monitor.publish.zabbix.port.default"         value="zabbix-server-port"/>
-	<variable name="jeyzer.monitor.publish.zabbix.source.ip.default"    value="zabbix-server-ip"/>
+	<!-- zabbix sender path defined as dynamic variable -->
+	<variable name="jeyzer.monitor.publish.zabbix.host.default"         value="host"/>
+	<variable name="jeyzer.monitor.publish.zabbix.port.default"         value="10051"/>
+	<variable name="jeyzer.monitor.publish.zabbix.source.ip.default"    value="127.0.0.1"/>
 	
 	<variable name="jeyzer.monitor.publish.email.smtp.host.default"     value="localhost"/>
 	<variable name="jeyzer.monitor.publish.email.smtp.port.default"     value="465"/>
@@ -158,6 +158,9 @@
 	
 	<variable name="script.extension" value=".bat" condition="izpack.windowsinstall"/>
 	<variable name="script.extension" value=".sh"  condition="unixinstall"/>
+
+	<variable name="jeyzer.monitor.publish.zabbix.sender.path.default" value="$INSTALL_PATH${SYSTEM[file.separator]}zabbix${SYSTEM[file.separator]}zabbix_sender.exe" condition="izpack.windowsinstall"/>
+	<variable name="jeyzer.monitor.publish.zabbix.sender.path.default" value="$INSTALL_PATH${SYSTEM[file.separator]}zabbix${SYSTEM[file.separator]}zabbix_sender"  condition="unixinstall"/>
 	
   </dynamicvariables>
  
@@ -177,13 +180,13 @@
  
   <panels>
 	<panel classname="HTMLHelloPanel"/>
+	<panel classname="LicencePanel" id="license.mpl-2.0"/>
 	<panel classname="TargetPanel">
 	  <configuration>
 	    <param name="ShowCreateDirectoryMessage" value="false"/>
 	  </configuration>
 	</panel>
     <panel classname="PacksPanel"/>
-   	<panel classname="LicencePanel" id="license.mpl-2.0"/>
 	<panel classname="UserInputPanel" id="recorder.agent"           condition="RecorderAgentIsSelected"/>
 	<panel classname="UserInputPanel" id="recorder.home"            condition="RecorderAgentIsSelected|RecorderClientIsSelected"/>
 	<panel classname="UserInputPanel" id="recorder.parameters"      condition="RecorderAgentIsSelected|RecorderClientIsSelected"/>

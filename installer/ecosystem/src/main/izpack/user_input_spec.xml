@@ -223,14 +223,14 @@
 
     <field type="text" align="left" variable="jeyzer.monitor.publish.zabbix.sender.path">
 	    <!-- description txt="The Zabbix sender local path." /-->
-        <spec txt="Zabbix sender path" size="60" set="${jeyzer.monitor.publish.zabbix.sender.path.default}"/>
+        <spec txt="Zabbix sender path" size="25" set="${jeyzer.monitor.publish.zabbix.sender.path.default}"/>
     </field>
 
     <field type="space"/>
 
     <field type="text" align="left" variable="jeyzer.monitor.publish.zabbix.host">
 	    <!--description txt="The Zabbix server host." /-->
-        <spec txt="Zabbix server host" size="40" set="${jeyzer.monitor.publish.zabbix.host.default}"/>
+        <spec txt="Zabbix server host" size="20" set="${jeyzer.monitor.publish.zabbix.host.default}"/>
     </field>
 	
 	<field type="space"/>
