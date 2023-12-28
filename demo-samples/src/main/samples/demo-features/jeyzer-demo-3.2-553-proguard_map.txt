@@ -1,0 +1,1519 @@
+module-info -> module-info:
+org.jeyzer.demo.event.codes.DemoEventCode -> org.jeyzer.demo.a.a.a:
+    org.jeyzer.demo.event.codes.DemoEventCode JZR_DEM_01 -> a
+    org.jeyzer.demo.event.codes.DemoEventCode JZR_DEM_02 -> b
+    org.jeyzer.demo.event.codes.DemoEventCode JZR_DEM_03 -> c
+    org.jeyzer.demo.event.codes.DemoEventCode JZR_DEM_04 -> d
+    org.jeyzer.demo.event.codes.DemoEventCode JZR_DEM_05 -> e
+    org.jeyzer.demo.event.codes.DemoEventCode JZR_DEM_06 -> f
+    org.jeyzer.demo.event.codes.DemoEventCode JZR_DEM_07 -> g
+    java.lang.String SERVICE -> h
+    java.lang.String type -> i
+    java.lang.String abbreviation -> j
+    java.lang.String name -> k
+    java.lang.String description -> l
+    java.lang.String ticket -> m
+    org.jeyzer.mx.event.JzrEventLevel level -> n
+    org.jeyzer.mx.event.JzrEventSubLevel subLevel -> o
+    org.jeyzer.demo.event.codes.DemoEventCode[] $VALUES -> p
+    28:28:org.jeyzer.demo.event.codes.DemoEventCode[] values() -> a
+    28:28:org.jeyzer.demo.event.codes.DemoEventCode valueOf(java.lang.String) -> a
+    111:119:void <init>(java.lang.String,int,java.lang.String,java.lang.String,org.jeyzer.mx.event.JzrEventLevel,org.jeyzer.mx.event.JzrEventSubLevel) -> <init>
+    123:123:java.lang.String getType() -> getType
+    128:128:java.lang.String getName() -> getName
+    133:133:java.lang.String getAbbreviation() -> getAbbreviation
+    138:138:java.lang.String getDescription() -> getDescription
+    143:143:java.lang.String getTicket() -> getTicket
+    148:148:org.jeyzer.mx.event.JzrEventLevel getLevel() -> getLevel
+    153:153:org.jeyzer.mx.event.JzrEventSubLevel getSubLevel() -> getSubLevel
+    28:93:void <clinit>() -> <clinit>
+org.jeyzer.demo.event.codes.FeatureEventCode -> org.jeyzer.demo.a.a.b:
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_01 -> a
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_02 -> b
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_03 -> c
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_04 -> d
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_05 -> e
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_06 -> f
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_07 -> g
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_08 -> h
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_09 -> i
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_10 -> j
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_11 -> k
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_12 -> l
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_13 -> m
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_14 -> n
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_15 -> o
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_16 -> p
+    org.jeyzer.demo.event.codes.FeatureEventCode JZR_FEA_17 -> q
+    java.lang.String SERVICE -> r
+    java.lang.String type -> s
+    java.lang.String abbreviation -> t
+    java.lang.String name -> u
+    java.lang.String description -> v
+    java.lang.String ticket -> w
+    org.jeyzer.mx.event.JzrEventLevel level -> x
+    org.jeyzer.mx.event.JzrEventSubLevel subLevel -> y
+    org.jeyzer.demo.event.codes.FeatureEventCode[] $VALUES -> z
+    28:28:org.jeyzer.demo.event.codes.FeatureEventCode[] values() -> a
+    28:28:org.jeyzer.demo.event.codes.FeatureEventCode valueOf(java.lang.String) -> a
+    211:219:void <init>(java.lang.String,int,java.lang.String,java.lang.String,org.jeyzer.mx.event.JzrEventLevel,org.jeyzer.mx.event.JzrEventSubLevel) -> <init>
+    223:223:java.lang.String getType() -> getType
+    228:228:java.lang.String getName() -> getName
+    233:233:java.lang.String getAbbreviation() -> getAbbreviation
+    238:238:java.lang.String getDescription() -> getDescription
+    243:243:java.lang.String getTicket() -> getTicket
+    248:248:org.jeyzer.mx.event.JzrEventLevel getLevel() -> getLevel
+    253:253:org.jeyzer.mx.event.JzrEventSubLevel getSubLevel() -> getSubLevel
+    28:193:void <clinit>() -> <clinit>
+org.jeyzer.demo.event.codes.LaborEventCode -> org.jeyzer.demo.a.a.c:
+    org.jeyzer.demo.event.codes.LaborEventCode JZR_LAB_01 -> a
+    org.jeyzer.demo.event.codes.LaborEventCode JZR_LAB_02 -> b
+    org.jeyzer.demo.event.codes.LaborEventCode JZR_LAB_03 -> c
+    org.jeyzer.demo.event.codes.LaborEventCode JZR_LAB_04 -> d
+    org.jeyzer.demo.event.codes.LaborEventCode JZR_LAB_05 -> e
+    org.jeyzer.demo.event.codes.LaborEventCode JZR_LAB_06 -> f
+    org.jeyzer.demo.event.codes.LaborEventCode JZR_LAB_07 -> g
+    java.lang.String SERVICE -> h
+    java.lang.String type -> i
+    java.lang.String abbreviation -> j
+    java.lang.String name -> k
+    java.lang.String description -> l
+    java.lang.String ticket -> m
+    org.jeyzer.mx.event.JzrEventLevel level -> n
+    org.jeyzer.mx.event.JzrEventSubLevel subLevel -> o
+    org.jeyzer.demo.event.codes.LaborEventCode[] $VALUES -> p
+    28:28:org.jeyzer.demo.event.codes.LaborEventCode[] values() -> a
+    28:28:org.jeyzer.demo.event.codes.LaborEventCode valueOf(java.lang.String) -> a
+    110:118:void <init>(java.lang.String,int,java.lang.String,java.lang.String,org.jeyzer.mx.event.JzrEventLevel,org.jeyzer.mx.event.JzrEventSubLevel) -> <init>
+    122:122:java.lang.String getType() -> getType
+    127:127:java.lang.String getName() -> getName
+    132:132:java.lang.String getAbbreviation() -> getAbbreviation
+    137:137:java.lang.String getDescription() -> getDescription
+    142:142:java.lang.String getTicket() -> getTicket
+    147:147:org.jeyzer.mx.event.JzrEventLevel getLevel() -> getLevel
+    152:152:org.jeyzer.mx.event.JzrEventSubLevel getSubLevel() -> getSubLevel
+    28:93:void <clinit>() -> <clinit>
+org.jeyzer.demo.event.codes.MyApplicationEventCode -> org.jeyzer.demo.a.a.d:
+    org.jeyzer.demo.event.codes.MyApplicationEventCode MCY_MYA_01 -> a
+    org.jeyzer.demo.event.codes.MyApplicationEventCode MCY_MYA_02 -> b
+    org.jeyzer.demo.event.codes.MyApplicationEventCode MCY_MYA_10 -> c
+    org.jeyzer.demo.event.codes.MyApplicationEventCode MCY_MYA_11 -> d
+    org.jeyzer.demo.event.codes.MyApplicationEventCode MCY_MYA_12 -> e
+    org.jeyzer.demo.event.codes.MyApplicationEventCode MCY_MYA_13 -> f
+    org.jeyzer.demo.event.codes.MyApplicationEventCode MCY_MYA_20 -> g
+    org.jeyzer.demo.event.codes.MyApplicationEventCode MCY_MYA_21 -> h
+    java.lang.String SERVICE -> i
+    java.lang.String type -> j
+    java.lang.String abbreviation -> k
+    java.lang.String name -> l
+    java.lang.String description -> m
+    java.lang.String ticket -> n
+    org.jeyzer.mx.event.JzrEventLevel level -> o
+    org.jeyzer.mx.event.JzrEventSubLevel subLevel -> p
+    org.jeyzer.demo.event.codes.MyApplicationEventCode[] $VALUES -> q
+    28:28:org.jeyzer.demo.event.codes.MyApplicationEventCode[] values() -> a
+    28:28:org.jeyzer.demo.event.codes.MyApplicationEventCode valueOf(java.lang.String) -> a
+    121:129:void <init>(java.lang.String,int,java.lang.String,java.lang.String,org.jeyzer.mx.event.JzrEventLevel,org.jeyzer.mx.event.JzrEventSubLevel) -> <init>
+    131:139:void <init>(java.lang.String,int,java.lang.String,java.lang.String,org.jeyzer.mx.event.JzrEventLevel,org.jeyzer.mx.event.JzrEventSubLevel,java.lang.String) -> <init>
+    143:143:java.lang.String getType() -> getType
+    148:148:java.lang.String getName() -> getName
+    153:153:java.lang.String getAbbreviation() -> getAbbreviation
+    158:158:java.lang.String getDescription() -> getDescription
+    163:163:java.lang.String getTicket() -> getTicket
+    168:168:org.jeyzer.mx.event.JzrEventLevel getLevel() -> getLevel
+    173:173:org.jeyzer.mx.event.JzrEventSubLevel getSubLevel() -> getSubLevel
+    28:104:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.Feature -> org.jeyzer.demo.features.a:
+    org.slf4j.Logger logger -> a
+    java.util.concurrent.atomic.AtomicInteger idCount -> d
+    org.jeyzer.publish.JzrActionHandler jhandler -> b
+    org.jeyzer.publish.JzrMonitorHandler jmonitor -> c
+    28:36:void <init>() -> <init>
+    void show() -> a
+    java.lang.String getName() -> b
+    44:49:void start(org.jeyzer.publish.JzrActionContext) -> a
+    53:53:boolean isOneshotEvent() -> c
+    57:58:void stop() -> d
+    61:65:org.jeyzer.publish.JzrActionContext createContext(java.lang.String,java.lang.String) -> a
+    69:70:void hold() -> e
+    74:81:void publishThreadApplicativeEvent(org.jeyzer.publish.event.JzrEvent) -> a
+    84:87:void terminateThreadApplicativeEvent(org.jeyzer.publish.event.JzrEvent) -> b
+    90:91:void log(java.lang.String,java.lang.String) -> b
+    30:32:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.FeatureDemo -> org.jeyzer.demo.features.FeatureDemo:
+    org.slf4j.Logger logger -> b
+    java.lang.String JEYZER_PROFILE -> c
+    java.lang.String NODE_NAME -> d
+    java.lang.String SOURCE_NAME -> a
+    java.lang.String MANIFEST_IMPL_TITLE -> e
+    java.lang.String MANIFEST_IMPL_VERSION -> f
+    java.lang.String MANIFEST_IMPL_BUILD -> g
+    59:59:void <init>() -> <init>
+    75:175:void demo() -> a
+    178:187:void displayTitle() -> b
+    190:214:java.util.List createDemoFeatures() -> c
+    218:235:void publishFlightInfo() -> d
+    238:263:java.util.Map readManifestAttributes(java.util.List) -> a
+    267:273:void loadProcessVersionJars() -> e
+    276:278:void loadSharedDemoJar() -> f
+    282:284:void main(java.lang.String[]) -> main
+    61:61:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.FeatureRunnable -> org.jeyzer.demo.features.b:
+    org.slf4j.Logger logger -> a
+    java.util.List features -> b
+    java.lang.Object semaphore -> c
+    int count -> d
+    30:39:void <init>(java.util.List,int,java.lang.Object) -> <init>
+    45:72:void run() -> run
+    77:86:void waitForTermination() -> a
+    28:28:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.discovery.AirbusPlane -> org.jeyzer.demo.features.a.a:
+    java.lang.String FEATURE_NAME -> d
+    20:20:void <init>() -> <init>
+    26:29:void show() -> a
+    33:33:java.lang.String getName() -> b
+    37:40:void takeOff() -> f
+org.jeyzer.demo.features.discovery.AntonovPlane -> org.jeyzer.demo.features.a.b:
+    java.lang.String FEATURE_NAME -> d
+    20:20:void <init>() -> <init>
+    26:29:void show() -> a
+    33:33:java.lang.String getName() -> b
+    37:40:void land() -> f
+org.jeyzer.demo.features.discovery.BoeingPlane -> org.jeyzer.demo.features.a.c:
+    java.lang.String FEATURE_NAME -> d
+    20:20:void <init>() -> <init>
+    26:29:void show() -> a
+    33:33:java.lang.String getName() -> b
+    37:40:void maintenance() -> f
+org.jeyzer.demo.features.discovery.McDonnellDouglasPlane -> org.jeyzer.demo.features.a.d:
+    java.lang.String FEATURE_NAME -> d
+    20:20:void <init>() -> <init>
+    26:29:void show() -> a
+    33:33:java.lang.String getName() -> b
+    37:40:void transit() -> f
+org.jeyzer.demo.features.discovery.TupolevPlane -> org.jeyzer.demo.features.a.e:
+    java.lang.String FEATURE_NAME -> d
+    20:20:void <init>() -> <init>
+    26:29:void show() -> a
+    33:33:java.lang.String getName() -> b
+    37:40:void cruise() -> f
+org.jeyzer.demo.features.event.DemoEventManager -> org.jeyzer.demo.features.b.a:
+    org.slf4j.Logger logger -> c
+    int EVENTS_INFO_LIMIT -> a
+    int EVENTS_WARN_LIMIT -> b
+    org.jeyzer.publish.JzrMonitorHandler jmonitor -> d
+    40:43:void <init>() -> <init>
+    46:46:boolean publishApplicativeEvent(org.jeyzer.publish.event.JzrEvent) -> a
+    50:50:boolean publishSystemEvent(org.jeyzer.publish.event.JzrEvent) -> b
+    54:55:void unpublishApplicativeEvent(org.jeyzer.publish.event.JzrEvent) -> c
+    58:62:void test() -> a
+    65:70:void initPublisher() -> b
+    73:89:void testPublisherLimit() -> c
+    92:105:void testDuplicateEvent() -> d
+    108:115:void testSystemEvent() -> e
+    118:132:void testPublisherService() -> f
+    33:33:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.mx.generic.feature.DemoFeaturesMXBean -> org.jeyzer.demo.features.mx.generic.feature.DemoFeaturesMXBean:
+    java.lang.String DEMO_MXBEAN_NAME -> a
+    java.lang.String getDemoName() -> getDemoName
+    java.lang.String getVersion() -> getVersion
+    java.lang.String getPlayedFeatures() -> getPlayedFeatures
+org.jeyzer.demo.features.mx.generic.feature.FeaturesPublisher -> org.jeyzer.demo.features.mx.generic.feature.FeaturesPublisher:
+    org.slf4j.Logger logger -> d
+    java.lang.String DEMO_FEATURE_NAME -> b
+    java.lang.String DEMO_FEATURE_VERSION -> c
+    org.jeyzer.demo.features.mx.generic.feature.FeaturesPublisher instance -> e
+    boolean init -> f
+    java.util.Set features -> g
+    38:42:void <init>() -> <init>
+    45:50:org.jeyzer.demo.features.mx.generic.feature.FeaturesPublisher instance() -> a
+    55:55:java.lang.String getVersion() -> getVersion
+    60:60:java.lang.String getDemoName() -> getDemoName
+    65:72:java.lang.String getPlayedFeatures() -> getPlayedFeatures
+    76:77:void registerActiveFeature(java.lang.String) -> a
+    80:81:void unregisterActiveFeature(java.lang.String) -> b
+    84:97:void register() -> b
+    31:36:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.mx.generic.fighter.FighterAircraft -> org.jeyzer.demo.features.mx.generic.fighter.a:
+    org.slf4j.Logger logger -> d
+    java.lang.String FEATURE_NAME -> e
+    30:30:void <init>() -> <init>
+    38:53:void show() -> a
+    56:74:void executeAction(org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan) -> a
+    77:78:void barrel() -> f
+    81:82:void yoyo() -> g
+    85:86:void immelmann() -> h
+    89:90:void cisor() -> i
+    94:94:java.lang.String getName() -> b
+    98:111:void register(org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBean) -> a
+    32:32:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.mx.generic.fighter.FighterAircraft$1 -> org.jeyzer.demo.features.mx.generic.fighter.b:
+    int[] $SwitchMap$org$jeyzer$demo$features$mx$generic$fighter$MilitaryFlightPlan$ACTION -> a
+    56:56:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBean -> org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBean:
+    java.lang.String FLIGHT_MISSION_MXBEAN_NAME -> a
+    java.lang.String getFormation() -> getFormation
+    java.lang.String getModel() -> getModel
+    java.lang.String getAction() -> getAction
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBeanImpl -> org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBeanImpl:
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan plane -> b
+    21:23:void <init>(org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan) -> <init>
+    26:26:java.lang.String getFormation() -> getFormation
+    30:30:java.lang.String getModel() -> getModel
+    34:34:java.lang.String getAction() -> getAction
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan -> org.jeyzer.demo.features.mx.generic.fighter.c:
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION formation -> a
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL model -> b
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION action -> c
+    58:62:void <init>() -> <init>
+    65:76:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL generateModel() -> e
+    81:85:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION generateFormation() -> f
+    90:95:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION generateAction() -> g
+    100:100:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION getFormation() -> a
+    104:104:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL getModel() -> b
+    108:108:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION getAction() -> c
+    112:113:void updateAction() -> d
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION -> org.jeyzer.demo.features.mx.generic.fighter.d:
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION YOYO -> a
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION IMMELMANN -> b
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION BARREL -> c
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION CISORS -> d
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION[] $VALUES -> e
+    44:44:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION[] values() -> a
+    44:44:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$ACTION valueOf(java.lang.String) -> a
+    44:44:void <init>(java.lang.String,int) -> <init>
+    44:48:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION -> org.jeyzer.demo.features.mx.generic.fighter.e:
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION ECHELON -> a
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION FINGER_TIP -> b
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION BATTLE_SPREAD -> c
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION ROUTE -> d
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION WALL -> e
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION LADDER -> f
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION BOX -> g
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION FLUID -> h
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION TRAIL -> i
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION[] $VALUES -> j
+    19:19:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION[] values() -> a
+    19:19:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$FORMATION valueOf(java.lang.String) -> a
+    19:19:void <init>(java.lang.String,int) -> <init>
+    19:28:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL -> org.jeyzer.demo.features.mx.generic.fighter.f:
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL RAFALE -> a
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL F16 -> b
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL TYPHOON -> c
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL JAS39 -> d
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL MIG29 -> e
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL F14 -> f
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL SU27 -> g
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL J15 -> h
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL MIG35 -> i
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL TEJAS -> j
+    org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL[] $VALUES -> k
+    31:31:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL[] values() -> a
+    31:31:org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightPlan$MODEL valueOf(java.lang.String) -> a
+    31:31:void <init>(java.lang.String,int) -> <init>
+    31:41:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.mx.jeyzer.Airliner -> org.jeyzer.demo.features.mx.a.a:
+    java.lang.String FEATURE_NAME -> l
+    java.lang.String JZR_MX_ACTION_PINCIPAL -> m
+    org.jeyzer.demo.features.mx.jeyzer.FlightPlan fightPlan -> n
+    int fuelAdjust -> o
+    java.lang.String JZR_MX_DEPARTURE_AIRPORT -> d
+    java.lang.String JZR_MX_DESTINATION_AIRPORT -> e
+    java.lang.String JZR_MX_FLIGHT_LINE_TYPE -> f
+    java.lang.String JZR_MX_FLIGHT_MAX_ALTITUDE -> g
+    java.lang.String JZR_MX_FUEL_CONSUMED -> h
+    int distance -> p
+    76:79:void <init>(org.jeyzer.demo.features.mx.jeyzer.FlightPlan,java.lang.String,int,java.lang.String) -> <init>
+    83:84:void flight() -> f
+    88:88:java.lang.String getName() -> b
+    93:93:boolean isOneshotEvent() -> c
+    98:114:void longRangeFlight() -> h
+    117:132:void updateMXFigures() -> i
+    135:145:void callRandomMode() -> j
+    148:167:void callRandomFuelConsumption(java.lang.String) -> a
+    171:172:void hold() -> e
+    176:179:void decelerate(java.lang.String) -> b
+    183:186:void putGas(java.lang.String) -> c
+    190:193:void accelerate(java.lang.String) -> d
+    197:200:void cruise(java.lang.String) -> e
+    204:205:void assisted() -> k
+    209:210:void autopilot() -> l
+    214:215:void manual() -> m
+    28:28:org.slf4j.Logger access$000() -> g
+org.jeyzer.demo.features.mx.jeyzer.Airliner$AirlinerRunnable -> org.jeyzer.demo.features.mx.a.b:
+    java.util.List features -> a
+    34:38:void <init>(java.util.List) -> <init>
+    43:56:void run() -> run
+org.jeyzer.demo.features.mx.jeyzer.FlightPlan -> org.jeyzer.demo.features.mx.a.c:
+    java.lang.String JZR_MX_FLIGHT_WIND_FORCES -> a
+    java.lang.String JZR_MX_FUEL_CONSUMED -> b
+    java.lang.String JZR_MX_ALL_FLIGHTS_MAX_ALTITUDE -> c
+    int plannedFlights -> d
+    int currentFlightCounter -> e
+    32:35:void <init>(int) -> <init>
+    38:41:void reset() -> a
+    45:74:void updateMXFlightFigures(int,int) -> a
+org.jeyzer.demo.features.mx.jeyzer.Plane -> org.jeyzer.demo.features.mx.a.d:
+    java.lang.String JZR_MX_FLIGHT_HOURS_FIELD -> i
+    java.lang.String flightId -> j
+    java.lang.String actionPrincipal -> d
+    java.lang.String flightHours -> e
+    org.jeyzer.publish.JzrActionContext jzrActionContext -> k
+    29:33:void <init>(java.lang.String,java.lang.String,java.lang.String) -> <init>
+    37:43:void show() -> a
+    void flight() -> f
+org.jeyzer.demo.features.tasks.CPUConsumingTask -> org.jeyzer.demo.features.c.a:
+    java.lang.String FEATURE_NAME -> d
+    double result -> e
+    23:23:void <init>() -> <init>
+    30:30:double getResult() -> f
+    35:42:void show() -> a
+    46:46:java.lang.String getName() -> b
+    55:75:void consumeCPU() -> g
+org.jeyzer.demo.features.tasks.Deadlock -> org.jeyzer.demo.features.c.b:
+    org.slf4j.Logger logger -> d
+    java.lang.String FEATURE_NAME -> e
+    int count -> f
+    org.jeyzer.demo.features.tasks.Deadlock$SharedResource shared1 -> g
+    org.jeyzer.demo.features.tasks.Deadlock$SharedResource shared2 -> h
+    29:38:void <init>() -> <init>
+    57:60:void show() -> a
+    64:64:java.lang.String getName() -> b
+    68:92:void lockThreads() -> i
+    97:101:void waitBeforeShutdown() -> j
+    111:144:void accessSharedResources() -> f
+    147:147:int increaseCount() -> k
+    29:29:int access$000() -> g
+    29:29:org.slf4j.Logger access$100() -> h
+    31:35:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.tasks.Deadlock$1 -> org.jeyzer.demo.features.c.c:
+    org.jeyzer.demo.features.tasks.Deadlock this$0 -> a
+    73:73:void <init>(org.jeyzer.demo.features.tasks.Deadlock) -> <init>
+    80:81:void run() -> run
+org.jeyzer.demo.features.tasks.Deadlock$DeadlockFactory -> org.jeyzer.demo.features.c.d:
+    org.jeyzer.demo.features.tasks.Deadlock this$0 -> a
+    40:40:void <init>(org.jeyzer.demo.features.tasks.Deadlock) -> <init>
+    43:45:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+org.jeyzer.demo.features.tasks.Deadlock$SharedResource -> org.jeyzer.demo.features.c.e:
+    49:49:void <init>() -> <init>
+    51:52:void hello() -> a
+org.jeyzer.demo.features.tasks.DysfunctionalCodeSequence -> org.jeyzer.demo.features.c.f:
+    java.lang.String FEATURE_NAME -> d
+    20:20:void <init>() -> <init>
+    26:32:void show() -> a
+    36:36:java.lang.String getName() -> b
+    40:41:void dysfunctionalCode1() -> f
+    44:48:void dysfunctionalCode2() -> g
+org.jeyzer.demo.features.tasks.FrozenCode -> org.jeyzer.demo.features.c.g:
+    java.lang.String FEATURE_NAME -> d
+    21:21:void <init>() -> <init>
+    27:30:void show() -> a
+    34:34:java.lang.String getName() -> b
+    39:42:void frozenCode() -> f
+org.jeyzer.demo.features.tasks.HiatusEnd -> org.jeyzer.demo.features.c.h:
+    java.lang.String FEATURE_NAME -> d
+    21:21:void <init>() -> <init>
+    27:30:void show() -> a
+    34:34:java.lang.String getName() -> b
+    39:42:void hiatusEnd() -> f
+org.jeyzer.demo.features.tasks.HiatusStart -> org.jeyzer.demo.features.c.i:
+    java.lang.String FEATURE_NAME -> d
+    21:21:void <init>() -> <init>
+    27:30:void show() -> a
+    34:34:java.lang.String getName() -> b
+    39:42:void hiatusStart() -> f
+org.jeyzer.demo.features.tasks.LockedThreads -> org.jeyzer.demo.features.c.j:
+    java.lang.String FEATURE_NAME -> d
+    int count -> e
+    28:28:void <init>() -> <init>
+    45:48:void show() -> a
+    52:52:java.lang.String getName() -> b
+    57:81:void lockThreads() -> k
+    84:85:void executedActionLevel1() -> f
+    90:91:void executedActionLevel2() -> g
+    94:95:void executedActionLevel3() -> h
+    99:100:void executedLockedAction() -> i
+    103:104:void executeAction() -> l
+    107:107:int increaseCount() -> m
+    28:28:int access$000() -> j
+    32:32:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.tasks.LockedThreads$1 -> org.jeyzer.demo.features.c.k:
+    org.jeyzer.demo.features.tasks.LockedThreads this$0 -> a
+    61:61:void <init>(org.jeyzer.demo.features.tasks.LockedThreads) -> <init>
+    69:73:void run() -> run
+org.jeyzer.demo.features.tasks.LockedThreads$LockedThreadFactory -> org.jeyzer.demo.features.c.l:
+    org.jeyzer.demo.features.tasks.LockedThreads this$0 -> a
+    34:34:void <init>(org.jeyzer.demo.features.tasks.LockedThreads) -> <init>
+    37:39:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+org.jeyzer.demo.features.tasks.MemoryConsumingTask -> org.jeyzer.demo.features.c.m:
+    java.lang.String FEATURE_NAME -> d
+    java.util.List elements -> e
+    27:31:void <init>() -> <init>
+    35:42:void show() -> a
+    46:46:java.lang.String getName() -> b
+    52:60:void consumeMemory() -> f
+org.jeyzer.demo.features.tasks.MemoryExhaustingTask -> org.jeyzer.demo.features.c.n:
+    java.lang.String FEATURE_NAME -> d
+    java.util.List elements -> e
+    27:31:void <init>() -> <init>
+    35:38:void show() -> a
+    42:42:java.lang.String getName() -> b
+    48:109:void exhaustMemory() -> f
+org.jeyzer.demo.features.tasks.WingLightTester -> org.jeyzer.demo.features.c.o:
+    java.lang.String FEATURE_NAME -> d
+    int execCount -> e
+    org.jeyzer.demo.features.tasks.WingLightTester$WING_TYPE type -> f
+    40:42:void <init>(org.jeyzer.demo.features.tasks.WingLightTester$WING_TYPE) -> <init>
+    48:58:void show() -> a
+    63:63:java.lang.String getName() -> b
+    68:71:void lightYellow() -> f
+    75:78:void lightGreen() -> g
+    33:33:void <clinit>() -> <clinit>
+org.jeyzer.demo.features.tasks.WingLightTester$EmergencyLightTester -> org.jeyzer.demo.features.c.p:
+    85:87:void <init>() -> <init>
+    92:92:void light() -> a
+org.jeyzer.demo.features.tasks.WingLightTester$WING_TYPE -> org.jeyzer.demo.features.c.q:
+    org.jeyzer.demo.features.tasks.WingLightTester$WING_TYPE LEFT -> a
+    org.jeyzer.demo.features.tasks.WingLightTester$WING_TYPE RIGHT -> b
+    org.jeyzer.demo.features.tasks.WingLightTester$WING_TYPE[] $VALUES -> c
+    35:35:org.jeyzer.demo.features.tasks.WingLightTester$WING_TYPE[] values() -> a
+    35:35:org.jeyzer.demo.features.tasks.WingLightTester$WING_TYPE valueOf(java.lang.String) -> a
+    35:35:void <init>(java.lang.String,int) -> <init>
+    35:35:void <clinit>() -> <clinit>
+org.jeyzer.demo.labors.JobGenerator -> org.jeyzer.demo.labors.a:
+    org.slf4j.Logger logger -> a
+    int ALL_SYSTEM_JOBS -> b
+    int ALL_EXECUTABLE_JOBS -> c
+    int ALL_JOBS -> d
+    int SYSTEM_TEST_JOBS -> e
+    int EXECUTABLE_TEST_JOBS -> f
+    int TEST_JOBS -> g
+    boolean testMode -> h
+    int jobCount -> i
+    java.util.List systemJobs -> j
+    java.util.List executableJobs -> k
+    42:52:void <init>(int,boolean,java.util.List) -> <init>
+    55:66:void declareJobs() -> c
+    69:73:void initJobs() -> d
+    76:76:java.util.List getSystemJobs() -> a
+    80:80:java.util.List getExecutableJobs() -> b
+    84:103:boolean generateJobs(java.util.List) -> a
+    107:118:java.util.List buildIdList() -> e
+    122:130:java.util.List buildTestIdList() -> f
+    134:147:void dumpJobs() -> g
+    150:157:void generateSystemJob(int) -> a
+    160:168:void generateExecutableJob(int) -> b
+    30:34:void <clinit>() -> <clinit>
+org.jeyzer.demo.labors.LaborsDemo -> org.jeyzer.demo.labors.LaborsDemo:
+    org.slf4j.Logger logger -> j
+    java.lang.String JEYZER_PROFILE -> k
+    java.lang.String NODE_NAME -> l
+    java.lang.String MANIFEST_IMPL_TITLE -> m
+    java.lang.String MANIFEST_IMPL_VERSION -> n
+    java.lang.String MANIFEST_IMPL_BUILD -> o
+    java.lang.String SOURCE_NAME -> a
+    int EVENTS_INFO_LIMIT -> b
+    int EVENTS_WARN_LIMIT -> c
+    java.lang.String LIST_HELP -> d
+    java.lang.String LIST_PARAM -> e
+    java.lang.String JOBS_PARAM -> f
+    java.lang.String SCOPE_PARAM -> g
+    java.lang.String SCOPE_VALUE_ALL -> h
+    java.lang.String SCOPE_VALUE_TEST -> i
+    org.jeyzer.publish.JzrMonitorHandler jmonitor -> p
+    42:42:void <init>() -> <init>
+    72:92:void main(java.lang.String[]) -> main
+    95:117:void demo(int,java.util.List) -> a
+    120:134:void list() -> a
+    137:145:void fireSystemEventsForExecutableJobs(java.util.List) -> a
+    149:161:void applySystemJobs(org.jeyzer.demo.labors.JobGenerator) -> a
+    165:174:void displayTitle() -> b
+    177:197:void initPublisher() -> c
+    200:224:java.util.Map readManifestAttributes(java.util.List) -> b
+    228:234:int parseScopeParam(java.lang.String[]) -> a
+    238:238:boolean parseListParam(java.lang.String[]) -> b
+    242:253:boolean checkParams(java.lang.String[]) -> c
+    257:264:void displayMenu() -> d
+    267:311:java.util.List parseJobsParam(java.lang.String[]) -> d
+    44:44:void <clinit>() -> <clinit>
+org.jeyzer.demo.labors.job.DummyJob -> org.jeyzer.demo.labors.job.a:
+    java.util.concurrent.atomic.AtomicInteger dummyThreadCount -> a
+    30:31:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    37:41:void executeJob() -> a
+    45:45:java.lang.String getEventName() -> b
+    50:50:java.util.concurrent.atomic.AtomicInteger getThreadCount() -> c
+    54:64:void callRandomFunction() -> m
+    67:81:void callRandomOperation(java.lang.String) -> a
+    85:86:void commit(java.lang.String) -> b
+    90:91:void compute(java.lang.String) -> c
+    95:96:void read(java.lang.String) -> d
+    100:101:void scan(java.lang.String) -> e
+    105:106:void perform() -> n
+    110:111:void analyze() -> o
+    115:116:void focus() -> p
+    27:27:void <clinit>() -> <clinit>
+org.jeyzer.demo.labors.job.Job -> org.jeyzer.demo.labors.job.b:
+    16:16:void <init>() -> <init>
+    void init() -> d
+    void work() -> e
+    java.lang.String getEventName() -> b
+org.jeyzer.demo.labors.job.executable.ExecutableJob -> org.jeyzer.demo.labors.job.executable.a:
+    long HOLD_TIC_DURATION -> b
+    org.jeyzer.publish.JzrMonitorHandler jmonitor -> c
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition def -> d
+    java.util.List threads -> a
+    int lifeTics -> e
+    org.jeyzer.publish.event.JzrStandardEvent laborEvent -> f
+    36:39:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    void executeJob() -> a
+    45:46:void init() -> d
+    50:58:void work() -> e
+    63:69:void run() -> run
+    73:73:java.lang.String getEventName() -> b
+    77:77:org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition getJobDefinition() -> f
+    81:87:boolean lifeTic() -> g
+    91:91:int getLifeTics() -> h
+    95:96:void setLifeTics(int) -> a
+    99:99:int getWeight() -> i
+    103:105:void hold() -> j
+    108:109:void oneTicHold() -> k
+    113:113:java.util.concurrent.atomic.AtomicInteger getThreadCount() -> c
+    117:118:void setJzrMonitorHandler(org.jeyzer.publish.JzrMonitorHandler) -> a
+    121:121:boolean isSystemEventBased() -> l
+    125:126:void setLaborEvent(org.jeyzer.publish.event.JzrStandardEvent) -> a
+org.jeyzer.demo.labors.job.executable.ExecutableJobAdjuster -> org.jeyzer.demo.labors.job.executable.b:
+    org.slf4j.Logger logger -> a
+    22:22:void <init>() -> <init>
+    27:38:void adjustJobs(java.util.List) -> a
+    41:48:void adjustCandidates(java.util.List) -> b
+    51:61:java.util.List getAdjustCandidates(java.util.List) -> c
+    65:69:int getTotalWeight(java.util.List) -> d
+    24:24:void <clinit>() -> <clinit>
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition -> org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition:
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition DUMMY -> DUMMY
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CPU_CONSUMING_TASK -> CPU_CONSUMING_TASK
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_GLOBAL_PERCENTAGE -> FUNCTION_GLOBAL_PERCENTAGE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_GLOBAL_PERCENTAGE -> OPERATION_GLOBAL_PERCENTAGE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_GLOBAL_PERCENTAGE -> CONTENTION_TYPE_GLOBAL_PERCENTAGE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_PRESENCE -> FUNCTION_PRESENCE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_PRESENCE -> OPERATION_PRESENCE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_PRESENCE -> CONTENTION_TYPE_PRESENCE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_PATTERN -> CONTENTION_TYPE_PATTERN
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_TASK_ONESHOT_EVENT -> APPLICATIVE_TASK_ONESHOT_EVENT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_TASK_LONG_EVENT -> APPLICATIVE_TASK_LONG_EVENT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_SESSION_ONESHOT_EVENT -> APPLICATIVE_SESSION_ONESHOT_EVENT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_SESSION_LONG_EVENT -> APPLICATIVE_SESSION_LONG_EVENT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_SYSTEM_EVENT -> APPLICATIVE_SYSTEM_EVENT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JEYZER_PUBLISHER_EVENT -> JEYZER_PUBLISHER_EVENT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_IN_PRINCIPAL_PERCENTAGE -> OPERATION_IN_PRINCIPAL_PERCENTAGE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_IN_PRINCIPAL_PERCENTAGE -> FUNCTION_IN_PRINCIPAL_PERCENTAGE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_IN_PRINCIPAL_PERCENTAGE -> CONTENTION_TYPE_IN_PRINCIPAL_PERCENTAGE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MEMORY_CONSUMING_PROCESS -> MEMORY_CONSUMING_PROCESS
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXCESSIVE_GC_TIME -> EXCESSIVE_GC_TIME
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXCESSIVE_OLD_GC_EXECUTION -> EXCESSIVE_OLD_GC_EXECUTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition NAMED_THREAD_LEAK -> NAMED_THREAD_LEAK
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition GLOBAL_THREAD_LEAK -> GLOBAL_THREAD_LEAK
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition STACK_OVERFLOW -> STACK_OVERFLOW
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition TASK_EXECUTION_PATTERN -> TASK_EXECUTION_PATTERN
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_PATTERN -> OPERATION_PATTERN
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_PATTERN -> FUNCTION_PATTERN
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_PATTERN_WITH_PERCENTAGE -> OPERATION_PATTERN_WITH_PERCENTAGE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_PATTERN_WITH_PERCENTAGE -> FUNCTION_PATTERN_WITH_PERCENTAGE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JEYZER_MX_CONTEXT_PARAMETER_NUMBER -> JEYZER_MX_CONTEXT_PARAMETER_NUMBER
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JEYZER_MX_CONTEXT_PARAMETER_PATTERN -> JEYZER_MX_CONTEXT_PARAMETER_PATTERN
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition TASK_JEYZER_MX_CONTEXT_PARAMETER_NUMBER -> TASK_JEYZER_MX_CONTEXT_PARAMETER_NUMBER
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition TASK_JEYZER_MX_CONTEXT_PARAMETER_PATTERN -> TASK_JEYZER_MX_CONTEXT_PARAMETER_PATTERN
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition ACTIVE_THREAD_LIMIT -> ACTIVE_THREAD_LIMIT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition GLOBAL_THREAD_LIMIT -> GLOBAL_THREAD_LIMIT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition LOCKER_TASK -> LOCKER_TASK
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition LOCKS_CONTENTION -> LOCKS_CONTENTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_PARALLEL_CONTENTION -> FUNCTION_PARALLEL_CONTENTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_PARALLEL_CONTENTION -> OPERATION_PARALLEL_CONTENTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_PARALLEL_CONTENTION -> CONTENTION_TYPE_PARALLEL_CONTENTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CPU_RUNNABLE_VS_CPU_CAPACITY -> CPU_RUNNABLE_VS_CPU_CAPACITY
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_AND_OPERATION_PARALLEL_CONTENTION -> FUNCTION_AND_OPERATION_PARALLEL_CONTENTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition LONG_RUNNING_TASK_WITH_FUNCTION -> LONG_RUNNING_TASK_WITH_FUNCTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition LONG_RUNNING_TASK -> LONG_RUNNING_TASK
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MEMORY_CONSUMING_TASK -> MEMORY_CONSUMING_TASK
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition DEADLOCK -> DEADLOCK
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition ABSENT_THREADS -> ABSENT_THREADS
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition ACTIVE_NAMED_THREAD_LIMIT -> ACTIVE_NAMED_THREAD_LIMIT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition ACTIVE_UNIQUE_THREAD -> ACTIVE_UNIQUE_THREAD
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition NAMED_THREAD_LIMIT -> NAMED_THREAD_LIMIT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition UNIQUE_THREAD -> UNIQUE_THREAD
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition GC_FAILING_TO_RELEASE_MEMORY -> GC_FAILING_TO_RELEASE_MEMORY
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SYSTEM_CPU_OVERLOAD -> SYSTEM_CPU_OVERLOAD
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CPU_CONSUMING_PROCESS -> CPU_CONSUMING_PROCESS
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SESSION_EXECUTION_PATTERN -> SESSION_EXECUTION_PATTERN
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MX_BEAN_PARAMETER_NUMBER_HIGHER -> MX_BEAN_PARAMETER_NUMBER_HIGHER
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MX_BEAN_PARAMETER_NUMBER_LOWER -> MX_BEAN_PARAMETER_NUMBER_LOWER
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MX_BEAN_PARAMETER_PATTERN -> MX_BEAN_PARAMETER_PATTERN
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FROZEN_STACKS -> FROZEN_STACKS
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FROZEN_STACKS_WITH_FUNCTION -> FROZEN_STACKS_WITH_FUNCTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MEMORY_CONSUMING_SYSTEM -> MEMORY_CONSUMING_SYSTEM
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MULTI_FUNCTION_CONTENTION -> MULTI_FUNCTION_CONTENTION
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_JAR_VERSION_SNAPSHOT -> PROCESS_JAR_VERSION_SNAPSHOT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_JAR_MULTIPLE_VERSIONS -> PROCESS_JAR_MULTIPLE_VERSIONS
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_JAR_VERSION_ABSENCE -> PROCESS_JAR_VERSION_ABSENCE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_JAR_MANIFEST_VERSION_MISMATCH -> PROCESS_JAR_MANIFEST_VERSION_MISMATCH
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_MODULE_VERSION_SNAPSHOT -> PROCESS_MODULE_VERSION_SNAPSHOT
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_MODULE_VERSION_ABSENCE -> PROCESS_MODULE_VERSION_ABSENCE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JVM_FLAG -> JVM_FLAG
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SHARED_PROFILE -> SHARED_PROFILE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXECUTOR_PRESENCE -> EXECUTOR_PRESENCE
+    int threadCount -> a
+    int startLifeTics -> b
+    int percentage -> c
+    boolean systemEventBased -> d
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] $VALUES -> $VALUES
+    17:17:org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] values() -> values
+    17:17:org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition valueOf(java.lang.String) -> valueOf
+    126:127:void <init>(java.lang.String,int,int,int) -> <init>
+    130:131:void <init>(java.lang.String,int,int,int,boolean) -> <init>
+    133:138:void <init>(java.lang.String,int,int,int,int,boolean) -> <init>
+    146:146:boolean isPercentageBased() -> isPercentageBased
+    150:150:int getThreadCount() -> getThreadCount
+    154:154:int getStartLifeTics() -> getStartLifeTics
+    158:158:int getPercentage() -> getPercentage
+    162:162:java.lang.String getEventName() -> getEventName
+    166:166:java.lang.String getStickerName() -> getStickerName
+    170:170:java.lang.String getThreadName() -> getThreadName
+    174:174:java.lang.String getClassName() -> getClassName
+    178:178:boolean isSystemEventBased() -> isSystemEventBased
+    182:193:java.lang.String getClassNameFromEnumValue() -> a
+    198:198:java.lang.String toString() -> toString
+    17:123:void <clinit>() -> <clinit>
+org.jeyzer.demo.labors.job.executable.ExecutableJobScheduler -> org.jeyzer.demo.labors.job.executable.c:
+    org.slf4j.Logger logger -> a
+    java.util.Queue scheduledJobs -> b
+    java.util.List liveJobs -> c
+    org.jeyzer.publish.JzrMonitorHandler jmonitor -> d
+    boolean testMode -> e
+    boolean previousEmpty -> f
+    35:46:void <init>(java.util.List,org.jeyzer.publish.JzrMonitorHandler,boolean) -> <init>
+    49:61:void start() -> a
+    65:78:void run() -> run
+    81:86:void printEmptySection() -> b
+    89:92:void printJobSection() -> c
+    95:108:void startJob(org.jeyzer.demo.labors.job.executable.ExecutableJob) -> a
+    111:119:void updateLiveJobs() -> d
+    122:136:void prepareJobs(java.util.List) -> a
+    139:142:void addRealJobTic(org.jeyzer.demo.labors.job.executable.ExecutableJob) -> b
+    145:150:void addDummyJobTics(int) -> a
+    153:161:void addDummyJobs(java.util.List) -> b
+    164:172:int getRandomDummyCount() -> e
+    177:185:int getRandomLifeTics() -> f
+    33:33:void <clinit>() -> <clinit>
+org.jeyzer.demo.labors.job.executable.JobThreadFactory -> org.jeyzer.demo.labors.job.executable.d:
+    java.lang.String name -> a
+    java.util.concurrent.atomic.AtomicInteger count -> b
+    23:26:void <init>(java.lang.String,java.util.concurrent.atomic.AtomicInteger) -> <init>
+    30:32:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+org.jeyzer.demo.labors.job.executable.impl.AbsentThreadsJob -> org.jeyzer.demo.labors.job.executable.impl.AbsentThreadsJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.concurrent.ThreadFactory factory -> e
+    java.lang.Thread vitalThread -> f
+    27:33:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    37:39:void init() -> d
+    44:48:void executeJob() -> a
+    52:61:void pauseVitalThread() -> m
+    65:67:void createVitalThread() -> n
+org.jeyzer.demo.labors.job.executable.impl.AbsentThreadsJob$SubAbsentThreads -> org.jeyzer.demo.labors.job.executable.impl.AbsentThreadsJob$SubAbsentThreads:
+    org.jeyzer.demo.labors.job.executable.impl.AbsentThreadsJob this$0 -> a
+    69:69:void <init>(org.jeyzer.demo.labors.job.executable.impl.AbsentThreadsJob) -> <init>
+    74:75:void run() -> run
+    80:86:void doCriticalWork() -> a
+org.jeyzer.demo.labors.job.executable.impl.ActiveNamedThreadLimitJob -> org.jeyzer.demo.labors.job.executable.impl.ActiveNamedThreadLimitJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List antlThreads -> e
+    java.util.List workers -> f
+    java.util.concurrent.ThreadFactory factory -> g
+    29:36:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    40:42:void init() -> d
+    47:48:void executeJob() -> a
+    53:64:void activateWorkerThreads() -> m
+    67:75:void createWorkerThreads() -> n
+org.jeyzer.demo.labors.job.executable.impl.ActiveNamedThreadLimitJob$SubActiveNamedThreadLimitWorker -> org.jeyzer.demo.labors.job.executable.impl.ActiveNamedThreadLimitJob$SubActiveNamedThreadLimitWorker:
+    int startLifeTics -> b
+    org.jeyzer.demo.labors.job.executable.impl.ActiveNamedThreadLimitJob this$0 -> a
+    81:83:void <init>(org.jeyzer.demo.labors.job.executable.impl.ActiveNamedThreadLimitJob,int) -> <init>
+    89:99:void run() -> run
+    102:105:void doNothingAgain() -> a
+    109:112:void doNothing() -> b
+    115:116:void subwork() -> c
+    120:121:void processWork() -> d
+org.jeyzer.demo.labors.job.executable.impl.ActiveThreadLimitJob -> org.jeyzer.demo.labors.job.executable.impl.ActiveThreadLimitJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List gtlThreads -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    29:35:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    41:48:void executeJob() -> a
+    52:59:void createActiveThreads() -> m
+org.jeyzer.demo.labors.job.executable.impl.ActiveThreadLimitJob$SubActiveThreadLimit -> org.jeyzer.demo.labors.job.executable.impl.ActiveThreadLimitJob$SubActiveThreadLimit:
+    org.jeyzer.demo.labors.job.executable.impl.ActiveThreadLimitJob this$0 -> a
+    61:61:void <init>(org.jeyzer.demo.labors.job.executable.impl.ActiveThreadLimitJob) -> <init>
+    66:67:void run() -> run
+    71:72:void activeThread() -> f
+    75:76:void action1() -> a
+    79:80:void action12() -> b
+    83:84:void action123() -> c
+    87:88:void action1234() -> d
+    92:96:void action12345() -> e
+org.jeyzer.demo.labors.job.executable.impl.ActiveUniqueThreadJob -> org.jeyzer.demo.labors.job.executable.impl.ActiveUniqueThreadJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.lang.Thread failoverThread -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    27:33:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    39:45:void executeJob() -> a
+    49:53:void createFailoverThread() -> m
+org.jeyzer.demo.labors.job.executable.impl.ActiveUniqueThreadJob$SubActiveUniqueThreadJob -> org.jeyzer.demo.labors.job.executable.impl.ActiveUniqueThreadJob$SubActiveUniqueThreadJob:
+    org.jeyzer.demo.labors.job.executable.impl.ActiveUniqueThreadJob this$0 -> a
+    55:55:void <init>(org.jeyzer.demo.labors.job.executable.impl.ActiveUniqueThreadJob) -> <init>
+    60:61:void run() -> run
+    64:65:void interfaceFailover() -> b
+    70:74:void failOver() -> a
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeSessionLongEventJob -> org.jeyzer.demo.labors.job.executable.impl.ApplicativeSessionLongEventJob:
+    27:28:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:35:void executeJob() -> a
+    39:46:org.jeyzer.publish.event.JzrEvent raiseApplicativeSessionLongEvent() -> m
+    51:55:void waitSomeTime() -> n
+    58:59:void closeApplicativeSessionLongEvent(org.jeyzer.publish.event.JzrEvent) -> a
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeSessionOneshotEventJob -> org.jeyzer.demo.labors.job.executable.impl.ApplicativeSessionOneshotEventJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:37:void executeJob() -> a
+    41:46:void raiseApplicativeSessionOneshotEvent() -> m
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeSystemEventJob -> org.jeyzer.demo.labors.job.executable.impl.ApplicativeSystemEventJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:37:void executeJob() -> a
+    41:46:void raiseApplicativeSystemEvent() -> m
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskLongEventJob -> org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskLongEventJob:
+    27:28:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:35:void executeJob() -> a
+    39:46:org.jeyzer.publish.event.JzrEvent raiseApplicativeTaskLongEvent() -> m
+    51:55:void waitSomeTime() -> n
+    58:59:void closeApplicativeTaskLongEvent(org.jeyzer.publish.event.JzrEvent) -> a
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskOneshotEventJob -> org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskOneshotEventJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:37:void executeJob() -> a
+    41:46:void raiseApplicativeTaskOneshotEvent() -> m
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypeGlobalPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.ContentionTypeGlobalPercentageJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void receivePayload() -> m
+    45:46:void waitForMessagePayloadReception() -> n
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypeInPrincipalPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.ContentionTypeInPrincipalPercentageJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    34:38:void executeJob() -> a
+    42:43:void executePurchase() -> m
+    46:47:void databaseOperation() -> n
+    51:52:void mssqlTransactionCommit() -> o
+    55:56:void otherAction() -> p
+    59:67:void callRandomOperation() -> q
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypeParallelContentionJob -> org.jeyzer.demo.labors.job.executable.impl.ContentionTypeParallelContentionJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void storeMesssage() -> m
+    45:46:void storeInDatabase() -> n
+    50:51:void oracleTransactionCommit() -> o
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypePatternJob -> org.jeyzer.demo.labors.job.executable.impl.ContentionTypePatternJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    34:42:void executeJob() -> a
+    45:46:void testContentionType() -> m
+    50:51:void intensiveDebugLog() -> n
+    54:55:void otherOperation() -> o
+    59:67:void callRandomOperation() -> p
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypePresenceJob -> org.jeyzer.demo.labors.job.executable.impl.ContentionTypePresenceJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void triggerUndesiredContentionType() -> m
+    45:46:void undesiredContentionType() -> n
+org.jeyzer.demo.labors.job.executable.impl.CpuConsumingProcessJob -> org.jeyzer.demo.labors.job.executable.impl.CpuConsumingProcessJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List cpuThreads -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    33:39:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    45:52:void executeJob() -> a
+    56:67:void createCpuConsumingThreads() -> m
+org.jeyzer.demo.labors.job.executable.impl.CpuConsumingProcessJob$SubCpuConsumingProcessJob -> org.jeyzer.demo.labors.job.executable.impl.CpuConsumingProcessJob$SubCpuConsumingProcessJob:
+    double result -> b
+    org.jeyzer.demo.labors.job.executable.impl.CpuConsumingProcessJob this$0 -> a
+    69:69:void <init>(org.jeyzer.demo.labors.job.executable.impl.CpuConsumingProcessJob) -> <init>
+    76:77:void run() -> run
+    80:80:double getResult() -> a
+    87:100:void consumeCPU() -> b
+org.jeyzer.demo.labors.job.executable.impl.CpuConsumingTaskJob -> org.jeyzer.demo.labors.job.executable.impl.CpuConsumingTaskJob:
+    double result -> a
+    27:28:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:31:double getResult() -> m
+    37:38:void executeJob() -> a
+    44:57:void consumeCPU() -> n
+org.jeyzer.demo.labors.job.executable.impl.CpuRunnableVsCpuCapacityJob -> org.jeyzer.demo.labors.job.executable.impl.CpuRunnableVsCpuCapacityJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List cpuThreads -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    33:39:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    45:52:void executeJob() -> a
+    56:67:void createCpuConsumingThreads() -> m
+org.jeyzer.demo.labors.job.executable.impl.CpuRunnableVsCpuCapacityJob$SubCpuRunnableVsCpuCapacityJob -> org.jeyzer.demo.labors.job.executable.impl.CpuRunnableVsCpuCapacityJob$SubCpuRunnableVsCpuCapacityJob:
+    double result -> b
+    org.jeyzer.demo.labors.job.executable.impl.CpuRunnableVsCpuCapacityJob this$0 -> a
+    69:69:void <init>(org.jeyzer.demo.labors.job.executable.impl.CpuRunnableVsCpuCapacityJob) -> <init>
+    76:77:void run() -> run
+    80:80:double getResult() -> a
+    87:100:void consumeCPU() -> b
+org.jeyzer.demo.labors.job.executable.impl.DeadlockJob -> org.jeyzer.demo.labors.job.executable.impl.DeadlockJob:
+    java.util.concurrent.locks.Lock shared1 -> a
+    java.util.concurrent.locks.Lock shared2 -> e
+    java.util.concurrent.atomic.AtomicInteger subCount -> f
+    java.util.List dlThreads -> g
+    java.util.concurrent.ThreadFactory factory -> h
+    32:41:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    47:54:void executeJob() -> a
+    58:65:void createDeadlock() -> m
+    30:30:java.util.concurrent.locks.Lock access$000(org.jeyzer.demo.labors.job.executable.impl.DeadlockJob) -> a
+    30:30:java.util.concurrent.locks.Lock access$100(org.jeyzer.demo.labors.job.executable.impl.DeadlockJob) -> b
+org.jeyzer.demo.labors.job.executable.impl.DeadlockJob$SubDeadlock -> org.jeyzer.demo.labors.job.executable.impl.DeadlockJob$SubDeadlock:
+    org.jeyzer.demo.labors.job.executable.impl.DeadlockJob this$0 -> a
+    67:67:void <init>(org.jeyzer.demo.labors.job.executable.impl.DeadlockJob) -> <init>
+    72:73:void run() -> run
+    81:100:void accessSharedResources() -> a
+org.jeyzer.demo.labors.job.executable.impl.ExcessiveGcTimeJob -> org.jeyzer.demo.labors.job.executable.impl.ExcessiveGcTimeJob:
+    java.util.List elements -> a
+    27:31:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    37:41:void executeJob() -> a
+    45:52:void consumeMemory() -> m
+org.jeyzer.demo.labors.job.executable.impl.ExcessiveOldGcExecutionJob -> org.jeyzer.demo.labors.job.executable.impl.ExcessiveOldGcExecutionJob:
+    java.util.List elements -> a
+    28:32:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    38:43:void executeJob() -> a
+    47:51:void consumeMemory() -> m
+    55:58:void fillList() -> n
+org.jeyzer.demo.labors.job.executable.impl.ExecutorPresenceJob -> org.jeyzer.demo.labors.job.executable.impl.ExecutorPresenceJob:
+    22:23:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    28:29:void executeJob() -> a
+    33:37:void executeImportantThing() -> m
+org.jeyzer.demo.labors.job.executable.impl.FrozenStacksJob -> org.jeyzer.demo.labors.job.executable.impl.FrozenStacksJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:35:void executeJob() -> a
+    39:40:void stuckCall() -> m
+org.jeyzer.demo.labors.job.executable.impl.FrozenStacksWithFunctionJob -> org.jeyzer.demo.labors.job.executable.impl.FrozenStacksWithFunctionJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:35:void executeJob() -> a
+    39:40:void specificFastCriticalSection() -> m
+org.jeyzer.demo.labors.job.executable.impl.FunctionAndOperationParallelContentionJob -> org.jeyzer.demo.labors.job.executable.impl.FunctionAndOperationParallelContentionJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    34:41:void executeJob() -> a
+    45:46:void storeMessage() -> m
+    50:51:void jdbcConnectionPoolAccess() -> n
+    55:56:void waitForPoolResource() -> o
+    59:60:void otherAction() -> p
+    63:71:void callRandomOperation() -> q
+org.jeyzer.demo.labors.job.executable.impl.FunctionGlobalPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.FunctionGlobalPercentageJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:35:void executeJob() -> a
+    39:40:void processMessagePayLoad() -> m
+org.jeyzer.demo.labors.job.executable.impl.FunctionInPrincipalPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.FunctionInPrincipalPercentageJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:42:void increaseSpeed() -> m
+    46:50:void initSecondaryEngine() -> n
+    54:55:void runSecondaryEngine() -> o
+org.jeyzer.demo.labors.job.executable.impl.FunctionParallelContentionJob -> org.jeyzer.demo.labors.job.executable.impl.FunctionParallelContentionJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:37:void executeJob() -> a
+    42:46:void sendMesssage() -> m
+    50:51:void handleIoException() -> n
+    54:54:void connectToClient() -> o
+org.jeyzer.demo.labors.job.executable.impl.FunctionPatternJob -> org.jeyzer.demo.labors.job.executable.impl.FunctionPatternJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:35:void executeJob() -> a
+    39:40:void initModule() -> m
+org.jeyzer.demo.labors.job.executable.impl.FunctionPatternWithPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.FunctionPatternWithPercentageJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:37:void executeJob() -> a
+    41:52:void activityXyz() -> m
+    58:59:void preprocess() -> n
+    63:64:void process() -> o
+    68:69:void postprocess() -> p
+org.jeyzer.demo.labors.job.executable.impl.FunctionPresenceJob -> org.jeyzer.demo.labors.job.executable.impl.FunctionPresenceJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:35:void executeJob() -> a
+    39:40:void deprecatedFunctionMethod() -> m
+org.jeyzer.demo.labors.job.executable.impl.GcFailingToReleaseMemoryJob -> org.jeyzer.demo.labors.job.executable.impl.GcFailingToReleaseMemoryJob:
+    java.util.List elements -> a
+    28:32:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    38:42:void executeJob() -> a
+    46:69:void exhaustMemory() -> m
+    74:83:void surfMemoryEdge() -> n
+org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLeakJob -> org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLeakJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List gtlThreads -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    29:35:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    41:48:void executeJob() -> a
+    53:59:void createGlobalThreads() -> m
+org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLeakJob$SubGlobalThreadLeak -> org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLeakJob$SubGlobalThreadLeak:
+    org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLeakJob this$0 -> a
+    63:63:void <init>(org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLeakJob) -> <init>
+    68:69:void run() -> run
+    74:78:void threadLeakingAction() -> a
+org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLimitJob -> org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLimitJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List gtlThreads -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    29:35:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    41:48:void executeJob() -> a
+    52:59:void createThreads() -> m
+org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLimitJob$SubGlobalThreadLimit -> org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLimitJob$SubGlobalThreadLimit:
+    org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLimitJob this$0 -> a
+    61:61:void <init>(org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLimitJob) -> <init>
+    67:71:void run() -> run
+org.jeyzer.demo.labors.job.executable.impl.JeyzerMxContextParameterNumberJob -> org.jeyzer.demo.labors.job.executable.impl.JeyzerMxContextParameterNumberJob:
+    java.lang.String OPEN_RESOURCES_KEY -> a
+    27:28:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    34:38:void executeJob() -> a
+    42:44:void publishHighOpenResourceValue() -> m
+org.jeyzer.demo.labors.job.executable.impl.JeyzerMxContextParameterPatternJob -> org.jeyzer.demo.labors.job.executable.impl.JeyzerMxContextParameterPatternJob:
+    java.lang.String GATEWAY_STATE_KEY -> a
+    27:28:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:34:void init() -> d
+    40:44:void executeJob() -> a
+    48:50:void closeGatewayState() -> m
+org.jeyzer.demo.labors.job.executable.impl.JeyzerPublisherEventJob -> org.jeyzer.demo.labors.job.executable.impl.JeyzerPublisherEventJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:34:void executeJob() -> a
+    38:40:void disableApplicativeEventPublishing() -> m
+    44:48:void waitSomeTime() -> n
+    51:52:void enableApplicativeEventPublishing() -> o
+org.jeyzer.demo.labors.job.executable.impl.JvmFlagJob -> org.jeyzer.demo.labors.job.executable.impl.JvmFlagJob:
+    23:24:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    29:30:void executeJob() -> a
+org.jeyzer.demo.labors.job.executable.impl.LockerTaskJob -> org.jeyzer.demo.labors.job.executable.impl.LockerTaskJob:
+    java.lang.Object lock -> a
+    23:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:37:void executeJob() -> a
+    41:44:void doSynchronizedWork() -> m
+    48:49:void workAlone() -> n
+org.jeyzer.demo.labors.job.executable.impl.LocksContentionJob -> org.jeyzer.demo.labors.job.executable.impl.LocksContentionJob:
+    java.lang.Object[] locks -> a
+    java.util.Random random -> e
+    27:32:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    39:46:void executeJob() -> a
+    50:54:void doRandomSynchronizedWork() -> m
+    58:59:void workAlone() -> n
+org.jeyzer.demo.labors.job.executable.impl.LongRunningTaskJob -> org.jeyzer.demo.labors.job.executable.impl.LongRunningTaskJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:40:void executeJob() -> a
+    44:53:void longRunningActivity() -> m
+    56:57:void readActivityData() -> n
+    60:61:void computeActivityData() -> o
+    64:65:void storeActivityData() -> p
+org.jeyzer.demo.labors.job.executable.impl.LongRunningTaskWithFunctionJob -> org.jeyzer.demo.labors.job.executable.impl.LongRunningTaskWithFunctionJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    33:40:void executeJob() -> a
+    44:45:void endOfMonthProcessing() -> m
+    48:57:void callRandomOperation() -> n
+    60:61:void readActivityData() -> o
+    64:65:void computeActivityData() -> p
+    68:69:void storeActivityData() -> q
+org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingProcessJob -> org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingProcessJob:
+    java.util.List elements -> a
+    27:31:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    37:41:void executeJob() -> a
+    45:52:void consumeMemory() -> m
+org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingSystemJob -> org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingSystemJob:
+    java.util.List elements -> a
+    27:31:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    37:41:void executeJob() -> a
+    45:52:void consumeMemory() -> m
+org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingTaskJob -> org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingTaskJob:
+    java.util.List elements -> a
+    26:30:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    36:40:void executeJob() -> a
+    44:50:void consumeMemory() -> m
+org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob -> org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List failoverThreads -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    30:36:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    42:49:void executeJob() -> a
+    53:60:void createFailoverThreads() -> m
+    28:28:void access$000(org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob) -> a
+    28:28:void access$100(org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob) -> b
+    28:28:void access$200(org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob) -> c
+org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob$SubMultiFunctionContention -> org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob$SubMultiFunctionContention:
+    int index -> b
+    org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob this$0 -> a
+    66:68:void <init>(org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob,int) -> <init>
+    74:78:void run() -> run
+    81:87:void enterFailoverSituation() -> a
+    91:92:void ioExceptionHandling() -> b
+    96:97:void stopConnectionInJmx() -> c
+    101:102:void addConnection() -> d
+org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterNumberHigherJob -> org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterNumberHigherJob:
+    org.jeyzer.demo.labors.job.executable.impl.PlaneMXImpl plane -> a
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:33:void init() -> d
+    39:45:void executeJob() -> a
+    49:51:void flyHigher() -> m
+org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterNumberLowerJob -> org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterNumberLowerJob:
+    org.jeyzer.demo.labors.job.executable.impl.PlaneMXImpl plane -> a
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:33:void init() -> d
+    39:45:void executeJob() -> a
+    49:51:void flyLower() -> m
+org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterPatternJob -> org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterPatternJob:
+    org.jeyzer.demo.labors.job.executable.impl.PlaneMXImpl plane -> a
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:33:void init() -> d
+    39:45:void executeJob() -> a
+    49:51:void flyWithFailure() -> m
+org.jeyzer.demo.labors.job.executable.impl.NamedThreadLeakJob -> org.jeyzer.demo.labors.job.executable.impl.NamedThreadLeakJob:
+    java.util.List timers -> a
+    29:33:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    39:49:void executeJob() -> a
+    55:64:void createTimers() -> m
+org.jeyzer.demo.labors.job.executable.impl.NamedThreadLeakJob$NamedThreadLeakTimer -> org.jeyzer.demo.labors.job.executable.impl.NamedThreadLeakJob$NamedThreadLeakTimer:
+    org.jeyzer.demo.labors.job.executable.impl.NamedThreadLeakJob this$0 -> a
+    68:68:void <init>(org.jeyzer.demo.labors.job.executable.impl.NamedThreadLeakJob) -> <init>
+    73:74:void run() -> run
+    79:83:void timerAction() -> a
+org.jeyzer.demo.labors.job.executable.impl.NamedThreadLimitJob -> org.jeyzer.demo.labors.job.executable.impl.NamedThreadLimitJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List antlThreads -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    29:35:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    41:49:void executeJob() -> a
+    53:60:void createInactiveThreads() -> m
+org.jeyzer.demo.labors.job.executable.impl.NamedThreadLimitJob$SubNamedThreadLimitJob -> org.jeyzer.demo.labors.job.executable.impl.NamedThreadLimitJob$SubNamedThreadLimitJob:
+    org.jeyzer.demo.labors.job.executable.impl.NamedThreadLimitJob this$0 -> a
+    62:62:void <init>(org.jeyzer.demo.labors.job.executable.impl.NamedThreadLimitJob) -> <init>
+    67:68:void run() -> run
+    73:77:void handleClientInactiveConnection() -> a
+org.jeyzer.demo.labors.job.executable.impl.OperationGlobalPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.OperationGlobalPercentageJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void processPayload() -> m
+    45:46:void logMessagePayload() -> n
+org.jeyzer.demo.labors.job.executable.impl.OperationInPrincipalPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.OperationInPrincipalPercentageJob:
+    26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    34:38:void executeJob() -> a
+    42:43:void processBigData() -> m
+    47:48:void readData() -> n
+    52:53:void permuteData() -> o
+    56:64:void callRandomOperation() -> p
+org.jeyzer.demo.labors.job.executable.impl.OperationParallelContentionJob -> org.jeyzer.demo.labors.job.executable.impl.OperationParallelContentionJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void executeDatabaseAction() -> m
+    44:45:void createPreparedStatement() -> n
+    48:49:void getStatementFromPool() -> o
+    53:54:void waitForPreparedStatement() -> p
+org.jeyzer.demo.labors.job.executable.impl.OperationPatternJob -> org.jeyzer.demo.labors.job.executable.impl.OperationPatternJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void delayFunction() -> m
+    45:46:void onHold() -> n
+org.jeyzer.demo.labors.job.executable.impl.OperationPatternWithPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.OperationPatternWithPercentageJob:
+    java.util.Random random -> a
+    26:30:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    37:44:void executeJob() -> a
+    50:51:void processData() -> m
+    56:57:void throwException() -> n
+    61:62:void doOther() -> o
+    65:83:void callRandomOperation() -> p
+    87:92:void deepWork(int) -> b
+org.jeyzer.demo.labors.job.executable.impl.OperationPresenceJob -> org.jeyzer.demo.labors.job.executable.impl.OperationPresenceJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void triggerUnsecuredMethod() -> m
+    45:46:void unsecuredOperationMethod() -> n
+org.jeyzer.demo.labors.job.executable.impl.PlaneMXBean -> org.jeyzer.demo.labors.job.executable.impl.PlaneMXBean:
+    java.lang.String MXBEAN_PLANE_NAME -> a
+    long getAltitude() -> getAltitude
+    java.lang.String getState() -> getState
+    long getAge() -> getAge
+    java.lang.String getModel() -> getModel
+org.jeyzer.demo.labors.job.executable.impl.PlaneMXImpl -> org.jeyzer.demo.labors.job.executable.impl.PlaneMXImpl:
+    org.slf4j.Logger logger -> b
+    org.jeyzer.demo.labors.job.executable.impl.PlaneMXImpl plane -> c
+    long altitude -> d
+    java.lang.String state -> e
+    long age -> f
+    java.lang.String model -> g
+    32:41:void <init>() -> <init>
+    44:44:org.jeyzer.demo.labors.job.executable.impl.PlaneMXImpl instance() -> a
+    49:49:long getAltitude() -> getAltitude
+    53:54:void setAltitude(long) -> a
+    58:58:java.lang.String getState() -> getState
+    62:63:void setState(java.lang.String) -> a
+    67:67:long getAge() -> getAge
+    72:72:java.lang.String getModel() -> getModel
+    76:89:void registerMxBean() -> b
+    27:29:void <clinit>() -> <clinit>
+org.jeyzer.demo.labors.job.executable.impl.ProcessJarManifestVersionMismatchJob -> org.jeyzer.demo.labors.job.executable.impl.ProcessJarManifestVersionMismatchJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    30:31:void executeJob() -> a
+    34:36:void loadVersionJarWithDifferentManifestSpecificationVersion() -> m
+org.jeyzer.demo.labors.job.executable.impl.ProcessJarMultipleVersionsJob -> org.jeyzer.demo.labors.job.executable.impl.ProcessJarMultipleVersionsJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:32:void executeJob() -> a
+    35:39:void loadDuplicates() -> m
+org.jeyzer.demo.labors.job.executable.impl.ProcessJarVersionAbsenceJob -> org.jeyzer.demo.labors.job.executable.impl.ProcessJarVersionAbsenceJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    30:31:void executeJob() -> a
+    34:36:void loadNoVersionJar() -> m
+org.jeyzer.demo.labors.job.executable.impl.ProcessJarVersionSnapshotJob -> org.jeyzer.demo.labors.job.executable.impl.ProcessJarVersionSnapshotJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:32:void executeJob() -> a
+    35:39:void loadSnapshots() -> m
+org.jeyzer.demo.labors.job.executable.impl.ProcessModuleVersionAbsenceJob -> org.jeyzer.demo.labors.job.executable.impl.ProcessModuleVersionAbsenceJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    30:31:void executeJob() -> a
+    34:36:void loadNoVersionJar() -> m
+org.jeyzer.demo.labors.job.executable.impl.ProcessModuleVersionSnapshotJob -> org.jeyzer.demo.labors.job.executable.impl.ProcessModuleVersionSnapshotJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:32:void executeJob() -> a
+    35:39:void loadSnapshots() -> m
+org.jeyzer.demo.labors.job.executable.impl.SessionExecutionPatternJob -> org.jeyzer.demo.labors.job.executable.impl.SessionExecutionPatternJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void riskySection() -> m
+    45:46:void problematicSection() -> n
+org.jeyzer.demo.labors.job.executable.impl.SharedProfileJob -> org.jeyzer.demo.labors.job.executable.impl.SharedProfileJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    30:32:void executeJob() -> a
+    37:41:void callback() -> callback
+org.jeyzer.demo.labors.job.executable.impl.StackOverflowJob -> org.jeyzer.demo.labors.job.executable.impl.StackOverflowJob:
+    24:25:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    31:36:void executeJob() -> a
+    40:46:void recursiveMethod(int) -> b
+    49:51:void otherRecursiveMethod(int) -> c
+org.jeyzer.demo.labors.job.executable.impl.SystemCpuOverloadJob -> org.jeyzer.demo.labors.job.executable.impl.SystemCpuOverloadJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.util.List cpuThreads -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    33:39:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    45:52:void executeJob() -> a
+    56:67:void createCpuConsumingThreads() -> m
+org.jeyzer.demo.labors.job.executable.impl.SystemCpuOverloadJob$SubSystemCpuOverloadJob -> org.jeyzer.demo.labors.job.executable.impl.SystemCpuOverloadJob$SubSystemCpuOverloadJob:
+    double result -> b
+    org.jeyzer.demo.labors.job.executable.impl.SystemCpuOverloadJob this$0 -> a
+    69:69:void <init>(org.jeyzer.demo.labors.job.executable.impl.SystemCpuOverloadJob) -> <init>
+    76:77:void run() -> run
+    80:80:double getResult() -> a
+    87:100:void consumeCpu() -> b
+org.jeyzer.demo.labors.job.executable.impl.TaskExecutionPatternJob -> org.jeyzer.demo.labors.job.executable.impl.TaskExecutionPatternJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void riskySection() -> m
+    45:46:void problematicSection() -> n
+org.jeyzer.demo.labors.job.executable.impl.TaskJeyzerMxContextParameterNumberJob -> org.jeyzer.demo.labors.job.executable.impl.TaskJeyzerMxContextParameterNumberJob:
+    java.lang.String ACTIVITY_ERROR_COUNT_KEY -> a
+    29:30:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    36:40:void executeJob() -> a
+    44:54:void publishActivityErrorCount() -> m
+org.jeyzer.demo.labors.job.executable.impl.TaskJeyzerMxContextParameterPatternJob -> org.jeyzer.demo.labors.job.executable.impl.TaskJeyzerMxContextParameterPatternJob:
+    java.lang.String ACTIVITY_STATE_KEY -> a
+    29:30:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    36:40:void executeJob() -> a
+    44:54:void publishActivityState() -> m
+org.jeyzer.demo.labors.job.executable.impl.UniqueThreadJob -> org.jeyzer.demo.labors.job.executable.impl.UniqueThreadJob:
+    java.util.concurrent.atomic.AtomicInteger subCount -> a
+    java.lang.Thread undesiredThread -> e
+    java.util.concurrent.ThreadFactory factory -> f
+    27:33:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    39:45:void executeJob() -> a
+    49:53:void createUndesiredThread() -> m
+org.jeyzer.demo.labors.job.executable.impl.UniqueThreadJob$SubUniqueThreadJob -> org.jeyzer.demo.labors.job.executable.impl.UniqueThreadJob$SubUniqueThreadJob:
+    org.jeyzer.demo.labors.job.executable.impl.UniqueThreadJob this$0 -> a
+    55:55:void <init>(org.jeyzer.demo.labors.job.executable.impl.UniqueThreadJob) -> <init>
+    61:65:void run() -> run
+    70:71:void undesiredThreadExecution() -> a
+org.jeyzer.demo.labors.job.system.SystemJob -> org.jeyzer.demo.labors.job.system.a:
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition def -> a
+    22:24:void <init>(org.jeyzer.demo.labors.job.system.SystemJobDefinition) -> <init>
+    28:29:void init() -> d
+    34:34:void work() -> e
+    38:38:java.lang.String getEventName() -> b
+    42:42:boolean isFullSessionScope() -> a
+org.jeyzer.demo.labors.job.system.SystemJobDefinition -> org.jeyzer.demo.labors.job.system.SystemJobDefinition:
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_FREE_SPACE -> DISK_FREE_SPACE
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_USED_SPACE -> DISK_USED_SPACE
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_SPACE_TOTAL -> DISK_SPACE_TOTAL
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_WRITE_TIME -> DISK_WRITE_TIME
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_WRITE_SPEED -> DISK_WRITE_SPEED
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition THREAD_DUMP_CAPTURE_TIME -> THREAD_DUMP_CAPTURE_TIME
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_CARD_PROPERTY_PATTERN -> PROCESS_CARD_PROPERTY_PATTERN
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_CARD_PROPERTY_NUMBER -> PROCESS_CARD_PROPERTY_NUMBER
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_CARD_PROPERTY_ABSENCE -> PROCESS_CARD_PROPERTY_ABSENCE
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_UP_TIME -> PROCESS_UP_TIME
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_MAX_HEAP -> PROCESS_COMMAND_LINE_MAX_HEAP
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_PARAMETER_ABSENCE -> PROCESS_COMMAND_LINE_PARAMETER_ABSENCE
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_PROPERTY_NUMBER -> PROCESS_COMMAND_LINE_PROPERTY_NUMBER
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_PROPERTY_PATTERN -> PROCESS_COMMAND_LINE_PROPERTY_PATTERN
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_PARAMETER_PATTERN -> PROCESS_COMMAND_LINE_PARAMETER_PATTERN
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_SPACE_FREE_PERCENT -> DISK_SPACE_FREE_PERCENT
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_SPACE_USED_PERCENT -> DISK_SPACE_USED_PERCENT
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition MX_BEAN_PARAMETER_PATTERN_SYSTEM -> MX_BEAN_PARAMETER_PATTERN_SYSTEM
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition MX_BEAN_PARAMETER_NUMBER_SYSTEM -> MX_BEAN_PARAMETER_NUMBER_SYSTEM
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition STICKER_MATCH -> STICKER_MATCH
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_JAR_VERSION -> PROCESS_JAR_VERSION
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_JAR_NAME -> PROCESS_JAR_NAME
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_JAR_NAME_ABSENCE -> PROCESS_JAR_NAME_ABSENCE
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_MODULE_VERSION -> PROCESS_MODULE_VERSION
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_MODULE_NAME -> PROCESS_MODULE_NAME
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_MODULE_NAME_ABSENCE -> PROCESS_MODULE_NAME_ABSENCE
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition RECORDING_SIZE -> RECORDING_SIZE
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition GARBAGE_COLLECTOR_NAME -> GARBAGE_COLLECTOR_NAME
+    boolean fullSessionScope -> a
+    org.jeyzer.demo.labors.job.system.SystemJobDefinition[] $VALUES -> $VALUES
+    16:16:org.jeyzer.demo.labors.job.system.SystemJobDefinition[] values() -> values
+    16:16:org.jeyzer.demo.labors.job.system.SystemJobDefinition valueOf(java.lang.String) -> valueOf
+    49:51:void <init>(java.lang.String,int,boolean) -> <init>
+    54:54:java.lang.String getEventName() -> getEventName
+    58:58:java.lang.String getStickerName() -> getStickerName
+    62:62:java.lang.String getClassName() -> getClassName
+    66:66:boolean isFullSessionScope() -> isFullSessionScope
+    70:81:java.lang.String getClassNameFromEnumValue() -> a
+    16:45:void <clinit>() -> <clinit>
+org.jeyzer.demo.philosopher.Bowl -> org.jeyzer.demo.b.a:
+    boolean available -> a
+    java.util.List riceGrains -> b
+    21:52:void <init>() -> <init>
+    void getFirstAccess() -> a
+    void getSecondAccess() -> b
+    void waitForBowl() -> c
+    int getId() -> d
+    34:34:boolean isAvailable() -> e
+    38:39:boolean hold() -> f
+    43:44:boolean release() -> g
+    49:49:java.lang.String toString() -> toString
+    55:58:void fillBowl() -> h
+org.jeyzer.demo.philosopher.Philosopher -> org.jeyzer.demo.b.b:
+    org.slf4j.Logger logger -> a
+    int id -> b
+    java.util.concurrent.Semaphore fork -> c
+    java.util.concurrent.CountDownLatch tableOpen -> d
+    org.jeyzer.demo.philosopher.Bowl left -> e
+    org.jeyzer.demo.philosopher.Bowl right -> f
+    org.jeyzer.demo.philosopher.Bowl second -> g
+    org.jeyzer.demo.philosopher.Bowl first -> h
+    boolean ordered -> i
+    39:48:void <init>(int,java.util.concurrent.Semaphore,java.util.concurrent.CountDownLatch,org.jeyzer.demo.philosopher.Bowl,org.jeyzer.demo.philosopher.Bowl,boolean) -> <init>
+    52:69:void run() -> run
+    72:75:void getFork() -> c
+    78:80:void releaseFork() -> d
+    83:85:void accessBowls() -> a
+    88:114:void accessFirstBowl() -> e
+    118:141:void accessSecondBowl() -> f
+    146:162:org.jeyzer.demo.philosopher.Bowl chooseOrderedBowl() -> g
+    166:198:org.jeyzer.demo.philosopher.Bowl chooseRandomBowl() -> h
+    202:203:void eatBowls() -> i
+    206:207:void log(java.lang.String) -> a
+    210:210:java.lang.String getName() -> b
+    25:25:void <clinit>() -> <clinit>
+org.jeyzer.demo.philosopher.Table -> org.jeyzer.demo.b.c:
+    org.slf4j.Logger logger -> b
+    java.lang.String ORDERED_PARAM -> a
+    28:28:void <init>() -> <init>
+    35:70:void demo(boolean) -> a
+    73:74:void setupTable() -> a
+    77:78:void waitForTermination() -> b
+    81:94:void main(java.lang.String[]) -> a
+    97:98:void log(java.lang.String) -> a
+    101:110:void displayTitle() -> c
+    30:30:void <clinit>() -> <clinit>
+org.jeyzer.demo.philosopher.bowl.Bowl_1 -> org.jeyzer.demo.b.a.a:
+    18:18:void <init>() -> <init>
+    22:22:int getId() -> d
+    27:29:void getFirstAccess() -> a
+    33:35:void getSecondAccess() -> b
+    39:40:void waitForBowl() -> c
+org.jeyzer.demo.philosopher.bowl.Bowl_2 -> org.jeyzer.demo.b.a.b:
+    18:18:void <init>() -> <init>
+    22:22:int getId() -> d
+    27:29:void getFirstAccess() -> a
+    33:35:void getSecondAccess() -> b
+    39:40:void waitForBowl() -> c
+org.jeyzer.demo.philosopher.bowl.Bowl_3 -> org.jeyzer.demo.b.a.c:
+    18:18:void <init>() -> <init>
+    22:22:int getId() -> d
+    27:29:void getFirstAccess() -> a
+    33:35:void getSecondAccess() -> b
+    39:40:void waitForBowl() -> c
+org.jeyzer.demo.philosopher.bowl.Bowl_4 -> org.jeyzer.demo.b.a.d:
+    18:18:void <init>() -> <init>
+    22:22:int getId() -> d
+    27:29:void getFirstAccess() -> a
+    33:35:void getSecondAccess() -> b
+    39:40:void waitForBowl() -> c
+org.jeyzer.demo.philosopher.bowl.Bowl_5 -> org.jeyzer.demo.b.a.e:
+    18:18:void <init>() -> <init>
+    22:22:int getId() -> d
+    27:29:void getFirstAccess() -> a
+    33:35:void getSecondAccess() -> b
+    39:40:void waitForBowl() -> c
+org.jeyzer.demo.philosopher2.Bowl -> org.jeyzer.demo.philosopher2.a:
+    java.util.List riceGrains -> a
+    21:23:void <init>() -> <init>
+    void getFirstAccess(org.jeyzer.demo.philosopher2.Philosopher) -> a
+    void getSecondAccess(org.jeyzer.demo.philosopher2.Philosopher) -> b
+    int getId() -> a
+    33:33:java.lang.String toString() -> toString
+    37:40:void fillBowl() -> b
+org.jeyzer.demo.philosopher2.Philosopher -> org.jeyzer.demo.philosopher2.b:
+    org.slf4j.Logger logger -> e
+    java.lang.String CHOICE_RANDOM -> a
+    java.lang.String CHOICE_SOLUTION -> b
+    java.lang.String CHOICE_LOCK -> c
+    java.lang.String CHOICE_DEMO -> d
+    int id -> f
+    java.util.concurrent.CountDownLatch tableOpen -> g
+    org.jeyzer.demo.philosopher2.Bowl left -> h
+    org.jeyzer.demo.philosopher2.Bowl right -> i
+    org.jeyzer.demo.philosopher2.Bowl second -> j
+    org.jeyzer.demo.philosopher2.Bowl first -> k
+    java.lang.String choice -> l
+    43:51:void <init>(int,java.util.concurrent.CountDownLatch,org.jeyzer.demo.philosopher2.Bowl,org.jeyzer.demo.philosopher2.Bowl,java.lang.String) -> <init>
+    55:71:void run() -> run
+    74:89:void accessFirstBowl() -> a
+    93:98:void accessSecondBowl() -> b
+    103:114:org.jeyzer.demo.philosopher2.Bowl chooseOrderedBowl() -> e
+    120:123:org.jeyzer.demo.philosopher2.Bowl chooseLeftBowl() -> f
+    127:138:org.jeyzer.demo.philosopher2.Bowl chooseRandomBowl() -> g
+    143:145:void eatBowls() -> c
+    148:149:void log(java.lang.String) -> a
+    152:152:java.lang.String getName() -> d
+    24:24:void <clinit>() -> <clinit>
+org.jeyzer.demo.philosopher2.PhilosophersDemo -> org.jeyzer.demo.philosopher2.PhilosophersDemo:
+    org.slf4j.Logger logger -> c
+    java.lang.String TYPE_PARAM -> a
+    java.lang.String LINE_SEPARATOR -> b
+    27:27:void <init>() -> <init>
+    36:70:void demo(java.lang.String) -> a
+    74:79:void setupTable() -> a
+    82:90:void waitForTermination(java.lang.Thread[]) -> a
+    94:99:void epilogue() -> b
+    102:133:void main(java.lang.String[]) -> main
+    136:137:void log(java.lang.String) -> b
+    29:29:void <clinit>() -> <clinit>
+org.jeyzer.demo.philosopher2.bowl.Bowl_1 -> org.jeyzer.demo.philosopher2.a.a:
+    19:19:void <init>() -> <init>
+    23:23:int getId() -> a
+    28:29:void getFirstAccess(org.jeyzer.demo.philosopher2.Philosopher) -> a
+    32:35:void ownsFirstBowl(org.jeyzer.demo.philosopher2.Philosopher) -> c
+    39:40:void getSecondAccess(org.jeyzer.demo.philosopher2.Philosopher) -> b
+    43:46:void ownsSecondBowl(org.jeyzer.demo.philosopher2.Philosopher) -> d
+org.jeyzer.demo.philosopher2.bowl.Bowl_2 -> org.jeyzer.demo.philosopher2.a.b:
+    19:19:void <init>() -> <init>
+    23:23:int getId() -> a
+    28:29:void getFirstAccess(org.jeyzer.demo.philosopher2.Philosopher) -> a
+    32:35:void ownsFirstBowl(org.jeyzer.demo.philosopher2.Philosopher) -> c
+    39:40:void getSecondAccess(org.jeyzer.demo.philosopher2.Philosopher) -> b
+    43:46:void ownsSecondBowl(org.jeyzer.demo.philosopher2.Philosopher) -> d
+org.jeyzer.demo.philosopher2.bowl.Bowl_3 -> org.jeyzer.demo.philosopher2.a.c:
+    19:19:void <init>() -> <init>
+    23:23:int getId() -> a
+    28:29:void getFirstAccess(org.jeyzer.demo.philosopher2.Philosopher) -> a
+    32:35:void ownsFirstBowl(org.jeyzer.demo.philosopher2.Philosopher) -> c
+    39:40:void getSecondAccess(org.jeyzer.demo.philosopher2.Philosopher) -> b
+    43:46:void ownsSecondBowl(org.jeyzer.demo.philosopher2.Philosopher) -> d
+org.jeyzer.demo.philosopher2.bowl.Bowl_4 -> org.jeyzer.demo.philosopher2.a.d:
+    19:19:void <init>() -> <init>
+    23:23:int getId() -> a
+    28:29:void getFirstAccess(org.jeyzer.demo.philosopher2.Philosopher) -> a
+    32:35:void ownsFirstBowl(org.jeyzer.demo.philosopher2.Philosopher) -> c
+    39:40:void getSecondAccess(org.jeyzer.demo.philosopher2.Philosopher) -> b
+    43:46:void ownsSecondBowl(org.jeyzer.demo.philosopher2.Philosopher) -> d
+org.jeyzer.demo.philosopher2.bowl.Bowl_5 -> org.jeyzer.demo.philosopher2.a.e:
+    19:19:void <init>() -> <init>
+    23:23:int getId() -> a
+    28:29:void getFirstAccess(org.jeyzer.demo.philosopher2.Philosopher) -> a
+    32:35:void ownsFirstBowl(org.jeyzer.demo.philosopher2.Philosopher) -> c
+    39:40:void getSecondAccess(org.jeyzer.demo.philosopher2.Philosopher) -> b
+    43:46:void ownsSecondBowl(org.jeyzer.demo.philosopher2.Philosopher) -> d
+org.jeyzer.demo.tollbooth.CarDriver -> org.jeyzer.demo.tollbooth.a:
+    org.slf4j.Logger logger -> a
+    int carId -> b
+    java.util.concurrent.ExecutorService toll -> c
+    org.jeyzer.demo.tollbooth.TollWorker worker -> d
+    double result -> e
+    36:39:void <init>(java.util.concurrent.ExecutorService,int) -> <init>
+    42:42:double getResult() -> a
+    47:47:java.lang.String toString() -> toString
+    55:76:void run() -> run
+    79:82:void arrivesAtTheToll() -> d
+    86:90:void giveTicketAndWait() -> e
+    93:98:void prepareMoney() -> f
+    101:105:void giveMoneyAndWait() -> g
+    108:114:void startsCar() -> h
+    117:118:int getRandom(int,int) -> a
+    122:123:void log(java.lang.String) -> a
+    126:129:void askMoney() -> b
+    132:135:void confirmsPayment() -> c
+    141:158:void consumeCPU(int) -> a
+    26:26:void <clinit>() -> <clinit>
+org.jeyzer.demo.tollbooth.TollDemo -> org.jeyzer.demo.tollbooth.TollDemo:
+    org.slf4j.Logger logger -> a
+    int nextTollId -> b
+    29:29:void <init>() -> <init>
+    36:38:int getNextTollId() -> b
+    68:70:void main(java.lang.String[]) -> main
+    74:91:void startSimulation() -> c
+    94:103:void displayTitle() -> d
+    29:29:int access$000() -> a
+    31:33:void <clinit>() -> <clinit>
+org.jeyzer.demo.tollbooth.TollDemo$TollSupervisorThreadFactory -> org.jeyzer.demo.tollbooth.b:
+    org.jeyzer.demo.tollbooth.TollDemo this$0 -> a
+    50:50:void <init>(org.jeyzer.demo.tollbooth.TollDemo) -> <init>
+    53:55:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+org.jeyzer.demo.tollbooth.TollDemo$TollThreadFactory -> org.jeyzer.demo.tollbooth.c:
+    org.jeyzer.demo.tollbooth.TollDemo this$0 -> a
+    41:41:void <init>(org.jeyzer.demo.tollbooth.TollDemo) -> <init>
+    44:46:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+org.jeyzer.demo.tollbooth.TollDemo$TrafficThreadFactory -> org.jeyzer.demo.tollbooth.d:
+    org.jeyzer.demo.tollbooth.TollDemo this$0 -> a
+    59:59:void <init>(org.jeyzer.demo.tollbooth.TollDemo) -> <init>
+    61:63:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+org.jeyzer.demo.tollbooth.TollSupervisor -> org.jeyzer.demo.tollbooth.e:
+    org.slf4j.Logger logger -> c
+    java.util.concurrent.ThreadPoolExecutor toll -> d
+    int adjust -> a
+    boolean increase -> b
+    28:33:void <init>(java.util.concurrent.ThreadPoolExecutor) -> <init>
+    37:38:void run() -> run
+    41:87:void regulate() -> a
+    90:92:void removeOneTollWorker() -> b
+    95:98:void addOneTollWorker() -> c
+    101:102:void log(java.lang.String) -> a
+    25:25:void <clinit>() -> <clinit>
+org.jeyzer.demo.tollbooth.TollWorker -> org.jeyzer.demo.tollbooth.f:
+    org.slf4j.Logger logger -> a
+    org.jeyzer.demo.tollbooth.CarDriver driver -> b
+    java.util.List elements -> c
+    30:34:void <init>(org.jeyzer.demo.tollbooth.CarDriver) -> <init>
+    39:58:void run() -> run
+    61:65:void processTicket() -> c
+    69:74:void waitsForMoney() -> d
+    77:81:void storesMoney() -> e
+    84:89:void waitsForDriverToLeave() -> f
+    92:95:void pause() -> g
+    98:99:void log(java.lang.String) -> a
+    102:103:int getRandom(int,int) -> a
+    107:110:void receivesMoney() -> a
+    113:116:void saysGoodbye() -> b
+    119:123:void consumeMemory(int) -> a
+    26:26:void <clinit>() -> <clinit>
+org.jeyzer.demo.tollbooth.TrafficGenerator -> org.jeyzer.demo.tollbooth.g:
+    org.slf4j.Logger logger -> a
+    int nextCarId -> b
+    java.util.concurrent.ExecutorService toll -> c
+    30:32:int getNextCarId() -> a
+    37:39:void <init>(java.util.concurrent.ExecutorService) -> <init>
+    43:44:void run() -> run
+    47:66:void generateTraffic() -> b
+    69:70:void log(java.lang.String) -> a
+    25:27:void <clinit>() -> <clinit>

@@ -1,0 +1,236 @@
+module-info
+org.jeyzer.demo.features.FeatureDemo
+org.jeyzer.demo.features.FeatureDemo: void main(java.lang.String[])
+org.jeyzer.demo.features.mx.generic.feature.DemoFeaturesMXBean
+org.jeyzer.demo.features.mx.generic.feature.DemoFeaturesMXBean: java.lang.String getDemoName()
+org.jeyzer.demo.features.mx.generic.feature.DemoFeaturesMXBean: java.lang.String getVersion()
+org.jeyzer.demo.features.mx.generic.feature.DemoFeaturesMXBean: java.lang.String getPlayedFeatures()
+org.jeyzer.demo.features.mx.generic.feature.FeaturesPublisher
+org.jeyzer.demo.features.mx.generic.feature.FeaturesPublisher: java.lang.String getVersion()
+org.jeyzer.demo.features.mx.generic.feature.FeaturesPublisher: java.lang.String getDemoName()
+org.jeyzer.demo.features.mx.generic.feature.FeaturesPublisher: java.lang.String getPlayedFeatures()
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBean
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBean: java.lang.String getFormation()
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBean: java.lang.String getModel()
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBean: java.lang.String getAction()
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBeanImpl
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBeanImpl: java.lang.String getFormation()
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBeanImpl: java.lang.String getModel()
+org.jeyzer.demo.features.mx.generic.fighter.MilitaryFlightMissionMXBeanImpl: java.lang.String getAction()
+org.jeyzer.demo.labors.LaborsDemo
+org.jeyzer.demo.labors.LaborsDemo: void main(java.lang.String[])
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition DUMMY
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CPU_CONSUMING_TASK
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_GLOBAL_PERCENTAGE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_GLOBAL_PERCENTAGE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_GLOBAL_PERCENTAGE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_PRESENCE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_PRESENCE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_PRESENCE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_PATTERN
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_TASK_ONESHOT_EVENT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_TASK_LONG_EVENT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_SESSION_ONESHOT_EVENT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_SESSION_LONG_EVENT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition APPLICATIVE_SYSTEM_EVENT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JEYZER_PUBLISHER_EVENT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_IN_PRINCIPAL_PERCENTAGE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_IN_PRINCIPAL_PERCENTAGE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_IN_PRINCIPAL_PERCENTAGE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MEMORY_CONSUMING_PROCESS
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXCESSIVE_GC_TIME
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXCESSIVE_OLD_GC_EXECUTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition NAMED_THREAD_LEAK
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition GLOBAL_THREAD_LEAK
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition STACK_OVERFLOW
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition TASK_EXECUTION_PATTERN
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_PATTERN
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_PATTERN
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_PATTERN_WITH_PERCENTAGE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_PATTERN_WITH_PERCENTAGE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JEYZER_MX_CONTEXT_PARAMETER_NUMBER
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JEYZER_MX_CONTEXT_PARAMETER_PATTERN
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition TASK_JEYZER_MX_CONTEXT_PARAMETER_NUMBER
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition TASK_JEYZER_MX_CONTEXT_PARAMETER_PATTERN
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition ACTIVE_THREAD_LIMIT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition GLOBAL_THREAD_LIMIT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition LOCKER_TASK
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition LOCKS_CONTENTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_PARALLEL_CONTENTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition OPERATION_PARALLEL_CONTENTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_PARALLEL_CONTENTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CPU_RUNNABLE_VS_CPU_CAPACITY
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FUNCTION_AND_OPERATION_PARALLEL_CONTENTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition LONG_RUNNING_TASK_WITH_FUNCTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition LONG_RUNNING_TASK
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MEMORY_CONSUMING_TASK
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition DEADLOCK
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition ABSENT_THREADS
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition ACTIVE_NAMED_THREAD_LIMIT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition ACTIVE_UNIQUE_THREAD
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition NAMED_THREAD_LIMIT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition UNIQUE_THREAD
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition GC_FAILING_TO_RELEASE_MEMORY
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SYSTEM_CPU_OVERLOAD
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CPU_CONSUMING_PROCESS
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SESSION_EXECUTION_PATTERN
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MX_BEAN_PARAMETER_NUMBER_HIGHER
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MX_BEAN_PARAMETER_NUMBER_LOWER
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MX_BEAN_PARAMETER_PATTERN
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FROZEN_STACKS
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition FROZEN_STACKS_WITH_FUNCTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MEMORY_CONSUMING_SYSTEM
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition MULTI_FUNCTION_CONTENTION
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_JAR_VERSION_SNAPSHOT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_JAR_MULTIPLE_VERSIONS
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_JAR_VERSION_ABSENCE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_JAR_MANIFEST_VERSION_MISMATCH
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_MODULE_VERSION_SNAPSHOT
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition PROCESS_MODULE_VERSION_ABSENCE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JVM_FLAG
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SHARED_PROFILE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXECUTOR_PRESENCE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] $VALUES
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] values()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition valueOf(java.lang.String)
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: boolean isPercentageBased()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: int getThreadCount()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: int getStartLifeTics()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: int getPercentage()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: java.lang.String getEventName()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: java.lang.String getStickerName()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: java.lang.String getThreadName()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: java.lang.String getClassName()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: boolean isSystemEventBased()
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: java.lang.String toString()
+org.jeyzer.demo.labors.job.executable.impl.AbsentThreadsJob
+org.jeyzer.demo.labors.job.executable.impl.AbsentThreadsJob$SubAbsentThreads
+org.jeyzer.demo.labors.job.executable.impl.ActiveNamedThreadLimitJob
+org.jeyzer.demo.labors.job.executable.impl.ActiveNamedThreadLimitJob$SubActiveNamedThreadLimitWorker
+org.jeyzer.demo.labors.job.executable.impl.ActiveThreadLimitJob
+org.jeyzer.demo.labors.job.executable.impl.ActiveThreadLimitJob$SubActiveThreadLimit
+org.jeyzer.demo.labors.job.executable.impl.ActiveUniqueThreadJob
+org.jeyzer.demo.labors.job.executable.impl.ActiveUniqueThreadJob$SubActiveUniqueThreadJob
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeSessionLongEventJob
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeSessionOneshotEventJob
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeSystemEventJob
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskLongEventJob
+org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskOneshotEventJob
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypeGlobalPercentageJob
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypeInPrincipalPercentageJob
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypeParallelContentionJob
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypePatternJob
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypePresenceJob
+org.jeyzer.demo.labors.job.executable.impl.CpuConsumingProcessJob
+org.jeyzer.demo.labors.job.executable.impl.CpuConsumingProcessJob$SubCpuConsumingProcessJob
+org.jeyzer.demo.labors.job.executable.impl.CpuConsumingTaskJob
+org.jeyzer.demo.labors.job.executable.impl.CpuRunnableVsCpuCapacityJob
+org.jeyzer.demo.labors.job.executable.impl.CpuRunnableVsCpuCapacityJob$SubCpuRunnableVsCpuCapacityJob
+org.jeyzer.demo.labors.job.executable.impl.DeadlockJob
+org.jeyzer.demo.labors.job.executable.impl.DeadlockJob$SubDeadlock
+org.jeyzer.demo.labors.job.executable.impl.ExcessiveGcTimeJob
+org.jeyzer.demo.labors.job.executable.impl.ExcessiveOldGcExecutionJob
+org.jeyzer.demo.labors.job.executable.impl.ExecutorPresenceJob
+org.jeyzer.demo.labors.job.executable.impl.FrozenStacksJob
+org.jeyzer.demo.labors.job.executable.impl.FrozenStacksWithFunctionJob
+org.jeyzer.demo.labors.job.executable.impl.FunctionAndOperationParallelContentionJob
+org.jeyzer.demo.labors.job.executable.impl.FunctionGlobalPercentageJob
+org.jeyzer.demo.labors.job.executable.impl.FunctionInPrincipalPercentageJob
+org.jeyzer.demo.labors.job.executable.impl.FunctionParallelContentionJob
+org.jeyzer.demo.labors.job.executable.impl.FunctionPatternJob
+org.jeyzer.demo.labors.job.executable.impl.FunctionPatternWithPercentageJob
+org.jeyzer.demo.labors.job.executable.impl.FunctionPresenceJob
+org.jeyzer.demo.labors.job.executable.impl.GcFailingToReleaseMemoryJob
+org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLeakJob
+org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLeakJob$SubGlobalThreadLeak
+org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLimitJob
+org.jeyzer.demo.labors.job.executable.impl.GlobalThreadLimitJob$SubGlobalThreadLimit
+org.jeyzer.demo.labors.job.executable.impl.JeyzerMxContextParameterNumberJob
+org.jeyzer.demo.labors.job.executable.impl.JeyzerMxContextParameterPatternJob
+org.jeyzer.demo.labors.job.executable.impl.JeyzerPublisherEventJob
+org.jeyzer.demo.labors.job.executable.impl.JvmFlagJob
+org.jeyzer.demo.labors.job.executable.impl.LockerTaskJob
+org.jeyzer.demo.labors.job.executable.impl.LocksContentionJob
+org.jeyzer.demo.labors.job.executable.impl.LongRunningTaskJob
+org.jeyzer.demo.labors.job.executable.impl.LongRunningTaskWithFunctionJob
+org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingProcessJob
+org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingSystemJob
+org.jeyzer.demo.labors.job.executable.impl.MemoryConsumingTaskJob
+org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob
+org.jeyzer.demo.labors.job.executable.impl.MultiFunctionContentionJob$SubMultiFunctionContention
+org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterNumberHigherJob
+org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterNumberLowerJob
+org.jeyzer.demo.labors.job.executable.impl.MxBeanParameterPatternJob
+org.jeyzer.demo.labors.job.executable.impl.NamedThreadLeakJob
+org.jeyzer.demo.labors.job.executable.impl.NamedThreadLeakJob$NamedThreadLeakTimer
+org.jeyzer.demo.labors.job.executable.impl.NamedThreadLimitJob
+org.jeyzer.demo.labors.job.executable.impl.NamedThreadLimitJob$SubNamedThreadLimitJob
+org.jeyzer.demo.labors.job.executable.impl.OperationGlobalPercentageJob
+org.jeyzer.demo.labors.job.executable.impl.OperationInPrincipalPercentageJob
+org.jeyzer.demo.labors.job.executable.impl.OperationParallelContentionJob
+org.jeyzer.demo.labors.job.executable.impl.OperationPatternJob
+org.jeyzer.demo.labors.job.executable.impl.OperationPatternWithPercentageJob
+org.jeyzer.demo.labors.job.executable.impl.OperationPresenceJob
+org.jeyzer.demo.labors.job.executable.impl.PlaneMXBean
+org.jeyzer.demo.labors.job.executable.impl.PlaneMXBean: long getAltitude()
+org.jeyzer.demo.labors.job.executable.impl.PlaneMXBean: java.lang.String getState()
+org.jeyzer.demo.labors.job.executable.impl.PlaneMXBean: long getAge()
+org.jeyzer.demo.labors.job.executable.impl.PlaneMXBean: java.lang.String getModel()
+org.jeyzer.demo.labors.job.executable.impl.PlaneMXImpl
+org.jeyzer.demo.labors.job.executable.impl.ProcessJarManifestVersionMismatchJob
+org.jeyzer.demo.labors.job.executable.impl.ProcessJarMultipleVersionsJob
+org.jeyzer.demo.labors.job.executable.impl.ProcessJarVersionAbsenceJob
+org.jeyzer.demo.labors.job.executable.impl.ProcessJarVersionSnapshotJob
+org.jeyzer.demo.labors.job.executable.impl.ProcessModuleVersionAbsenceJob
+org.jeyzer.demo.labors.job.executable.impl.ProcessModuleVersionSnapshotJob
+org.jeyzer.demo.labors.job.executable.impl.SessionExecutionPatternJob
+org.jeyzer.demo.labors.job.executable.impl.SharedProfileJob
+org.jeyzer.demo.labors.job.executable.impl.StackOverflowJob
+org.jeyzer.demo.labors.job.executable.impl.SystemCpuOverloadJob
+org.jeyzer.demo.labors.job.executable.impl.SystemCpuOverloadJob$SubSystemCpuOverloadJob
+org.jeyzer.demo.labors.job.executable.impl.TaskExecutionPatternJob
+org.jeyzer.demo.labors.job.executable.impl.TaskJeyzerMxContextParameterNumberJob
+org.jeyzer.demo.labors.job.executable.impl.TaskJeyzerMxContextParameterPatternJob
+org.jeyzer.demo.labors.job.executable.impl.UniqueThreadJob
+org.jeyzer.demo.labors.job.executable.impl.UniqueThreadJob$SubUniqueThreadJob
+org.jeyzer.demo.labors.job.system.SystemJobDefinition
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_FREE_SPACE
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_USED_SPACE
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_SPACE_TOTAL
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_WRITE_TIME
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_WRITE_SPEED
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition THREAD_DUMP_CAPTURE_TIME
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_CARD_PROPERTY_PATTERN
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_CARD_PROPERTY_NUMBER
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_CARD_PROPERTY_ABSENCE
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_UP_TIME
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_MAX_HEAP
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_PARAMETER_ABSENCE
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_PROPERTY_NUMBER
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_PROPERTY_PATTERN
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_COMMAND_LINE_PARAMETER_PATTERN
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_SPACE_FREE_PERCENT
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition DISK_SPACE_USED_PERCENT
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition MX_BEAN_PARAMETER_PATTERN_SYSTEM
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition MX_BEAN_PARAMETER_NUMBER_SYSTEM
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition STICKER_MATCH
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_JAR_VERSION
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_JAR_NAME
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_JAR_NAME_ABSENCE
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_MODULE_VERSION
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_MODULE_NAME
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition PROCESS_MODULE_NAME_ABSENCE
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition RECORDING_SIZE
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition GARBAGE_COLLECTOR_NAME
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition[] $VALUES
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition[] values()
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: org.jeyzer.demo.labors.job.system.SystemJobDefinition valueOf(java.lang.String)
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: java.lang.String getEventName()
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: java.lang.String getStickerName()
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: java.lang.String getClassName()
+org.jeyzer.demo.labors.job.system.SystemJobDefinition: boolean isFullSessionScope()
+org.jeyzer.demo.philosopher2.PhilosophersDemo
+org.jeyzer.demo.philosopher2.PhilosophersDemo: void main(java.lang.String[])
+org.jeyzer.demo.tollbooth.TollDemo
+org.jeyzer.demo.tollbooth.TollDemo: void main(java.lang.String[])
