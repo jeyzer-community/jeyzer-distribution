@@ -4,7 +4,7 @@
     <groupId>org.jeyzer.docker</groupId>
     <artifactId>jeyzer-docker</artifactId>
     <name>Jeyzer Docker</name>
-    <version>3.2</version>
+    <version>3.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 	<url>https://jeyzer.org</url>
 	<description>The Jeyzer Docker project</description>
