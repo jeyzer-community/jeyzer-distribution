@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.jeyzer</groupId>
 		<artifactId>jeyzer-all</artifactId>
-		<version>3.3-SNAPSHOT</version>
+		<version>3.3</version>
 		<relativePath>../../jeyzer-all/pom.xml</relativePath>
 	</parent>
   
@@ -12,7 +12,7 @@
 	<groupId>org.jeyzer</groupId>
 	<artifactId>jeyzer-demo-samples</artifactId>
 	<packaging>jar</packaging>
-	<version>3.3-SNAPSHOT</version>
+	<version>3.3</version>
 	<name>Jeyzer Demo Samples</name>
 	<url>https://jeyzer.org</url>
 	<description>Jeyzer Demo recording and JZR report files. Those large files are isolated in the current project to not impact the Jeyzer Community Demo one</description>

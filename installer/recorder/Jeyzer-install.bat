@@ -29,4 +29,4 @@ rem set PATH=C:\Dev\programs\Java\Openjdk\jdk-17.0.2\bin;%PATH%
 
 java -version
 
-java -jar target/jeyzer-recorder-installer-3.3-SNAPSHOT.jar
+java -jar target/jeyzer-recorder-installer-3.3.jar
