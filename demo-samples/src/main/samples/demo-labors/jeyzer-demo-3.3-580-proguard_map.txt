@@ -663,6 +663,7 @@ org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition -> org.jeyzer.demo
     org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JVM_FLAG -> JVM_FLAG
     org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SHARED_PROFILE -> SHARED_PROFILE
     org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXECUTOR_PRESENCE -> EXECUTOR_PRESENCE
+    org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_AND_HIGH_PROCESS_CPU -> CONTENTION_TYPE_AND_HIGH_PROCESS_CPU
     int threadCount -> a
     int startLifeTics -> b
     int percentage -> c
@@ -670,21 +671,21 @@ org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition -> org.jeyzer.demo
     org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] $VALUES -> $VALUES
     17:17:org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] values() -> values
     17:17:org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition valueOf(java.lang.String) -> valueOf
-    126:127:void <init>(java.lang.String,int,int,int) -> <init>
-    130:131:void <init>(java.lang.String,int,int,int,boolean) -> <init>
-    133:138:void <init>(java.lang.String,int,int,int,int,boolean) -> <init>
-    146:146:boolean isPercentageBased() -> isPercentageBased
-    150:150:int getThreadCount() -> getThreadCount
-    154:154:int getStartLifeTics() -> getStartLifeTics
-    158:158:int getPercentage() -> getPercentage
-    162:162:java.lang.String getEventName() -> getEventName
-    166:166:java.lang.String getStickerName() -> getStickerName
-    170:170:java.lang.String getThreadName() -> getThreadName
-    174:174:java.lang.String getClassName() -> getClassName
-    178:178:boolean isSystemEventBased() -> isSystemEventBased
-    182:193:java.lang.String getClassNameFromEnumValue() -> a
-    198:198:java.lang.String toString() -> toString
-    17:123:void <clinit>() -> <clinit>
+    128:129:void <init>(java.lang.String,int,int,int) -> <init>
+    132:133:void <init>(java.lang.String,int,int,int,boolean) -> <init>
+    135:140:void <init>(java.lang.String,int,int,int,int,boolean) -> <init>
+    148:148:boolean isPercentageBased() -> isPercentageBased
+    152:152:int getThreadCount() -> getThreadCount
+    156:156:int getStartLifeTics() -> getStartLifeTics
+    160:160:int getPercentage() -> getPercentage
+    164:164:java.lang.String getEventName() -> getEventName
+    168:168:java.lang.String getStickerName() -> getStickerName
+    172:172:java.lang.String getThreadName() -> getThreadName
+    176:176:java.lang.String getClassName() -> getClassName
+    180:180:boolean isSystemEventBased() -> isSystemEventBased
+    184:195:java.lang.String getClassNameFromEnumValue() -> a
+    200:200:java.lang.String toString() -> toString
+    17:125:void <clinit>() -> <clinit>
 org.jeyzer.demo.labors.job.executable.ExecutableJobScheduler -> org.jeyzer.demo.labors.job.executable.c:
     org.slf4j.Logger logger -> a
     java.util.Queue scheduledJobs -> b
@@ -798,6 +799,11 @@ org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskOneshotEventJob -> org
     26:27:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
     33:37:void executeJob() -> a
     41:46:void raiseApplicativeTaskOneshotEvent() -> m
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypeAndHighProcessCpuJob -> org.jeyzer.demo.labors.job.executable.impl.ContentionTypeAndHighProcessCpuJob:
+    25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
+    32:36:void executeJob() -> a
+    40:41:void triggerConsumingContentionType() -> m
+    45:46:void consumingContentionType() -> n
 org.jeyzer.demo.labors.job.executable.impl.ContentionTypeGlobalPercentageJob -> org.jeyzer.demo.labors.job.executable.impl.ContentionTypeGlobalPercentageJob:
     25:26:void <init>(org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition) -> <init>
     32:36:void executeJob() -> a

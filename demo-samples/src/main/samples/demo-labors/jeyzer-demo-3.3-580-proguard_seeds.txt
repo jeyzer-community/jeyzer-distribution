@@ -91,6 +91,7 @@ org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.l
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition JVM_FLAG
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition SHARED_PROFILE
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition EXECUTOR_PRESENCE
+org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition CONTENTION_TYPE_AND_HIGH_PROCESS_CPU
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] $VALUES
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition[] values()
 org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition: org.jeyzer.demo.labors.job.executable.ExecutableJobDefinition valueOf(java.lang.String)
@@ -117,6 +118,7 @@ org.jeyzer.demo.labors.job.executable.impl.ApplicativeSessionOneshotEventJob
 org.jeyzer.demo.labors.job.executable.impl.ApplicativeSystemEventJob
 org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskLongEventJob
 org.jeyzer.demo.labors.job.executable.impl.ApplicativeTaskOneshotEventJob
+org.jeyzer.demo.labors.job.executable.impl.ContentionTypeAndHighProcessCpuJob
 org.jeyzer.demo.labors.job.executable.impl.ContentionTypeGlobalPercentageJob
 org.jeyzer.demo.labors.job.executable.impl.ContentionTypeInPrincipalPercentageJob
 org.jeyzer.demo.labors.job.executable.impl.ContentionTypeParallelContentionJob
